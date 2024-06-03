@@ -19,6 +19,7 @@ export type LaptopCardProps = {
 
 export type CustomButtonProps = {
 	title: string;
+	styles?: string;
 };
 
 export type CustomHeadingProps = {
@@ -93,3 +94,10 @@ export type frequentlyAskedQuestionsProps = {
 	question: string;
 	answer: string;
 }[];
+
+export type AboutSectionProps = {
+	src: string;
+	title: string;
+	description: string[];
+	isImageFirst?: boolean;
+};

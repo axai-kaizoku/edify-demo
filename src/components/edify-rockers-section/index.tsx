@@ -9,7 +9,7 @@ export default function EdifyRockersSection() {
 					heading="Edify Rockers"
 					styles="py-16"
 				/>
-				<div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+				<div className="flex flex-row items-center lg:overflow-hidden overflow-auto justify-between gap-4">
 					<VideoModal src="/assets/videos/video-1.mp4" />
 					<VideoModal src="/assets/videos/video-2.mp4" />
 					<VideoModal src="/assets/videos/video-3.mp4" />

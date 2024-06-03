@@ -14,7 +14,7 @@ export default function BestSellersSection() {
 					<CustomButtom title="EXPLORE" />
 				</div>
 
-				<div className="flex gap-12 pt-10">
+				<div className="flex gap-12 overflow-auto pt-10">
 					{Array.from({ length: 4 }).map((_, i) => (
 						<BestSellerCard
 							key={i}

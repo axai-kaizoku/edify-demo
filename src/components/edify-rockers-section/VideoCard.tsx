@@ -8,7 +8,7 @@ const VideoCard = ({
 	subHeading,
 }: EdifyRockeraCardProp) => {
 	return (
-		<div className="   flex items-center justify-center flex-col ">
+		<div className="w-[300px] h-[600px] flex items-center justify-center flex-col ">
 			<div className="">
 				<video
 					width="320"
@@ -18,8 +18,7 @@ const VideoCard = ({
 					muted
 					loop
 					preload="none"
-					className="rounded-lg  "
-				>
+					className="rounded-lg  ">
 					<source
 						src={videoLink}
 						type="video/mp4"

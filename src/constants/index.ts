@@ -1,4 +1,5 @@
 import {
+	AboutSectionProps,
 	PrivacyPolicyInfoProps,
 	TermsOfServicesProps,
 	frequentlyAskedQuestionsProps,
@@ -921,5 +922,50 @@ If the Party’s performance of its obligations under this Terms and Conditions 
 			If you have any questions regarding the Services or usage of the Platform, please contact Company at edify@winuall.com . Please note that for the purpose of validation, you shall be required to provide information (including, but not limited to contact number or registered mobile number, etc.) for the purpose of validation and taking your service request.
 			`,
 		],
+	},
+];
+
+export const AboutSectionInfo: AboutSectionProps[] = [
+	{
+		src: '/assets/about-1.png',
+		title: 'Solving Problems Together',
+		description: [
+			`
+			Our planet has limited resources, and e-waste is a growing concern. Every year, millions of tons of electronic waste end up in landfills, causing significant environmental harm. `,
+			`
+			At Edify, we are committed to combating this issue by refurbishing and reselling laptops. This not only reduces e-waste but also conserves the resources and energy required to produce new devices.`,
+		],
+		isImageFirst: false,
+	},
+	{
+		src: '/assets/about-2.png',
+		title: 'Quality You Can Trust',
+		description: [
+			`We understand the importance of reliability when it comes to technology. That’s why every laptop we procure undergoes a rigorous refurbishment process. 
+`,
+			`
+			Our team of experts ensures that each device meets our high standards for performance and quality before it reaches our customers. 
+			`,
+			`		
+			When you choose Edify, you’re not just buying a laptop—you’re investing in a product that’s been restored to like-new condition.
+			`,
+		],
+		isImageFirst: true,
+	},
+	{
+		src: '/assets/about-3.png',
+		title: 'Sourcing Responsibly',
+		description: [
+			`
+			We work closely with corporations and organisations to procure old laptops and e-waste. 
+			`,
+			`
+By partnering with businesses, we ensure that their retired technology doesn’t go to waste. 
+`,
+			`
+Instead, we give these devices a second life through our comprehensive refurbishment process, benefiting both the environment and the community.
+			`,
+		],
+		isImageFirst: false,
 	},
 ];
