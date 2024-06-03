@@ -8,8 +8,8 @@ export default function DetailedLaptopCard({
 	href,
 }: LaptopCardProps) {
 	return (
-		<div className="flex flex-row md:flex-row  md:gap-8 lg:gap-10">
-			<div className="flex flex-col gap-2 sm:gap-3 justify-start sm:justify-end">
+		<div className="flex flex-row md:flex-row  md:gap-8 justify-between">
+			<div className="flex flex-col w-[60%] gap-2 sm:gap-3 justify-start sm:justify-end">
 				<h3 className="text-base sm:text-2xl font-manuale font-semibold">
 					{title}
 				</h3>
@@ -29,7 +29,7 @@ export default function DetailedLaptopCard({
 				<img
 					src={src}
 					alt="laptop-2"
-					className="w-48 h-24 lg:w-[400px] lg:h-[240px]"
+					className="w-48 h-24 lg:w-[300px] lg:h-[160px]"
 				/>
 			</div>
 		</div>

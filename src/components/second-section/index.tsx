@@ -34,12 +34,10 @@ export default function SecondSection() {
 								</p>
 							</Link>
 						</div>
-						<Image
+						<img
 							className="w-40  h-auto sm:w-auto sm:h-auto"
 							src="/assets/laptop-1.png"
 							alt="laptop-1"
-							width={510}
-							height={470}
 						/>
 					</div>
 

@@ -1,5 +1,12 @@
+import { Metadata } from 'next';
 import { TermsOfServicesProps } from '@/types';
 import { termsOfServicesInfo } from '@/constants';
+
+export const metadata: Metadata = {
+	title: 'Terms of Service | Edify.club',
+	description:
+		'Review the terms of service for using Edify.club. Understand the conditions and user agreement that govern your access to our refurbished laptop platform.',
+};
 
 export default function TermsOfServices() {
 	const termsOfServices: TermsOfServicesProps = termsOfServicesInfo;

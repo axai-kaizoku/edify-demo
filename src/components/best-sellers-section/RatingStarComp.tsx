@@ -11,8 +11,8 @@ export default function RatingStarComp({ rating }: RatingStarCompProps) {
 					key={i}
 					src="/assets/filled-star.svg"
 					alt="filled-star"
-					width={16}
-					height={16}
+					width={12}
+					height={12}
 				/>
 			))}
 			{Array.from({ length: unfilledStars }).map((_, i) => (
@@ -20,8 +20,8 @@ export default function RatingStarComp({ rating }: RatingStarCompProps) {
 					key={i}
 					src="/assets/unfilled-star.svg"
 					alt="unfilled-star"
-					width={16}
-					height={16}
+					width={12}
+					height={12}
 				/>
 			))}
 		</div>

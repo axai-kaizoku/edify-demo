@@ -10,36 +10,45 @@ export default function BestSellerCard({
 	reviews,
 }: BestSellerCardProps) {
 	return (
-		<div className="w-72 h-80 p-2 flex flex-col gap-1 border rounded">
+		<div className="w-72 flex flex-col gap-1 rounded">
 			<div className="relative">
-				<Image
-					width={240}
-					height={240}
-					src={src}
-					alt="product-img"
-				/>
-				<div className="absolute top-0 right-0 flex flex-col gap-2 pr-6 pt-6 z-1">
-					<Image
-						width={32}
-						height={32}
-						src={'/assets/heart.svg'}
+				<div>
+					<img
+						src={src}
 						alt="product-img"
+						className="w-full h-full object-cover  rounded"
 					/>
-					<Image
-						width={32}
-						height={32}
+				</div>
+				<div className="absolute top-0 right-0 flex flex-col gap-2 pr-6 pt-2 z-1">
+					<img
+						className="w-5 h-5 sm:w-8 sm:h-8"
+						src={'/assets/heart.svg'}
+						alt="heart-icon"
+					/>
+					<img
+						className="w-5 h-5 sm:w-8 sm:h-8"
 						src={'/assets/fill-eye.svg'}
-						alt="product-img"
+						alt="eye-icon"
 					/>
 				</div>
 			</div>
-			<h3 className="text-xl font-graphik font-bold pt-4">{title}</h3>
-			<div className="flex gap-2.5 items-center ">
-				<p className="text-base font-graphik mt-1 font-bold flex items-center">
-					₹{price}
-				</p>
-				<RatingStarComp rating={rating} />
-				<p className="text-sm font-graphik font-normal">({reviews})</p>
+			<div className="pt-4 flex flex-col ">
+				<h3 className="text-xs sm:text-lg flex  items-center font-graphik font-bold">
+					{title}
+				</h3>
+				<div className="flex gap-2.5 justify-between items-center">
+					<div>
+						<p className="text-xs sm:text-sm text-slate-500 font-graphik font-bold">
+							₹{price}
+						</p>
+					</div>
+					<div className="flex items-center justify-center gap-2">
+						<RatingStarComp rating={rating} />
+						<p className="text-xs text-slate-600 font-graphik font-normal">
+							({reviews})
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

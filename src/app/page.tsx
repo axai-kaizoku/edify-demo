@@ -9,7 +9,7 @@ import FAQSection from '@/components/faq-section';
 
 export default function Home() {
 	return (
-		<div className="flex flex-col gap-10">
+		<div className="flex flex-col w-full gap-10">
 			<HeroComponent />
 			<SecondSection />
 			<LogoComponent />

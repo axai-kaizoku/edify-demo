@@ -64,7 +64,9 @@ function MobileFooter() {
 							COMPANY
 						</h1>
 						<div className="gap-1 font-graphik font-normal leading-5 text-xs text-slate-500">
-							<h2>About US</h2>
+							<Link href="/about-us">
+								<h2>About US</h2>
+							</Link>
 							<h2>Blog</h2>
 							<h2>Service and Warranty</h2>
 						</div>

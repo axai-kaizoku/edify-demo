@@ -25,8 +25,9 @@ const tinos = Tinos({
 });
 
 export const metadata: Metadata = {
-	title: 'Edify Tech',
-	description: 'Top Quality Refurbished Laptops in India by Edify',
+	title: 'Buy Top-Quality Refurbished Laptops in India | Edify.club',
+	description:
+		'Discover premium refurbished laptops at Edify.club. Shop top brands like HP, Apple, Dell, and Lenovo with a 6-month warranty. Quality checked and affordable.',
 };
 
 export default function RootLayout({

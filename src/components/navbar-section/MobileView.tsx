@@ -7,7 +7,12 @@ export default function MobileView() {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
 	const genericHamburgerLine = `h-1 w-6 my-0.5 rounded-full bg-black transition ease transform duration-300`;
 
-	const menuItems = ['HOME', 'ABOUT', 'SERVICES', 'CONTACT', 'SHOP'];
+	const menuItems = [
+		{ name: 'HOME', path: '/' },
+		{ name: 'ABOUT', path: '/about-us' },
+		{ name: 'BLOG', path: 'https://edify.club/blog/' },
+		{ name: 'SHOP', path: 'https://shop.edify.club/' },
+	];
 
 	const renderHamburgerLine = (className: string) => (
 		<div className={`${genericHamburgerLine} ${className}`} />
@@ -65,7 +70,7 @@ export default function MobileView() {
 						<li
 							key={index}
 							className="font-graphik text-sm font-bold leading-5">
-							{item}
+							<Link href={item.path}>{item.name}</Link>
 						</li>
 					))}
 				</ul>

@@ -17,11 +17,18 @@ export default function WebView() {
 
 			{/* Web NavLinks */}
 			<ul className="hidden gap-12 font-semibold font-graphik lg:flex text-navlink">
-				<li className="text-black">HOME</li>
-				<li>SHOP</li>
-				<li>BUSINESS</li>
-				<li>BLOG</li>
-				<li>ABOUT US</li>
+				<Link href={'/'}>
+					<li className="text-black">HOME</li>
+				</Link>
+				<Link href={'https://shop.edify.club/'}>
+					<li>SHOP</li>
+				</Link>
+				<Link href={'https://edify.club/blog/'}>
+					<li>BLOG</li>
+				</Link>
+				<Link href="/about-us">
+					<li>ABOUT US</li>
+				</Link>
 			</ul>
 			{/* Web NavLinks */}
 			<div className="lg:flex gap-6 hidden">

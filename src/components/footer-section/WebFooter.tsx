@@ -33,7 +33,9 @@ function WebFooter() {
 						<div className="flex justify-around w-full">
 							<div className="flex flex-col gap-4">
 								<FooterHeading title="Company" />
-								<FooterLinks title="About us" />
+								<Link href="/about-us">
+									<FooterLinks title="About us" />
+								</Link>
 								<FooterLinks title="Blog" />
 								<FooterLinks title="B2B Order" />
 								<FooterLinks title="Service and Warranty" />

@@ -13,7 +13,7 @@ export default function LaptopCard({
 			<Image
 				src={src}
 				alt="laptop-2"
-				className="w-[120px] h-[100px] lg:w-[300px] lg:h-[240px]"
+				className="w-[120px] h-[100px] lg:w-[300px] lg:h-[180px]"
 				width={246}
 				height={240}
 			/>

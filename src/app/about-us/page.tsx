@@ -1,7 +1,14 @@
+import { Metadata } from 'next';
 import Image from 'next/image';
+import CustomButtom from '@/components/common/CustomButton';
 import AboutSection from './_components/AboutSection';
 import { AboutSectionInfo } from '@/constants';
-import CustomButtom from '@/components/common/CustomButton';
+
+export const metadata: Metadata = {
+	title: 'About Us | Edify.club',
+	description:
+		'Learn about Edify.club and our mission to provide high-quality, affordable refurbished laptops while preserving the environment and reducing e-waste.',
+};
 
 export default function AboutUs() {
 	return (

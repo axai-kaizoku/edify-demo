@@ -1,5 +1,11 @@
+import { Metadata } from 'next';
 import { privacyPolicyInfo } from '@/constants';
 import { PrivacyPolicyInfoProps } from '@/types';
+
+export const metadata: Metadata = {
+	title: 'Privacy Policy | Edify.club',
+	description: `Read Edify.club's privacy policy to understand how we protect your personal data and ensure your privacy while using our services.`,
+};
 
 export default function PrivacyPolicy() {
 	const privacyPolicy: PrivacyPolicyInfoProps = privacyPolicyInfo;
