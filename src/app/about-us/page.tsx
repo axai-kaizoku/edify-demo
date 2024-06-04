@@ -32,7 +32,7 @@ export default function AboutUs() {
 	return (
 		<div className="flex justify-center items-center w-full">
 			<div className="flex flex-col w-full justify-center items-center">
-				<div className="flex flex-col w-[87%] gap-10 sm:w-4/5">
+				<div className="flex flex-col w-[87%] pb-20 gap-10 sm:w-4/5">
 					<div className="flex flex-col lg:flex-row py-10 sm:py-20 justify-between items-center">
 						<div className="flex flex-col gap-4">
 							<p className="font-graphik text-lg sm:text-xl font-normal">
@@ -69,9 +69,9 @@ export default function AboutUs() {
 						))}
 					</div>
 				</div>
-				<div className="bg-center w-full h-[700px]  flex items-center bg-cover bg-[url('/assets/about-4.png')]">
-					<div className="w-2/4  "></div>
-					<div className="w-[40%] flex flex-col gap-4 bg-white  p-8">
+				<div className="bg-center w-full h-[700px] flex flex-col sm:flex-row items-center bg-cover bg-[url('/assets/about-4.png')]">
+					<div className="w-2/4 hidden sm:block "></div>
+					<div className="w-full sm:w-[40%] flex flex-col gap-4 bg-white  p-8">
 						<h3 className="font-manuale font-semibold text-2xl sm:text-4xl">
 							Join the Edify Movement
 						</h3>

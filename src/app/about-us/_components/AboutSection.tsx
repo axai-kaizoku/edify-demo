@@ -9,10 +9,12 @@ export default function AboutSection({
 }: AboutSectionProps) {
 	return (
 		<div
-			className={`w-full flex justify-between ${
-				isImageFirst ? 'flex-row-reverse' : 'flex-row'
+			className={`w-full flex justify-between  ${
+				isImageFirst
+					? 'sm:flex-row-reverse flex-col-reverse'
+					: 'sm:flex-row flex-col-reverse'
 			}`}>
-			<div className="flex flex-col w-[53%] justify-center gap-10">
+			<div className="flex flex-col w-full sm:w-[53%] justify-center gap-10">
 				<h3 className="font-manuale font-semibold text-2xl sm:text-4xl">
 					{title}
 				</h3>
@@ -24,7 +26,7 @@ export default function AboutSection({
 					</div>
 				))}
 			</div>
-			<div className="relative w-[480px] h-[480px]">
+			<div className="relative w-[280px] h-[280px]  sm:w-[480px] sm:h-[480px]">
 				<Image
 					src={src}
 					alt={title}

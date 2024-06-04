@@ -5,7 +5,7 @@ import FeatureCard from './FeatureCard';
 const MetricsSection = () => {
 	return (
 		<>
-			<div className="w-full flex justify-center items-center">
+			<div className="w-full flex border-b justify-center items-center">
 				<div className="w-[87%]  sm:w-4/5  flex flex-col">
 					<div className="py-16 flex flex-col lg:flex-row justify-between gap-8 sm:gap-16">
 						<div className="flex lg:flex-col flex-row items-center sm:items-start gap-8">

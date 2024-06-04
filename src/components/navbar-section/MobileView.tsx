@@ -60,7 +60,7 @@ export default function MobileView() {
 
 			{/* Mobile Menu */}
 			<div
-				className={`w-full bg-white absolute top-0 left-0 right-0 transition-all duration-700 ${
+				className={`w-full bg-white block lg:hidden absolute top-0 left-0 right-0 transition-all duration-700 ${
 					isOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
 				}`}>
 				<ul

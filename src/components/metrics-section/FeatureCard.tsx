@@ -13,7 +13,7 @@ const FeatureCard = ({ logo, title, description }: FeatureCardProps) => {
 					height={20}
 					className="text-slate-600"
 				/>
-				<h1 className="text-base sm:text-2xl font-medium text-slate-900">
+				<h1 className="text-base sm:text-2xl font-semibold font-manuale text-black">
 					{title}
 				</h1>
 			</div>

@@ -5,15 +5,17 @@ export default function WebView() {
 	return (
 		<div className="lg:flex justify-between w-full items-center hidden">
 			{/* Web LOGO */}
-			<Link href="/">
-				<Image
-					src="/assets/logo.webp"
-					alt="logo"
-					width={140}
-					height={60}
-					className="lg:block hidden"
-				/>
-			</Link>
+			<div className="lg:block hidden">
+				<Link href="/">
+					<Image
+						src="/assets/logo.webp"
+						alt="logo"
+						width={140}
+						height={60}
+						className="lg:block hidden"
+					/>
+				</Link>
+			</div>
 
 			{/* Web NavLinks */}
 			<ul className="hidden gap-12 font-semibold font-graphik lg:flex text-navlink">

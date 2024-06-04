@@ -11,16 +11,16 @@ function WebFooter() {
 		<>
 			<footer className="  items-center justify-center w-full pt-16 pb-12 hidden sm:flex">
 				<div className="w-[87%] sm:w-4/5  flex  flex-col gap-8">
-					<Link href="/">
-						<div>
+					<div>
+						<Link href="/">
 							<Image
 								src={'/assets/logo.webp'}
 								alt="edify"
 								width={132}
 								height={60}
 							/>
-						</div>
-					</Link>
+						</Link>
+					</div>
 					<div className="flex  gap-16">
 						<div className="flex w-48  text-wrap ">
 							{' '}

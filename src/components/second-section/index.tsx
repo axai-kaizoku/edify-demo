@@ -27,8 +27,7 @@ export default function SecondSection() {
 								href={
 									'https://shop.edify.club/products/refurbished-dell-latitude-5490-core-i7-8th-gen-8gb-256gb-ssd-windows-10-pro'
 								}
-								target="_blank"
-							>
+								target="_blank">
 								<p className="font-bold sm:text-base text-sm font-graphik border-b-2 border-b-navlink w-fit">
 									SHOP NOW
 								</p>
@@ -43,7 +42,7 @@ export default function SecondSection() {
 
 					{/* Static Image end */}
 
-					<div className="flex flex-col-reverse sm:flex-col gap-20 ">
+					<div className="flex flex-col-reverse sm:flex-col gap-20">
 						<DetailedLaptopCard
 							href="https://shop.edify.club/products/copy-of-refurbished-lenovo-l450-5th-gen-intel-core-i5-thin-light-hd-laptop-8-gb-ram-256-gb-ssd-12-5?_pos=11&_fid=3d667371b&_ss=c"
 							src="/assets/laptop-2.png"

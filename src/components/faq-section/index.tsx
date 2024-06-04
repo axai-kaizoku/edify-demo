@@ -5,7 +5,7 @@ import FAQCard from './FAQCard';
 export default function FAQSection() {
 	return (
 		<>
-			<div className="w-full flex justify-center py-1 sm:py-6 items-center">
+			<div className="w-full flex justify-center border-b pb-14 lg:pb-20 sm:pt-6 items-center">
 				<div className="w-[87%] sm:w-4/5  flex flex-col">
 					<CustomHeading
 						heading="Frequently Asked Questions"
