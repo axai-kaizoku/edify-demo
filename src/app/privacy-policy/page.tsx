@@ -1,10 +1,29 @@
 import { Metadata } from 'next';
 import { privacyPolicyInfo } from '@/constants';
 import { PrivacyPolicyInfoProps } from '@/types';
+import { siteConfigPrivacyPolicy } from '@/config/site';
 
 export const metadata: Metadata = {
-	title: 'Privacy Policy | Edify.club',
-	description: `Read Edify.club's privacy policy to understand how we protect your personal data and ensure your privacy while using our services.`,
+	title: siteConfigPrivacyPolicy.name,
+	description: siteConfigPrivacyPolicy.description,
+	openGraph: {
+		type: 'website',
+		locale: 'en_US',
+		url: siteConfigPrivacyPolicy.url,
+		title: siteConfigPrivacyPolicy.name,
+		description: siteConfigPrivacyPolicy.description,
+		siteName: siteConfigPrivacyPolicy.name,
+		images: '/logo.png',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: siteConfigPrivacyPolicy.name,
+		description: siteConfigPrivacyPolicy.description,
+		images: '/logo.png',
+	},
+	icons: {
+		icon: '/logo.png',
+	},
 };
 
 export default function PrivacyPolicy() {

@@ -69,7 +69,8 @@ export default function MobileView() {
 					{menuItems.map((item, index) => (
 						<li
 							key={index}
-							className="font-graphik text-sm font-bold leading-5">
+							className="font-graphik text-sm font-bold leading-5"
+							onClick={() => setIsOpen(!isOpen)}>
 							<Link href={item.path}>{item.name}</Link>
 						</li>
 					))}

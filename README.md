@@ -27,6 +27,8 @@
 - [x] Responsive - Logo section
 - [x] Responsive - FAQ section
 - [x] Add privacy policy page
-- [ ] Responsive - Best Sellers
-- [ ] Responsive - Edify Rockers
+- [x] Responsive - Best Sellers
+- [x] Responsive - Edify Rockers
 - [x] Responsive - Testimonials
+- [ ] About us - responsive
+- [ ] Metatags

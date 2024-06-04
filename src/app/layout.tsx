@@ -3,6 +3,7 @@ import { Inter, Manuale, Tinos } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/navbar-section';
 import FooterSection from '@/components/footer-section';
+import { siteConfig } from '@/config/site';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,9 +26,26 @@ const tinos = Tinos({
 });
 
 export const metadata: Metadata = {
-	title: 'Buy Top-Quality Refurbished Laptops in India | Edify.club',
-	description:
-		'Discover premium refurbished laptops at Edify.club. Shop top brands like HP, Apple, Dell, and Lenovo with a 6-month warranty. Quality checked and affordable.',
+	title: siteConfig.name,
+	description: siteConfig.description,
+	openGraph: {
+		type: 'website',
+		locale: 'en_US',
+		url: siteConfig.url,
+		title: siteConfig.name,
+		description: siteConfig.description,
+		siteName: siteConfig.name,
+		images: '/logo.png',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: siteConfig.name,
+		description: siteConfig.description,
+		images: '/logo.png',
+	},
+	icons: {
+		icon: '/logo.png',
+	},
 };
 
 export default function RootLayout({

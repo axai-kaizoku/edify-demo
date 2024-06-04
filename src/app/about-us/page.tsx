@@ -3,11 +3,29 @@ import Image from 'next/image';
 import CustomButtom from '@/components/common/CustomButton';
 import AboutSection from './_components/AboutSection';
 import { AboutSectionInfo } from '@/constants';
+import { siteConfigAbout } from '@/config/site';
 
 export const metadata: Metadata = {
-	title: 'About Us | Edify.club',
-	description:
-		'Learn about Edify.club and our mission to provide high-quality, affordable refurbished laptops while preserving the environment and reducing e-waste.',
+	title: siteConfigAbout.name,
+	description: siteConfigAbout.description,
+	openGraph: {
+		type: 'website',
+		locale: 'en_US',
+		url: siteConfigAbout.url,
+		title: siteConfigAbout.name,
+		description: siteConfigAbout.description,
+		siteName: siteConfigAbout.name,
+		images: '/logo.png',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: siteConfigAbout.name,
+		description: siteConfigAbout.description,
+		images: '/logo.png',
+	},
+	icons: {
+		icon: '/logo.png',
+	},
 };
 
 export default function AboutUs() {

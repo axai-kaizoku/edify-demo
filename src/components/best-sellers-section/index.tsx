@@ -46,9 +46,8 @@ export default function BestSellersSection() {
 								},
 							},
 						}}
-						hasSliderWrapper
-					>
-						{Array.from({ length: 8 }).map((_, i) => (
+						hasSliderWrapper>
+						{Array.from({ length: 4 }).map((_, i) => (
 							<SplideSlide key={i}>
 								<div className="w-72">
 									<BestSellerCard

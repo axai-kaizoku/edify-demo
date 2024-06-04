@@ -1,11 +1,29 @@
 import { Metadata } from 'next';
 import { TermsOfServicesProps } from '@/types';
 import { termsOfServicesInfo } from '@/constants';
+import { siteConfigTermsOfServices } from '@/config/site';
 
 export const metadata: Metadata = {
-	title: 'Terms of Service | Edify.club',
-	description:
-		'Review the terms of service for using Edify.club. Understand the conditions and user agreement that govern your access to our refurbished laptop platform.',
+	title: siteConfigTermsOfServices.name,
+	description: siteConfigTermsOfServices.description,
+	openGraph: {
+		type: 'website',
+		locale: 'en_US',
+		url: siteConfigTermsOfServices.url,
+		title: siteConfigTermsOfServices.name,
+		description: siteConfigTermsOfServices.description,
+		siteName: siteConfigTermsOfServices.name,
+		images: '/logo.png',
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: siteConfigTermsOfServices.name,
+		description: siteConfigTermsOfServices.description,
+		images: '/logo.png',
+	},
+	icons: {
+		icon: '/logo.png',
+	},
 };
 
 export default function TermsOfServices() {
