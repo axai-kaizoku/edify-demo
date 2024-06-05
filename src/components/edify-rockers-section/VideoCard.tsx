@@ -1,5 +1,4 @@
 import { EdifyRockeraCardProp } from '@/types';
-
 import React from 'react';
 
 const VideoCard = ({
@@ -9,7 +8,7 @@ const VideoCard = ({
 }: EdifyRockeraCardProp) => {
 	return (
 		<div className="flex items-center justify-center flex-col ">
-			<div className="">
+			<div>
 				<video
 					width="320"
 					height="240"
@@ -18,16 +17,22 @@ const VideoCard = ({
 					muted
 					loop
 					preload="none"
-					className="rounded-lg  "
+					className="rounded-lg"
 				>
 					<source
 						src={videoLink}
 						type="video/mp4"
 					/>
+					<track
+						src="captions_en.vtt"
+						kind="captions"
+						srcLang="en"
+						label="english_captions"
+					/>
 					Your browser does not support the video tag.
 				</video>
 			</div>
-			<div className="p-8  flex-col gap-4 hidden">
+			<div className="p-8 flex-col gap-4 hidden">
 				<h1 className="text-slate-900 text-3xl font-semibold">{heading}</h1>
 				<p className="text-slate-900 text-xl font-normal">{subHeading}</p>
 			</div>

@@ -36,13 +36,15 @@ export const metadata: Metadata = {
 		title: siteConfig.name,
 		description: siteConfig.description,
 		siteName: siteConfig.name,
-		images: '/logo.png',
+		images:
+			'https://github-production-user-asset-6210df.s3.amazonaws.com/126662285/254238894-c4a1b2dc-7166-4529-bdf[…]=host&actor_id=0&key_id=0&repo_id=75189195',
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: siteConfig.name,
 		description: siteConfig.description,
-		images: '/logo.png',
+		images:
+			'https://github-production-user-asset-6210df.s3.amazonaws.com/126662285/254238894-c4a1b2dc-7166-4529-bdf[…]=host&actor_id=0&key_id=0&repo_id=75189195',
 	},
 	icons: {
 		icon: '/logo.png',
@@ -57,7 +59,8 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${inter.className} ${manuale.variable} ${tinos.variable}`}>
+				className={`${inter.className} ${manuale.variable} ${tinos.variable}`}
+			>
 				<Navbar />
 				<main className="pt-10 sm:pt-20">{children}</main>
 				<FooterSection />

@@ -5,7 +5,10 @@ import React from 'react';
 
 function SocialElements({ src, href, alt }: SocialIconsProps) {
 	return (
-		<Link href={href}>
+		<Link
+			href={href}
+			aria-label="Read more "
+		>
 			<Image
 				src={src}
 				alt={alt}

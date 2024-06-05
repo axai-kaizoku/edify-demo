@@ -9,9 +9,9 @@ const HeroComponent = () => {
 					<h1 className="text-3xl sm:text-6xl font-semibold leading-tight sm:leading-[72px] text-slate-900 font-manuale">
 						Edify Refurbished Laptops
 					</h1>
-					<h3 className="font-normal text-lg sm:text-2xl text-slate-600 font-graphik">
+					<p className="font-normal text-lg sm:text-2xl text-slate-600 font-graphik">
 						Unbeatable Value. Unmatched Performance.
-					</h3>
+					</p>
 				</div>
 				<div className="pt-4">
 					<CustomButton title="EXPLORE" />
@@ -19,11 +19,13 @@ const HeroComponent = () => {
 			</div>
 			<div className="w-full lg:w-auto flex justify-center lg:justify-end">
 				<Image
-					src="/assets/hero.png"
+					src="/assets/hero.webp"
 					alt="Hero-profile"
 					width={500}
 					height={500}
+					sizes="(min-width: 640px) 100vw, (min-width: 768px) 50vw,33vw"
 					className="max-w-full h-auto"
+					priority={true}
 				/>
 			</div>
 		</div>

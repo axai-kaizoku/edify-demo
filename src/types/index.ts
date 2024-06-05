@@ -61,13 +61,6 @@ export type FooterProps = {
 	href?: string;
 };
 
-export type LogoComponentCardProps = {
-	src: string;
-	alt: string;
-	width: number;
-	height: number;
-};
-
 export type PrivacyPolicyInfoProps = {
 	title: string;
 	desc: string[];
@@ -100,4 +93,11 @@ export type AboutSectionProps = {
 	title: string;
 	description: string[];
 	isImageFirst?: boolean;
+};
+
+export type LogoComponentCardProps = {
+	src: string;
+	alt: string;
+	width: number;
+	height: number;
 };

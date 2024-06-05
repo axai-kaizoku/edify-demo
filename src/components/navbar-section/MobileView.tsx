@@ -29,7 +29,9 @@ export default function MobileView() {
 	return (
 		<>
 			{/* Mobile LOGO */}
-			<Link href="/">
+			<Link
+				href="/"
+				aria-label="Read more ">
 				<Image
 					src="/assets/logo.webp"
 					alt="logo"
@@ -41,20 +43,14 @@ export default function MobileView() {
 
 			{/* Mobile Hamburger icon (menu icon) */}
 			<div
-				className="lg:hidden flex flex-col absolute pr-2.5 right-0 h-6 w-6 rounded justify-center items-center group"
+				className="lg:hidden flex flex-col absolute pr-2.5 right-0 h-6 w-6 rounded justify-center items-center "
 				onClick={() => setIsOpen(!isOpen)}>
 				{renderHamburgerLine(
-					isOpen
-						? 'rotate-45 translate-y-2.5 opacity-50 group-hover:opacity-100'
-						: 'opacity-100 group-hover:opacity-100',
+					isOpen ? 'rotate-45 translate-y-2.5  ' : 'opacity-100 ',
 				)}
+				{renderHamburgerLine(isOpen ? 'opacity-0' : 'opacity-100 ')}
 				{renderHamburgerLine(
-					isOpen ? 'opacity-0' : 'opacity-100 group-hover:opacity-100',
-				)}
-				{renderHamburgerLine(
-					isOpen
-						? '-rotate-45 -translate-y-1.5 opacity-50 group-hover:opacity-100'
-						: 'opacity-100 group-hover:opacity-100',
+					isOpen ? '-rotate-45 -translate-y-1.5  ' : 'opacity-100 ',
 				)}
 			</div>
 
@@ -69,9 +65,14 @@ export default function MobileView() {
 					{menuItems.map((item, index) => (
 						<li
 							key={index}
-							className="font-graphik text-sm font-bold leading-5"
-							onClick={() => setIsOpen(!isOpen)}>
-							<Link href={item.path}>{item.name}</Link>
+							className="font-graphik text-sm font-bold leading-5">
+							<Link
+								href={item.path}
+								aria-label="nav-links"
+								onClick={() => setIsOpen(!isOpen)}
+								className={isOpen ? 'block' : 'hidden'}>
+								{item.name}
+							</Link>
 						</li>
 					))}
 				</ul>

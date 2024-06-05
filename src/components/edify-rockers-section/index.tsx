@@ -10,7 +10,7 @@ export default function EdifyRockersSection() {
 			<div className="w-[87%] sm:w-4/5 flex flex-col">
 				<CustomHeading
 					heading="Edify Rockers"
-					styles="py-16"
+					styles="py-4 md:py-10 lg:py-16"
 				/>
 				<div className="py-10">
 					<Splide
@@ -44,6 +44,8 @@ export default function EdifyRockersSection() {
 							'/assets/videos/video-1.mp4',
 							'/assets/videos/video-2.mp4',
 							'/assets/videos/video-3.mp4',
+							'/assets/videos/video-4.mp4',
+							'/assets/videos/video-4.mp4',
 							'/assets/videos/video-4.mp4',
 						].map((src, i) => (
 							<SplideSlide key={i}>

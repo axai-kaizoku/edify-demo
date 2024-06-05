@@ -8,7 +8,10 @@ function MobileFooter() {
 	return (
 		<footer className="p-4 block sm:hidden">
 			<div>
-				<Link href="/">
+				<Link
+					href="/"
+					aria-label="Read more "
+				>
 					<Image
 						src="/assets/logo.webp"
 						alt="edify"
@@ -64,7 +67,10 @@ function MobileFooter() {
 							COMPANY
 						</h1>
 						<div className="gap-1 font-graphik font-normal leading-5 text-xs text-slate-500">
-							<Link href="/about-us">
+							<Link
+								href="/about-us"
+								aria-label="Read more "
+							>
 								<h2>About US</h2>
 							</Link>
 							<h2>Blog</h2>
@@ -76,11 +82,17 @@ function MobileFooter() {
 							LEGAL
 						</h1>
 						<div className="gap-1 font-graphik font-normal leading-5 text-xs text-slate-500">
-							<Link href="privacy-policy">
+							<Link
+								href="privacy-policy"
+								aria-label="Read more "
+							>
 								<h2>Privacy Policy</h2>
 							</Link>
 							<h2>Customer Service</h2>
-							<Link href="/terms-of-services">
+							<Link
+								href="/terms-of-services"
+								aria-label="Read more "
+							>
 								<h2>Terms and Conditions</h2>
 							</Link>
 						</div>

@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -6,7 +7,9 @@ export default function WebView() {
 		<div className="lg:flex justify-between w-full items-center hidden">
 			{/* Web LOGO */}
 			<div className="lg:block hidden">
-				<Link href="/">
+				<Link
+					href="/"
+					aria-label="Link">
 					<Image
 						src="/assets/logo.webp"
 						alt="logo"
@@ -18,19 +21,38 @@ export default function WebView() {
 			</div>
 
 			{/* Web NavLinks */}
-			<ul className="hidden gap-12 font-semibold font-graphik lg:flex text-navlink">
-				<Link href={'/'}>
-					<li className="text-black">HOME</li>
-				</Link>
-				<Link href={'https://shop.edify.club/'}>
-					<li>SHOP</li>
-				</Link>
-				<Link href={'https://edify.club/blog/'}>
-					<li>BLOG</li>
-				</Link>
-				<Link href="/about-us">
-					<li>ABOUT US</li>
-				</Link>
+			<ul className="hidden gap-12 font-semibold font-graphik lg:flex text-slate-500">
+				<li className="text-black">
+					<Link
+						href={'/'}
+						aria-label="Read more ">
+						HOME
+					</Link>
+				</li>
+
+				<li>
+					<Link
+						href={'https://shop.edify.club/'}
+						aria-label="Read more">
+						SHOP
+					</Link>
+				</li>
+
+				<li>
+					<Link
+						href={'https://edify.club/blog/'}
+						aria-label="Read more ">
+						BLOG
+					</Link>
+				</li>
+
+				<li>
+					<Link
+						href="/about-us"
+						aria-label="Read more ">
+						ABOUT US
+					</Link>
+				</li>
 			</ul>
 			{/* Web NavLinks */}
 			<div className="lg:flex gap-6 hidden">

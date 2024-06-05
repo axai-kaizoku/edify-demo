@@ -1,7 +1,7 @@
 import React from 'react';
 import FooterHeading from './FooterHeading';
 import FooterLinks from './FooterLinks';
-import SocialElemets from './SocialElemets';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import SocialElements from './SocialElemets';
@@ -12,7 +12,10 @@ function WebFooter() {
 			<footer className="  items-center justify-center w-full pt-16 pb-12 hidden sm:flex">
 				<div className="w-[87%] sm:w-4/5  flex  flex-col gap-8">
 					<div>
-						<Link href="/">
+						<Link
+							href="/"
+							aria-label="Read more"
+						>
 							<Image
 								src={'/assets/logo.webp'}
 								alt="edify"
@@ -33,7 +36,10 @@ function WebFooter() {
 						<div className="flex justify-around w-full">
 							<div className="flex flex-col gap-4">
 								<FooterHeading title="Company" />
-								<Link href="/about-us">
+								<Link
+									href="/about-us"
+									aria-label="Read more about us"
+								>
 									<FooterLinks title="About us" />
 								</Link>
 								<FooterLinks title="Blog" />
@@ -42,10 +48,16 @@ function WebFooter() {
 							</div>
 							<div className="flex flex-col gap-4">
 								<FooterHeading title="Legal" />
-								<Link href="/terms-of-services">
+								<Link
+									href="/terms-of-services"
+									aria-label="Read more about TOS"
+								>
 									<FooterLinks title="Terms and Conditions" />
 								</Link>
-								<Link href="/privacy-policy">
+								<Link
+									href="/privacy-policy"
+									aria-label="Read more about Policy"
+								>
 									<FooterLinks title="Privacy Policy" />
 								</Link>
 							</div>

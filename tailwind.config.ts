@@ -24,7 +24,6 @@ const config = {
 				tinos: ['var(--font-tinos)'],
 			},
 			colors: {
-				'item-desc': '#8E969E',
 				navlink: '#A6A6A6',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

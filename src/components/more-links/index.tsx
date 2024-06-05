@@ -32,10 +32,10 @@ export default function MoreLinks() {
 
 	useEffect(() => {
 		const handleResize = () => {
-			setIsMobileOrTablet(window.innerWidth <= 1024); // 1024px for tablet and mobile
+			setIsMobileOrTablet(window.innerWidth <= 1024);
 		};
 
-		handleResize(); // Initial check
+		handleResize();
 		window.addEventListener('resize', handleResize);
 
 		return () => {
@@ -71,16 +71,16 @@ export default function MoreLinks() {
 						{data?.map((res: any, index: number) => (
 							<div
 								key={index}
-								className="bg-white p-4"
+								className=""
 							>
-								<h1 className="text-lg font-bold font-graphik mb-2">
+								<h1 className="text-lg font-semibold font-graphik mb-2 leading-7">
 									{res.categoryTitle}
 								</h1>
 								<ul>
 									{res.pages.map((page: any, pageIndex: number) => (
 										<li
 											key={pageIndex}
-											className="text-sm"
+											className="text-xs text-gray-400 font-graphik font-medium leading-5"
 										>
 											<a href={page.url}>
 												{page.first_title_name.text} {page.last_title_name.text}

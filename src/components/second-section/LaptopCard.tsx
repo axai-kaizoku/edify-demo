@@ -9,13 +9,13 @@ export default function LaptopCard({
 	description,
 }: LaptopCardProps) {
 	return (
-		<div className="flex flex-col  md:items-baseline items-center lg:items-center justify-start lg:justify-center w-full max-w-xs md:max-w-none">
+		<div className="flex flex-col md:items-baseline items-center lg:items-center justify-start lg:justify-center w-full max-w-xs md:max-w-none">
 			<Image
 				src={src}
-				alt="laptop-2"
-				className="w-[120px] h-[100px] lg:w-[300px] lg:h-[180px]"
-				width={246}
-				height={240}
+				alt={title}
+				className="w-full h-auto max-w-[300px]"
+				width={668}
+				height={350}
 			/>
 			<div className="flex flex-col gap-3 items-center md:items-start text-center md:text-left">
 				<h3 className="text-base sm:text-2xl font-manuale font-semibold">

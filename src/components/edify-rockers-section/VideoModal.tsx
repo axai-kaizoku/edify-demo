@@ -11,7 +11,7 @@ import VideoCard from './VideoCard';
 export default function VideoModal({ src }: { src: string }) {
 	return (
 		<Dialog>
-			<DialogTrigger>
+			<DialogTrigger title="video-button">
 				<VideoCard
 					videoLink={src}
 					heading={'Layers'}
