@@ -47,16 +47,17 @@ export default function AboutUs() {
 							alt="About Us"
 							width={480}
 							height={350}
+							className="w-52 h-auto sm:w-auto sm:h-auto"
 						/>
 					</div>
-					<div className="flex flex-col py-3 sm:py-5 gap-10">
-						<p className="font-graphik font-normal text-lg sm:text-xl">
-							OUR PASSION
-						</p>
-						<h3 className="text-4xl font-manuale font-semibold">
-							Making the world a better place!
-						</h3>
-					</div>
+					<Image
+						src="/assets/about-impact.svg"
+						alt="impact-about"
+						width={1200}
+						height={613}
+						className="w-full h-auto sm:w-auto sm:h-auto"
+					/>
+
 					<div className="flex flex-col gap-8">
 						{AboutSectionInfo.map((item, i) => (
 							<AboutSection
@@ -69,8 +70,8 @@ export default function AboutUs() {
 						))}
 					</div>
 				</div>
-				<div className="bg-center w-full h-[700px] flex flex-col sm:flex-row items-center bg-cover bg-[url('/assets/about-4.png')]">
-					<div className="w-2/4 hidden sm:block "></div>
+				<div className="bg-center w-full h-[700px] flex flex-col-reverse justify-center sm:flex-row items-center bg-cover bg-[url('/assets/about-4.png')]">
+					<div className="w-2/4 lg:block hidden"></div>
 					<div className="w-full sm:w-[40%] flex flex-col gap-4 bg-white  p-8">
 						<h3 className="font-manuale font-semibold text-2xl sm:text-4xl">
 							Join the Edify Movement

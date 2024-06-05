@@ -9,19 +9,19 @@ export default function AboutSection({
 }: AboutSectionProps) {
 	return (
 		<div
-			className={`w-full flex justify-between  ${
+			className={`w-full flex justify-center items-center lg:justify-between  ${
 				isImageFirst
-					? 'sm:flex-row-reverse flex-col-reverse'
-					: 'sm:flex-row flex-col-reverse'
+					? 'lg:flex-row-reverse flex-col-reverse'
+					: 'lg:flex-row flex-col-reverse'
 			}`}>
-			<div className="flex flex-col w-full sm:w-[53%] justify-center gap-10">
-				<h3 className="font-manuale font-semibold text-2xl sm:text-4xl">
+			<div className="flex flex-col w-full lg:w-[53%] justify-center ">
+				<h3 className="font-manuale font-semibold text-2xl sm:text-4xl py-3 sm:py-5">
 					{title}
 				</h3>
 				{description.map((desc, i) => (
 					<div
 						key={i}
-						className="text-slate-500  text-lg sm:text-xl ">
+						className="text-slate-500 text-base py-2 sm:py-4 sm:text-xl ">
 						{desc}
 					</div>
 				))}

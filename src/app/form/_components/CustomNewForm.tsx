@@ -17,7 +17,7 @@ export default function CustomNewForm() {
 		e.preventDefault();
 		const name = e.target[0].value;
 		const phone = e.target[1].value;
-		const budget = e.target[2].value;
+		const budget = e.target['budget'].value;
 
 		console.log('shop form', name, phone, budget);
 	}
@@ -63,7 +63,11 @@ export default function CustomNewForm() {
 										value="15k-20k"
 										className="sr-only"
 									/>
-									<label htmlFor="15k-20k">15k-20k</label>
+									<Label
+										htmlFor="15k-20k"
+										className="border p-2 rounded-md">
+										15k-20k
+									</Label>
 									<input
 										type="radio"
 										name="budget"
@@ -71,7 +75,11 @@ export default function CustomNewForm() {
 										value="20k-25k"
 										className="sr-only"
 									/>
-									<label htmlFor="15k-20k">20k-25k</label>
+									<Label
+										htmlFor="20k-25k"
+										className="border p-2 rounded-md">
+										20k-25k
+									</Label>
 									<input
 										type="radio"
 										name="budget"
@@ -79,7 +87,11 @@ export default function CustomNewForm() {
 										value="25k-30k"
 										className="sr-only"
 									/>
-									<label htmlFor="15k-20k">25k-30k</label>
+									<Label
+										htmlFor="25k-30k"
+										className="border p-2 rounded-md">
+										25k-30k
+									</Label>
 								</div>
 							</div>
 						</CardContent>
@@ -115,10 +127,45 @@ export default function CustomNewForm() {
 							/>
 						</div>
 						<div className="space-y-1">
-							<Label htmlFor="username">Budget</Label>
-							<Input type="radio" />
-							<Input type="radio" />
-							<Input type="radio" />
+							<Label htmlFor="budget">Budget</Label>
+							<div className="flex gap-8 py-4">
+								<input
+									type="radio"
+									name="budget"
+									id="15k-20k"
+									value="15k-20k"
+									className="sr-only"
+								/>
+								<Label
+									htmlFor="15k-20k"
+									className="border p-2 rounded-md">
+									15k-20k
+								</Label>
+								<input
+									type="radio"
+									name="budget"
+									id="20k-25k"
+									value="20k-25k"
+									className="sr-only"
+								/>
+								<Label
+									htmlFor="20k-25k"
+									className="border p-2 rounded-md">
+									20k-25k
+								</Label>
+								<input
+									type="radio"
+									name="budget"
+									id="25k-30k"
+									value="25k-30k"
+									className="sr-only"
+								/>
+								<Label
+									htmlFor="25k-30k"
+									className="border p-2 rounded-md">
+									25k-30k
+								</Label>
+							</div>
 						</div>
 					</CardContent>
 					<CardFooter>
