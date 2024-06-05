@@ -1,3 +1,4 @@
+'use client';
 import { Button } from '@/components/ui/button';
 import {
 	Card,
@@ -11,7 +12,15 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
-export default function TabsDemo() {
+export default function CustomNewForm() {
+	function handleShop(e: any) {
+		e.preventDefault();
+		const name = e.target[0].value;
+		const phone = e.target[1].value;
+		const budget = e.target[2].value;
+
+		console.log('shop form', name, phone, budget);
+	}
 	return (
 		<Tabs
 			defaultValue="account"
@@ -25,41 +34,60 @@ export default function TabsDemo() {
 				<TabsTrigger value="affiliate">Affiliate</TabsTrigger>
 			</TabsList>
 			<TabsContent value="shop">
-				<Card>
-					<CardHeader>
-						<CardTitle>Shop</CardTitle>
-						<CardDescription>
-							{`
+				<form onSubmit={handleShop}>
+					<Card>
+						<CardHeader>
+							<CardTitle>Shop</CardTitle>
+							<CardDescription>
+								{`
 							Make changes to your account here. Click save when you're done.
 							`}
-						</CardDescription>
-					</CardHeader>
-					<CardContent className="space-y-2">
-						<div className="space-y-1">
-							<Label htmlFor="name">Name</Label>
-							<Input
-								id="name"
-								defaultValue="Pedro Duarte"
-							/>
-						</div>
-						<div className="space-y-1">
-							<Label htmlFor="username">Username</Label>
-							<Input
-								id="username"
-								defaultValue="@peduarte"
-							/>
-						</div>
-						<div className="space-y-1">
-							<Label htmlFor="username">Budget</Label>
-							<Input type="radio" />
-							<Input type="radio" />
-							<Input type="radio" />
-						</div>
-					</CardContent>
-					<CardFooter>
-						<Button>Shop Now</Button>
-					</CardFooter>
-				</Card>
+							</CardDescription>
+						</CardHeader>
+						<CardContent className="space-y-2">
+							<div className="space-y-1">
+								<Label htmlFor="name">Full Name</Label>
+								<Input id="name" />
+							</div>
+							<div className="space-y-1">
+								<Label htmlFor="username">Phone Number</Label>
+								<Input id="username" />
+							</div>
+							<div className="space-y-1">
+								<Label htmlFor="budget">Budget</Label>
+								<div className="flex gap-8 py-4">
+									<input
+										type="radio"
+										name="budget"
+										id="15k-20k"
+										value="15k-20k"
+										className="sr-only"
+									/>
+									<label htmlFor="15k-20k">15k-20k</label>
+									<input
+										type="radio"
+										name="budget"
+										id="20k-25k"
+										value="20k-25k"
+										className="sr-only"
+									/>
+									<label htmlFor="15k-20k">20k-25k</label>
+									<input
+										type="radio"
+										name="budget"
+										id="25k-30k"
+										value="25k-30k"
+										className="sr-only"
+									/>
+									<label htmlFor="15k-20k">25k-30k</label>
+								</div>
+							</div>
+						</CardContent>
+						<CardFooter>
+							<Button>Shop Now</Button>
+						</CardFooter>
+					</Card>
+				</form>
 			</TabsContent>
 			<TabsContent value="bulk-order">
 				<Card>
@@ -94,7 +122,7 @@ export default function TabsDemo() {
 						</div>
 					</CardContent>
 					<CardFooter>
-						<Button>Enquire Now</Button>
+						<Button type="submit">Enquire Now</Button>
 					</CardFooter>
 				</Card>
 			</TabsContent>
