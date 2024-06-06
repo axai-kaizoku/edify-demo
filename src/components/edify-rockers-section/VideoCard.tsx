@@ -7,10 +7,10 @@ const VideoCard = ({
 	subHeading,
 }: EdifyRockeraCardProp) => {
 	return (
-		<div className="flex items-center justify-center flex-col ">
+		<div className="flex items-center justify-center flex-col w-full">
 			<div>
 				<video
-					width="320"
+					width="100%"
 					height="240"
 					controls
 					autoPlay

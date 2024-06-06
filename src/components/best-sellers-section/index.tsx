@@ -46,10 +46,11 @@ export default function BestSellersSection() {
 								},
 							},
 						}}
-						hasSliderWrapper>
+						hasSliderWrapper
+					>
 						{Array.from({ length: 4 }).map((_, i) => (
 							<SplideSlide key={i}>
-								<div className="w-72">
+								<div className="w-full">
 									<BestSellerCard
 										title="Lorem Ipsum"
 										src="/assets/laptop-2.png"

@@ -36,15 +36,13 @@ export const metadata: Metadata = {
 		title: siteConfig.name,
 		description: siteConfig.description,
 		siteName: siteConfig.name,
-		images:
-			'https://github-production-user-asset-6210df.s3.amazonaws.com/126662285/254238894-c4a1b2dc-7166-4529-bdf[…]=host&actor_id=0&key_id=0&repo_id=75189195',
+		images: 'https://utfs.io/f/119f891a-3a8a-48fa-9be9-ab9366e23355-xuif36.jpg',
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: siteConfig.name,
 		description: siteConfig.description,
-		images:
-			'https://github-production-user-asset-6210df.s3.amazonaws.com/126662285/254238894-c4a1b2dc-7166-4529-bdf[…]=host&actor_id=0&key_id=0&repo_id=75189195',
+		images: 'https://utfs.io/f/119f891a-3a8a-48fa-9be9-ab9366e23355-xuif36.jpg',
 	},
 	icons: {
 		icon: '/logo.png',

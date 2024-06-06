@@ -15,13 +15,13 @@ export const metadata: Metadata = {
 		title: siteConfigAbout.name,
 		description: siteConfigAbout.description,
 		siteName: siteConfigAbout.name,
-		images: '/logo.png',
+		images: 'https://utfs.io/f/eec40c30-41d1-4ace-b3ed-1c9bf5afe3b0-xuif3b.jpg',
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: siteConfigAbout.name,
 		description: siteConfigAbout.description,
-		images: '/logo.png',
+		images: 'https://utfs.io/f/eec40c30-41d1-4ace-b3ed-1c9bf5afe3b0-xuif3b.jpg',
 	},
 	icons: {
 		icon: '/logo.png',

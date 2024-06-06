@@ -30,5 +30,7 @@
 - [x] Responsive - Best Sellers
 - [x] Responsive - Edify Rockers
 - [x] Responsive - Testimonials
-- [ ] About us - responsive
-- [ ] Metatags
+- [x] About us - responsive
+- [x] Metatags
+- [x] Website Optimization
+- [x] Image Optimization

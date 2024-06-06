@@ -8,6 +8,7 @@ function SocialElements({ src, href, alt }: SocialIconsProps) {
 		<Link
 			href={href}
 			aria-label="Read more "
+			target="_blank"
 		>
 			<Image
 				src={src}
