@@ -9,8 +9,8 @@ export default function DetailedLaptopCard({
 	href,
 }: LaptopCardProps) {
 	return (
-		<div className="flex flex-row md:flex-row lg:-mt-6 md:gap-8 justify-between">
-			<div className="flex flex-col w-[60%] gap-2 sm:gap-3 justify-start sm:justify-end">
+		<div className="flex flex-row md:flex-row md:gap-8 justify-between">
+			<div className="flex flex-col w-[60%] gap-2 sm:gap-5 justify-start sm:justify-end">
 				<h3 className="text-base sm:text-2xl font-manuale font-semibold">
 					{title}
 				</h3>
@@ -21,18 +21,18 @@ export default function DetailedLaptopCard({
 					href={href}
 					target="_blank"
 				>
-					<p className="text-xs sm:text-base font-bold font-graphik border-b-2 border-b-navlink w-fit">
+					<p className="text-xs sm:text-base font-bold font-graphik border-b-2 border-b-navlink  flex w-fit items-center">
 						SHOP NOW
 					</p>
 				</Link>
 			</div>
-			<div className="flex justify-center md:justify-end">
+			<div className="">
 				<Image
 					src={src}
 					alt={title}
+					className="h-[145px] w-64 object-cover"
 					width={668}
-					height={373}
-					className="w-full h-auto max-w-[300px]"
+					height={350}
 				/>
 			</div>
 		</div>

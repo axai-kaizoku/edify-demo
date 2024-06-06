@@ -13,7 +13,7 @@ export default function LaptopCard({
 			<Image
 				src={src}
 				alt={title}
-				className="w-full h-auto max-w-[300px]"
+				className="lg:h-[145px] h-[100px] md:h-[150px]  md:w-52 w-36 lg:w-52 object-cover lg:object-cover md:object-contain"
 				width={668}
 				height={350}
 			/>

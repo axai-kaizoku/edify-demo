@@ -36,7 +36,7 @@ export default function AboutUs() {
 					<div className="flex flex-col lg:flex-row py-10 lg:py-20 justify-between items-center">
 						<div className="flex flex-col gap-4">
 							<p className="font-graphik text-lg sm:text-xl font-normal">
-								One Refurbished Laptop At a Time
+								One Refurbished Laptop at a Time
 							</p>
 							<h3 className="font-manuale font-semibold text-2xl sm:text-5xl">
 								PROMOTING CIRCULAR <br className="lg:block hidden" /> ECONOMY
