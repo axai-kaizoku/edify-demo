@@ -70,6 +70,7 @@ export default function AboutUs() {
 						))}
 					</div>
 				</div>
+
 				<div className="bg-center w-full h-[700px] flex flex-col-reverse justify-center sm:flex-row items-center bg-cover bg-[url('/assets/about-4.png')]">
 					<div className="w-2/4 lg:block hidden"></div>
 					<div className="w-full sm:w-[40%] flex flex-col gap-4 bg-white  p-8">

@@ -19,7 +19,7 @@ export default function BestSellerCard({
 						className="w-full h-full object-cover  rounded"
 					/>
 				</div>
-				<div className="absolute top-0 right-0 flex flex-col gap-2 pr-6 pt-2 z-1">
+				<div className="absolute top-0 right-0 opacity-0 flex flex-col gap-2 pr-6 pt-2 z-1">
 					<img
 						className="w-5 h-5 sm:w-8 sm:h-8"
 						src={'/assets/heart.svg'}
