@@ -6,6 +6,7 @@ import EdifyRockersSection from '@/components/edify-rockers-section';
 import TestiMonialsSection from '@/components/testimonials-section';
 import FAQSection from '@/components/faq-section';
 import ImageSlider from '@/components/ui-design';
+import MoreLinks from '@/components/more-links';
 
 export default function Home() {
 	return (
@@ -18,6 +19,7 @@ export default function Home() {
 			<TestiMonialsSection />
 			<FAQSection />
 			<ImageSlider />
+			<MoreLinks />
 		</div>
 	);
 }

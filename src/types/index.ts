@@ -101,3 +101,52 @@ export type LogoComponentCardProps = {
 	width: number;
 	height: number;
 };
+
+type Title = {
+	text: string;
+	bgColour?: string;
+};
+
+type SubHeading = string[];
+
+type Product = {
+	alt_tag: string;
+	brief: string;
+	image: string;
+	mrp: number;
+	product_url: string;
+	selling_price: number;
+	title: string;
+};
+
+export type FooterPage = {
+	first_title_name: {
+		text: string;
+	};
+	last_title_name: {
+		text: string;
+	};
+	slug: string;
+};
+
+export type FooterCategory = {
+	categoryTitle: string;
+	categoryValue: string;
+	pages: FooterPage[];
+	sortOrder: number;
+};
+
+export type SEOPageData = {
+	first_title_name: Title;
+	last_title_name: Title;
+	subHeading: SubHeading;
+	value_proposition_title: string;
+	value_proposition: string | null;
+	meta_title: string;
+	meta_description: string;
+	slug: string;
+	products: Product[];
+	Ogtags: string;
+	footer: FooterPage[];
+	footerByCategory: FooterCategory[];
+};
