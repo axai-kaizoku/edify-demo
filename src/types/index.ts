@@ -109,7 +109,7 @@ type Title = {
 
 type SubHeading = string[];
 
-type Product = {
+export type Product = {
 	alt_tag: string;
 	brief: string;
 	image: string;

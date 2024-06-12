@@ -5,8 +5,8 @@ import { FooterCategory, FooterPage } from '@/types';
 
 export default function MoreLinks({ slug }: { slug?: string }) {
 	const [data, setData] = useState<FooterCategory[]>([]);
-	const [showLinks, setShowLinks] = useState(false);
-	const [isMobileOrTablet, setIsMobileOrTablet] = useState(false);
+	const [showLinks, setShowLinks] = useState<boolean>(false);
+	const [isMobileOrTablet, setIsMobileOrTablet] = useState<boolean>(false);
 
 	useEffect(() => {
 		async function fetchData() {
@@ -45,7 +45,7 @@ export default function MoreLinks({ slug }: { slug?: string }) {
 				</button>
 			)}
 			<div
-				className={`links-container w-full flex justify-center items-center transition-all  duration-500 ${
+				className={`links-container w-full flex border-b justify-center items-center transition-all  duration-500 ${
 					!isMobileOrTablet || showLinks
 						? 'h-fit  opacity-100'
 						: 'max-h-0 opacity-0 overflow-hidden'

@@ -6,7 +6,7 @@ export default function ImageSlider() {
 	return (
 		<>
 			<div className="w-full flex justify-center items-center">
-				<div className="w-4/5">
+				<div className="w-[87%] sm:w-4/5 ">
 					<ReactCompareSlider
 						itemOne={
 							<ReactCompareSliderImage

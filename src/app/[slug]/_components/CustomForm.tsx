@@ -3,9 +3,19 @@ import { useState } from 'react';
 
 export default function CustomForm() {
 	const [selectedOption, setSelectedOption] = useState<string>('');
+	const [phone, setPhone] = useState<string>('');
+	const [isTyping, setIsTyping] = useState<boolean>(false);
+	const [formErrors, setFormErrors] = useState<string[]>([]);
 
 	const handleRadioChange = (e: any) => {
 		setSelectedOption(e.target.value);
+	};
+
+	const handlePhoneChange = (e: any) => {
+		const value = e.target.value;
+		if (/^\d{0,10}$/.test(value)) {
+			setPhone(value);
+		}
 	};
 
 	const handleSubmit = (e: any) => {
@@ -15,20 +25,54 @@ export default function CustomForm() {
 		const phone = e.target[2].value;
 		const laptops = selectedOption;
 
-		console.log({
-			name,
-			city,
-			phone,
-			laptops,
-		});
+		const errors: string[] = [];
+		if (!name.trim()) {
+			errors.push('Name is required.');
+		}
+		if (!city.trim()) {
+			errors.push('City is required.');
+		}
+		if (!phone.trim() || phone.length !== 10) {
+			errors.push('Phone number is invalid.');
+		}
+		if (!laptops) {
+			errors.push('Please select the number of laptops.');
+		}
+
+		setFormErrors(errors);
+
+		//API integration
+
+		if (errors.length === 0) {
+			console.log({
+				name,
+				city,
+				phone,
+				laptops,
+			});
+
+			setPhone('');
+			e.target[0].value = '';
+			e.target[1].value = '';
+			setSelectedOption('');
+			setIsTyping(false);
+		}
 	};
+
+	const handleTyping = () => {
+		setIsTyping(true);
+	};
+
 	return (
 		<div className="border bg-white w-full min-h-[450px] px-6 sm:px-8 py-6">
 			<form
 				className="flex font-graphik flex-col justify-between h-[450px] text-sm"
-				onSubmit={handleSubmit}>
+				onSubmit={handleSubmit}
+				onChange={handleTyping}>
 				<div className="flex flex-col gap-2.5">
-					<label htmlFor="fullName" className="font-bold">
+					<label
+						htmlFor="fullName"
+						className="font-bold">
 						FULL NAME
 					</label>
 					<input
@@ -41,7 +85,9 @@ export default function CustomForm() {
 					/>
 				</div>
 				<div className="flex flex-col gap-2.5">
-					<label htmlFor="city" className="font-bold">
+					<label
+						htmlFor="city"
+						className="font-bold">
 						CITY
 					</label>
 					<input
@@ -54,19 +100,26 @@ export default function CustomForm() {
 					/>
 				</div>
 				<div className="flex flex-col gap-2.5">
-					<label htmlFor="phoneNumber" className="font-bold">
+					<label
+						htmlFor="phoneNumber"
+						className="font-bold">
 						PHONE NUMBER
 					</label>
 					<input
-						type="number"
+						type="tel"
 						id="phoneNumber"
-						placeholder="+91 -  Phone Number"
+						placeholder="+91 - Phone Number"
 						className="border-b p-3 outline-none"
-						maxLength={10}
+						value={phone}
+						onChange={handlePhoneChange}
 						required
+						maxLength={10}
+						pattern="\d{10}"
 					/>
 				</div>
-				<label htmlFor="noOfLaptops" className="font-bold">
+				<label
+					htmlFor="noOfLaptops"
+					className="font-bold">
 					NO OF LAPTOPS
 				</label>
 				<div className="flex justify-between">
@@ -84,7 +137,7 @@ export default function CustomForm() {
 							htmlFor="5-25"
 							className={`border text-xs whitespace-nowrap p-2.5 sm:p-4 lg:py-4 lg:px-6  ${
 								selectedOption === '5-25'
-									? 'bg-slate-200 text-white'
+									? 'bg-black text-white'
 									: 'text-slate-400'
 							}`}>
 							5-25
@@ -104,7 +157,7 @@ export default function CustomForm() {
 							htmlFor="26-50"
 							className={`border text-xs whitespace-nowrap p-2.5 sm:p-4 lg:py-4 lg:px-6  ${
 								selectedOption === '26-50'
-									? 'bg-slate-200 text-white'
+									? 'bg-black text-white'
 									: 'text-slate-400'
 							}`}>
 							26-50
@@ -124,7 +177,7 @@ export default function CustomForm() {
 							htmlFor="51-100"
 							className={`border text-xs whitespace-nowrap p-2.5 sm:p-4 lg:py-4 lg:px-6  ${
 								selectedOption === '51-100'
-									? 'bg-slate-200 text-white'
+									? 'bg-black text-white'
 									: 'text-slate-400'
 							}`}>
 							51-100
@@ -144,7 +197,7 @@ export default function CustomForm() {
 							htmlFor="moreThan100"
 							className={`border text-xs whitespace-nowrap p-2.5 sm:p-4 lg:py-4 lg:px-6  ${
 								selectedOption === 'moreThan100'
-									? 'bg-slate-200 text-white'
+									? 'bg-black text-white'
 									: 'text-slate-400'
 							}`}>
 							More than 100
@@ -153,9 +206,18 @@ export default function CustomForm() {
 				</div>
 				<button
 					type="submit"
-					className="border py-2 text-base sm:text-lg text-white font-graphik font-bold bg-slate-200">
+					className={`border py-2 text-base sm:text-lg font-graphik font-bold ${
+						isTyping ? 'bg-black text-white' : 'bg-slate-200 text-white'
+					}`}>
 					ENQUIRE NOW
 				</button>
+				{formErrors.length > 0 && (
+					<div className="text-red-500 mt-2">
+						{formErrors.map((error, index) => (
+							<p key={`form ${index}`}>{error}</p>
+						))}
+					</div>
+				)}
 			</form>
 		</div>
 	);
