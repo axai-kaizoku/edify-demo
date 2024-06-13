@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import axios from 'axios';
 
 export default function CustomForm() {
 	const params = useSearchParams();
@@ -20,7 +21,7 @@ export default function CustomForm() {
 		}
 	};
 
-	const handleSubmit = (e: any) => {
+	const handleSubmit = async (e: any) => {
 		e.preventDefault();
 		const name = e.target[0].value;
 		const city = e.target[1].value;
@@ -43,27 +44,25 @@ export default function CustomForm() {
 
 		setFormErrors(errors);
 
-		//API integration
-		const resellerObject = {
-			name,
-			phone: `+91${phone}`,
-			project: 'Edify Reseller',
-			city,
-			utm_source: params.get('utm_source') || '',
-			utm_medium: params.get('utm_medium') || '',
-			utm_campaign: params.get('utm_campaign') || '',
-			utm_content: params.get('utm_content') || '',
-			pageTitle: window.location.href,
-		};
-		console.log(resellerObject);
-
 		if (errors.length === 0) {
-			console.log({
+			//API integration
+			const resellerObject = {
 				name,
+				phone: `+91${phone}`,
+				project: 'Edify Reseller',
 				city,
-				phone,
-				laptops,
-			});
+				utm_source: params.get('utm_source') || '',
+				utm_medium: params.get('utm_medium') || '',
+				utm_campaign: params.get('utm_campaign') || '',
+				utm_content: params.get('utm_content') || '',
+				pageTitle: window.location.href,
+			};
+			const response = await axios.post(
+				'https://api.edify.club/v2/mkt/requests/interested/reseller',
+				resellerObject,
+			);
+
+			console.log(response);
 
 			setPhone('');
 			e.target[0].value = '';
