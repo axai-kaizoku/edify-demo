@@ -1,8 +1,11 @@
+'use client';
+
 import Image from 'next/image';
 import { Product } from '@/types';
 import Link from 'next/link';
+import { useState } from 'react';
 
-export default function BestSellerCard({
+const BestSellerCard = ({
 	selling_price,
 	image,
 	alt_tag,
@@ -10,19 +13,20 @@ export default function BestSellerCard({
 	mrp,
 	brief,
 	product_url,
-}: Product) {
+}: Product) => {
+	const [imgSrc, setImgSrc] = useState(image);
+
 	return (
 		<div className="w-[250px] flex flex-col rounded-lg duration-300 ease-in-out overflow-hidden bg-white">
 			<div className="flex justify-center items-center p-2 h-1/2 w-full">
-				<Link href={product_url}>
-					<Image
-						src={image}
-						alt={alt_tag}
-						className="h-[100px] md:h-[150px] w-36 md:w-52 object-cover"
-						width={668}
-						height={350}
-					/>
-				</Link>
+				<Image
+					src={imgSrc}
+					alt={alt_tag}
+					className="h-[100px] md:h-[150px] w-36 md:w-52 object-cover"
+					width={668}
+					height={350}
+					onError={() => setImgSrc('../assets/laptop-1.png')}
+				/>
 			</div>
 
 			<div className="flex flex-col p-4">
@@ -44,11 +48,15 @@ export default function BestSellerCard({
 				</div>
 
 				<div className="flex justify-center items-center bg-black rounded-sm w-fit px-4 py-1">
-					<button className="text-white font-graphik leading-8 text-sm font-medium">
-						BUY NOW
-					</button>
+					<Link href={product_url} target="_blank">
+						<button className="text-white font-graphik leading-8 text-sm font-medium">
+							BUY NOW
+						</button>
+					</Link>
 				</div>
 			</div>
 		</div>
 	);
-}
+};
+
+export default BestSellerCard;

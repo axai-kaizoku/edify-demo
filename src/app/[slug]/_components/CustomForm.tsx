@@ -1,7 +1,9 @@
 'use client';
 import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 
 export default function CustomForm() {
+	const params = useSearchParams();
 	const [selectedOption, setSelectedOption] = useState<string>('');
 	const [phone, setPhone] = useState<string>('');
 	const [isTyping, setIsTyping] = useState<boolean>(false);
@@ -42,6 +44,18 @@ export default function CustomForm() {
 		setFormErrors(errors);
 
 		//API integration
+		const resellerObject = {
+			name,
+			phone: `+91${phone}`,
+			project: 'Edify Reseller',
+			city,
+			utm_source: params.get('utm_source') || '',
+			utm_medium: params.get('utm_medium') || '',
+			utm_campaign: params.get('utm_campaign') || '',
+			utm_content: params.get('utm_content') || '',
+			pageTitle: window.location.href,
+		};
+		console.log(resellerObject);
 
 		if (errors.length === 0) {
 			console.log({
@@ -70,9 +84,7 @@ export default function CustomForm() {
 				onSubmit={handleSubmit}
 				onChange={handleTyping}>
 				<div className="flex flex-col gap-2.5">
-					<label
-						htmlFor="fullName"
-						className="font-bold">
+					<label htmlFor="fullName" className="font-bold">
 						FULL NAME
 					</label>
 					<input
@@ -85,9 +97,7 @@ export default function CustomForm() {
 					/>
 				</div>
 				<div className="flex flex-col gap-2.5">
-					<label
-						htmlFor="city"
-						className="font-bold">
+					<label htmlFor="city" className="font-bold">
 						CITY
 					</label>
 					<input
@@ -100,9 +110,7 @@ export default function CustomForm() {
 					/>
 				</div>
 				<div className="flex flex-col gap-2.5">
-					<label
-						htmlFor="phoneNumber"
-						className="font-bold">
+					<label htmlFor="phoneNumber" className="font-bold">
 						PHONE NUMBER
 					</label>
 					<input
@@ -117,9 +125,7 @@ export default function CustomForm() {
 						pattern="\d{10}"
 					/>
 				</div>
-				<label
-					htmlFor="noOfLaptops"
-					className="font-bold">
+				<label htmlFor="noOfLaptops" className="font-bold">
 					NO OF LAPTOPS
 				</label>
 				<div className="flex justify-between">
