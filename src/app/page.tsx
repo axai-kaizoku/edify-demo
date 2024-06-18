@@ -6,6 +6,7 @@ import FAQSection from '@/components/faq-section';
 import MoreLinks from '@/components/more-links';
 import BestSellersSection from '@/components/best-sellers-section';
 import EdifyRefurbishedMeansSection from '@/components/edify-refurbished-means-section';
+import EdifiedEffectSection from '@/components/edified-effect-section';
 
 export default function Home() {
 	return (
@@ -17,9 +18,7 @@ export default function Home() {
 			<LogoComponent />
 			<BestSellersSection />
 			<EdifyRefurbishedMeansSection />
-			<h2 className="text-5xl border-b py-4 font-bold text-center">
-				The Edified Effect
-			</h2>
+			<EdifiedEffectSection />
 			<EdifyRockersSection />
 			<TestiMonialsSection />
 			<FAQSection />
