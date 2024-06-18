@@ -1,12 +1,30 @@
 'use client';
+import { useEffect, useState } from 'react';
 import CustomButton from '../common/CustomButton';
 import CustomHeading from '../common/CustomHeading';
 import BestSellerCard from './BestSellerCard';
 //@ts-ignore
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import { Product } from '@/types';
+import axios from 'axios';
 
 export default function BestSellersSection() {
+	const [products, setProducts] = useState<Product[]>([]);
+
+	useEffect(() => {
+		axios
+			.get(
+				'https://api.edify.club/v2/mkt/dynamic/seo/landingpage?slug=refurbished-laptops-nashik',
+			)
+			.then((response) => {
+				setProducts(response.data.products);
+			})
+			.catch((error) => {
+				console.error('Error fetching data:', error);
+			});
+	}, []);
+
 	return (
 		<div className="w-full flex justify-center items-center">
 			<div className="w-[87%] sm:w-4/5 flex flex-col">
@@ -15,7 +33,9 @@ export default function BestSellersSection() {
 						heading="Best Seller"
 						styles="py-6"
 					/>
-					<CustomButton title="EXPLORE" />
+					<div className="hidden lg:block">
+						<CustomButton title="VIEW MORE" />
+					</div>
 				</div>
 
 				<div className="py-10">
@@ -36,7 +56,7 @@ export default function BestSellersSection() {
 							perPage: 4,
 							breakpoints: {
 								640: {
-									perPage: 1,
+									perPage: 2,
 								},
 								1024: {
 									perPage: 2,
@@ -46,17 +66,18 @@ export default function BestSellersSection() {
 								},
 							},
 						}}
-						hasSliderWrapper
-					>
-						{Array.from({ length: 4 }).map((_, i) => (
-							<SplideSlide key={i}>
-								<div className="w-full">
+						hasSliderWrapper>
+						{products.map((product, index) => (
+							<SplideSlide key={`list ${index}`}>
+								<div className="border shadow-md hover:shadow-lg duration-300 rounded-sm flex sm:w-fit sm:px-4">
 									<BestSellerCard
-										title="Lorem Ipsum"
-										src="/assets/laptop-2.png"
-										price={100}
-										rating={4.2}
-										reviews={34}
+										selling_price={product.selling_price}
+										image={product.image}
+										alt_tag={product.alt_tag}
+										title={product.title}
+										mrp={product.mrp}
+										brief={product.brief}
+										product_url={product.product_url}
 									/>
 								</div>
 							</SplideSlide>

@@ -43,7 +43,7 @@ const SeoMain: React.FC<SeoMainProps> = ({ data }) => {
 				{/* Third Section */}
 				<SeoBestSellersSection products={data.products} />
 				{/* More Links Section */}
-				<MoreLinks />
+				<MoreLinks slug={data.slug} />
 			</div>
 		</>
 	);

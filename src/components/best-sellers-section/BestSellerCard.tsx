@@ -1,53 +1,54 @@
 import Image from 'next/image';
-import { BestSellerCardProps } from '@/types';
-import RatingStarComp from './RatingStarComp';
+import { Product } from '@/types';
+import Link from 'next/link';
 
 export default function BestSellerCard({
-	src,
+	selling_price,
+	image,
+	alt_tag,
 	title,
-	price,
-	rating,
-	reviews,
-}: BestSellerCardProps) {
+	mrp,
+	brief,
+	product_url,
+}: Product) {
 	return (
-		<div className="w-72 flex flex-col gap-1 rounded">
-			<div className="relative">
-				<div>
-					<img
-						src={src}
-						alt="product-img"
-						className="w-full h-full object-cover  rounded"
-					/>
-				</div>
-				<div className="absolute top-0 right-0 opacity-0 flex flex-col gap-2 pr-6 pt-2 z-1">
-					<img
-						className="w-5 h-5 sm:w-8 sm:h-8"
-						src={'/assets/heart.svg'}
-						alt="heart-icon"
-					/>
-					<img
-						className="w-5 h-5 sm:w-8 sm:h-8"
-						src={'/assets/fill-eye.svg'}
-						alt="eye-icon"
-					/>
-				</div>
+		<div className="w-[250px] flex flex-col rounded-lg duration-300 ease-in-out overflow-hidden bg-white h-[392px]">
+			<div className="flex justify-center items-center p-2 h-1/2 w-full pb-4">
+				<Image
+					src={image}
+					alt={alt_tag}
+					className="h-[100px] md:h-[150px] w-36 md:w-52 object-cover "
+					width={668}
+					height={350}
+				/>
 			</div>
-			<div className="pt-4 flex flex-col ">
-				<h3 className="text-xs sm:text-lg flex  items-center font-graphik font-bold">
+			<hr className=" mx-4  border-t border-gray-200" />
+
+			<div className="flex flex-col p-4">
+				<h3 className="text-xs md:text-sm  lg:text-lg text-gray-900 font-graphik font-semibold leading-6">
 					{title}
 				</h3>
-				<div className="flex gap-2.5 justify-between items-center">
-					<div>
-						<p className="text-xs sm:text-sm text-slate-500 font-graphik font-bold">
-							₹{price}
-						</p>
-					</div>
-					<div className="flex items-center justify-center gap-2">
-						<RatingStarComp rating={rating} />
-						<p className="text-xs text-slate-600 font-graphik font-normal">
-							({reviews})
-						</p>
-					</div>
+				<div className="flex flex-row justify-between items-center mt-2 text-wrap">
+					<p className="text-xs sm:text-md text-gray-500 font-normal">
+						{brief}
+					</p>
+				</div>
+				<div className="flex items-center justify-start py-4 gap-3">
+					<p className="text-gray-900 font-graphik font-semibold text-sm md:text-lg lg:text-xl">
+						₹{selling_price}
+					</p>
+					<p className="font-graphik  text-sm sm:text-lg lg:text-xl font-normal leading-6 line-through text-gray-500">
+						₹{mrp}
+					</p>
+				</div>
+				<div className="flex justify-center items-center bg-black rounded-sm w-fit sm:px-4 px-2 sm:py-1 py-0.5">
+					<Link
+						href={product_url}
+						target="_blank">
+						<button className="text-white font-graphik leading-8 text-xs sm:text-sm font-medium">
+							BUY NOW
+						</button>
+					</Link>
 				</div>
 			</div>
 		</div>

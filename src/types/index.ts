@@ -151,9 +151,21 @@ export type SEOPageData = {
 	footerByCategory: FooterCategory[];
 };
 
+export type CustomCardProps = {
+	src: string;
+	alt: string;
+	subHeading: string;
+};
+
 export type EdifyRefurbishedCardProps = {
 	src: string;
 	isImageFirst: boolean;
 	title: string;
+	description: string;
+};
+
+export type IncreasingNumbersProps = {
+	endNumber: number;
+	value: string;
 	description: string;
 };

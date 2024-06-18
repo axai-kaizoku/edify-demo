@@ -21,9 +21,9 @@ export default function EdifyRefurbishedCard({
 				height={250}
 				className="md:w-[305px] md:h-[250px] w-[55%] h-[55%]"
 			/>
-			<div className="flex flex-col w-full gap-1.5 lg:gap-4">
+			<div className="flex flex-col w-full  h-fit items-center md:items-start gap-1.5 md:gap-12 lg:gap-4">
 				<h3 className="font-manuale font-bold text-lg md:text-3xl">{title}</h3>
-				<div className="font-graphik text-xs sm:text-sm md:text-base text-slate-500">
+				<div className="font-graphik text-sm md:text-base leading-6 md:leading-normal text-slate-500">
 					{description}
 				</div>
 			</div>

@@ -2,32 +2,27 @@
 import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import axios from 'axios';
-
 export default function CustomForm() {
 	const params = useSearchParams();
 	const [selectedOption, setSelectedOption] = useState<string>('');
 	const [phone, setPhone] = useState<string>('');
 	const [isTyping, setIsTyping] = useState<boolean>(false);
 	const [formErrors, setFormErrors] = useState<string[]>([]);
-
 	const handleRadioChange = (e: any) => {
 		setSelectedOption(e.target.value);
 	};
-
 	const handlePhoneChange = (e: any) => {
 		const value = e.target.value;
 		if (/^\d{0,10}$/.test(value)) {
 			setPhone(value);
 		}
 	};
-
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
 		const name = e.target[0].value;
 		const city = e.target[1].value;
 		const phone = e.target[2].value;
 		const laptops = selectedOption;
-
 		const errors: string[] = [];
 		if (!name.trim()) {
 			errors.push('Name is required.');
@@ -41,9 +36,7 @@ export default function CustomForm() {
 		if (!laptops) {
 			errors.push('Please select the number of laptops.');
 		}
-
 		setFormErrors(errors);
-
 		if (errors.length === 0) {
 			//API integration
 			const resellerObject = {
@@ -61,9 +54,7 @@ export default function CustomForm() {
 				'https://api.edify.club/v2/mkt/requests/interested/reseller',
 				resellerObject,
 			);
-
 			console.log(response);
-
 			setPhone('');
 			e.target[0].value = '';
 			e.target[1].value = '';
@@ -71,11 +62,9 @@ export default function CustomForm() {
 			setIsTyping(false);
 		}
 	};
-
 	const handleTyping = () => {
 		setIsTyping(true);
 	};
-
 	return (
 		<div className="border bg-white w-full min-h-[450px] px-6 sm:px-8 py-6">
 			<form
@@ -83,7 +72,9 @@ export default function CustomForm() {
 				onSubmit={handleSubmit}
 				onChange={handleTyping}>
 				<div className="flex flex-col gap-2.5">
-					<label htmlFor="fullName" className="font-bold">
+					<label
+						htmlFor="fullName"
+						className="font-bold">
 						FULL NAME
 					</label>
 					<input
@@ -96,7 +87,9 @@ export default function CustomForm() {
 					/>
 				</div>
 				<div className="flex flex-col gap-2.5">
-					<label htmlFor="city" className="font-bold">
+					<label
+						htmlFor="city"
+						className="font-bold">
 						CITY
 					</label>
 					<input
@@ -109,7 +102,9 @@ export default function CustomForm() {
 					/>
 				</div>
 				<div className="flex flex-col gap-2.5">
-					<label htmlFor="phoneNumber" className="font-bold">
+					<label
+						htmlFor="phoneNumber"
+						className="font-bold">
 						PHONE NUMBER
 					</label>
 					<input
@@ -124,7 +119,9 @@ export default function CustomForm() {
 						pattern="\d{10}"
 					/>
 				</div>
-				<label htmlFor="noOfLaptops" className="font-bold">
+				<label
+					htmlFor="noOfLaptops"
+					className="font-bold">
 					NO OF LAPTOPS
 				</label>
 				<div className="flex justify-between">
