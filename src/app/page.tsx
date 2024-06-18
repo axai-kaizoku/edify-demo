@@ -1,24 +1,28 @@
 import HeroComponent from '@/components/HeroSection';
-import SecondSection from '@/components/second-section';
 import LogoComponent from '@/components/logo-section';
-import MetricsSection from '@/components/metrics-section';
 import EdifyRockersSection from '@/components/edify-rockers-section';
 import TestiMonialsSection from '@/components/testimonials-section';
 import FAQSection from '@/components/faq-section';
-import ImageSlider from '@/components/ui-design';
 import MoreLinks from '@/components/more-links';
+import BestSellersSection from '@/components/best-sellers-section';
+import EdifyRefurbishedMeansSection from '@/components/edify-refurbished-means-section';
 
 export default function Home() {
 	return (
 		<div className="flex flex-col w-full gap-4 md:gap-6 lg:gap-10">
 			<HeroComponent />
-			<SecondSection />
+			<h2 className="text-5xl border-b py-4 font-bold text-center">
+				Custom tailored needs
+			</h2>
 			<LogoComponent />
-			<MetricsSection />
+			<BestSellersSection />
+			<EdifyRefurbishedMeansSection />
+			<h2 className="text-5xl border-b py-4 font-bold text-center">
+				The Edified Effect
+			</h2>
 			<EdifyRockersSection />
 			<TestiMonialsSection />
 			<FAQSection />
-			<ImageSlider />
 			<MoreLinks />
 		</div>
 	);

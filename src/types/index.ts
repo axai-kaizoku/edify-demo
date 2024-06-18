@@ -150,3 +150,10 @@ export type SEOPageData = {
 	footer: FooterPage[];
 	footerByCategory: FooterCategory[];
 };
+
+export type EdifyRefurbishedCardProps = {
+	src: string;
+	isImageFirst: boolean;
+	title: string;
+	description: string;
+};
