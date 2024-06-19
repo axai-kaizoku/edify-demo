@@ -13,7 +13,10 @@ const MetricsSection = () => {
 								<CustomHeading heading="What it means to be Edify Refurbished?" />
 							</div>
 							<div className="flex justify-center sm:justify-start">
-								<CustomButton title="EXPLORE" />
+								<CustomButton
+									title="EXPLORE"
+									href="https://shop.edify.club/collections/all"
+								/>
 							</div>
 						</div>
 						<div className="flex flex-col  md:gap-8">

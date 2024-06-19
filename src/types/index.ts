@@ -20,6 +20,7 @@ export type LaptopCardProps = {
 export type CustomButtonProps = {
 	title: string;
 	styles?: string;
+	href: string;
 };
 
 export type CustomHeadingProps = {

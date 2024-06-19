@@ -11,6 +11,7 @@ const LogoComponent = () => {
 					<div className="flex justify-between w-full">
 						<CustomHeading heading="Get Laptops from Top Brands" />
 						<CustomButtom
+							href="https://shop.edify.club/collections/all"
 							title="DISCOVER MORE"
 							styles="lg:block hidden"
 						/>

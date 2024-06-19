@@ -87,6 +87,7 @@ export default function AboutUs() {
 							refurbished laptop at a time.
 						</p>
 						<CustomButtom
+							href="https://shop.edify.club/collections/all"
 							title="EXPLORE"
 							styles="w-full"
 						/>

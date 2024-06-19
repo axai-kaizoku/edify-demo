@@ -14,7 +14,10 @@ const HeroComponent = () => {
 					</p>
 				</div>
 				<div className="pt-4">
-					<CustomButton title="EXPLORE" />
+					<CustomButton
+						title="EXPLORE"
+						href="https://shop.edify.club/collections/all"
+					/>
 				</div>
 			</div>
 			<div className="w-full lg:w-auto flex justify-center lg:justify-end">

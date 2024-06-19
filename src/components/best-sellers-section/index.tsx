@@ -34,7 +34,10 @@ export default function BestSellersSection() {
 						styles="py-6"
 					/>
 					<div className="hidden lg:block">
-						<CustomButton title="VIEW MORE" />
+						<CustomButton
+							title="VIEW MORE"
+							href="https://shop.edify.club/collections/all"
+						/>
 					</div>
 				</div>
 
@@ -65,8 +68,7 @@ export default function BestSellersSection() {
 									perPage: 4,
 								},
 							},
-						}}
-						hasSliderWrapper>
+						}}>
 						{products.map((product, index) => (
 							<SplideSlide key={`list ${index}`}>
 								<div className="border shadow-md hover:shadow-lg duration-300 rounded-sm flex sm:w-fit sm:px-4">

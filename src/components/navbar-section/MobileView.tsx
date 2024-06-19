@@ -11,7 +11,6 @@ export default function MobileView() {
 		{ name: 'HOME', path: '/' },
 		{ name: 'ABOUT', path: '/about-us' },
 		{ name: 'BLOG', path: 'https://edify.club/blog/' },
-		{ name: 'SHOP', path: 'https://shop.edify.club/' },
 	];
 
 	const renderHamburgerLine = (className: string) => (

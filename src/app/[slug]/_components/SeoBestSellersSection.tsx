@@ -5,17 +5,26 @@ import BestSellerCard from './BestSellerCard';
 
 interface SeoBestSellersSectionProps {
 	products: Product[];
+	firstTitle: string;
+	lastTitle: string;
 }
 
 const SeoBestSellersSection: React.FC<SeoBestSellersSectionProps> = ({
 	products,
+	firstTitle,
+	lastTitle,
 }) => {
 	return (
 		<div className="w-full flex justify-center items-center py-10 border-b">
 			<div className="w-full sm:w-4/5 flex flex-col items-center">
 				<div className="flex justify-between items-center w-full mb-6 px-4 sm:px-0">
-					<CustomHeading heading="Best Laptops For Data Analysts" />
-					<CustomButton title="EXPLORE" />
+					<h1 className="text-3xl sm:text-4xl text-black font-manuale font-semibold">
+						{firstTitle} {lastTitle}
+					</h1>
+					<CustomButton
+						title="EXPLORE"
+						href="https://shop.edify.club/collections/all"
+					/>
 				</div>
 
 				<div className="grid grid-cols-2 sm:grid-cols-2  lg:grid-cols-4 gap-6 md:gap-[78px] md:pt-12 w-full px-4 sm:px-0">

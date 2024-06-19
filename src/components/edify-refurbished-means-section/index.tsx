@@ -11,11 +11,18 @@ export default function EdifyRefurbishedMeansSection() {
 						What it means to be Edify
 						<br className="hidden lg:block" /> Refurbished?
 					</h2>
-					<CustomButtom title="DISCOVER MORE" styles="lg:block hidden" />
+					<CustomButtom
+						title="DISCOVER MORE"
+						styles="lg:block hidden"
+						href="https://shop.edify.club/collections/all"
+					/>
 				</div>
 				<div className="flex justify-between w-full flex-col gap-6 lg:gap-0 lg:flex-row">
 					{EdifyRefurbishedCardInfo.map((card, i) => (
-						<EdifyRefurbishedCard cardData={card} key={i} />
+						<EdifyRefurbishedCard
+							cardData={card}
+							key={i}
+						/>
 					))}
 				</div>
 			</div>

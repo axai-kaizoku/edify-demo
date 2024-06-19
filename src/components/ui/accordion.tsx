@@ -4,6 +4,7 @@ import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 
 import { cn } from '@/lib/utils';
+import Image from 'next/image';
 
 const Accordion = AccordionPrimitive.Root;
 
@@ -42,13 +43,17 @@ const AccordionTrigger = React.forwardRef<
 				{children}
 				<div className="transition-transform duration-500">
 					{isOpen ? (
-						<img
+						<Image
+							width={24}
+							height={24}
 							src="/assets/minus-circle.svg"
 							alt="minus-circle"
 							className="w-3 h-3 sm:w-6 sm:h-6"
 						/>
 					) : (
-						<img
+						<Image
+							width={24}
+							height={24}
 							src="/assets/plus-circle.svg"
 							alt="plus-circle"
 							className="w-3 h-3 sm:w-6 sm:h-6"
