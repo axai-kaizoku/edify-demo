@@ -973,21 +973,21 @@ Instead, we give these devices a second life through our comprehensive refurbish
 
 export const EdifyRefurbishedCardInfo: EdifyRefurbishedCardProps[] = [
 	{
-		src: '/assets/edify-refurbished-1.webp',
+		src: '/assets/edify-refurbished-1.png',
 		isImageFirst: true,
 		title: '50+ Quality Checks',
 		description:
 			'Each laptop is checked against 50+ quality points. Only those passing our strict tests get the Edify badge, showing top performance and reliability.',
 	},
 	{
-		src: '/assets/edify-refurbished-2.webp',
+		src: '/assets/edify-refurbished-2.png',
 		isImageFirst: false,
 		title: 'Rigorous Refurbishment',
 		description:
 			'For those needing a little extra care, our team conducts rigorous refurbishment, ensuring every device functions at it’s peak, just like new.',
 	},
 	{
-		src: '/assets/edify-refurbished-3.webp',
+		src: '/assets/edify-refurbished-3.png',
 		isImageFirst: true,
 		title: '6 Months Of Warranty',
 		description:

@@ -18,7 +18,7 @@ const FeatureCard = ({ logo, title, description }: FeatureCardProps) => {
 				</h1>
 			</div>
 			<div className="flex justify-center items-center  pt-4 pb-7 pl-9 w-fit lg:w-[500px]  text-wrap">
-				<p className="text-slate-600 font-normal leading-5 text-sm sm:text-base ">
+				<p className="text-slate-600 font-normal leading-5 text-sm sm:text-base font-graphik">
 					{description}
 				</p>
 			</div>

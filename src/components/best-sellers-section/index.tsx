@@ -21,7 +21,7 @@ export default function BestSellersSection() {
 				setProducts(response.data.products);
 			})
 			.catch((error) => {
-				console.error('Error fetching data:', error);
+				throw new Error('Error fetching data:', error);
 			});
 	}, []);
 

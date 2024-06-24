@@ -24,12 +24,12 @@ export default function BestSellerCard({
 			</div>
 			<hr className=" mx-4  border-t border-gray-200" />
 
-			<div className="flex flex-col p-4">
-				<h3 className="text-sm  lg:text-lg text-gray-900 font-graphik font-semibold leading-6">
+			<div className="flex flex-col p-4 font-graphik">
+				<h3 className="text-sm  lg:text-lg text-gray-900  font-semibold leading-6">
 					{title}
 				</h3>
 				<div className="flex flex-row justify-between items-center mt-2 text-wrap">
-					<p className="text-sm sm:text-md text-gray-500 font-normal">
+					<p className="text-sm sm:text-md text-gray-500 font-normal ">
 						{brief}
 					</p>
 				</div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import LogoComponentCard from './LogoComponentCard';
-import CustomButtom from '../common/CustomButton';
 import CustomHeading from '../common/CustomHeading';
 
 const LogoComponent = () => {
@@ -10,11 +9,6 @@ const LogoComponent = () => {
 				<div className="w-[87%] sm:w-4/5 flex flex-col gap-10 py-8">
 					<div className="flex justify-between w-full">
 						<CustomHeading heading="Get Laptops from Top Brands" />
-						<CustomButtom
-							href="https://shop.edify.club/collections/all"
-							title="DISCOVER MORE"
-							styles="lg:block hidden"
-						/>
 					</div>
 					<div className=" items-center justify-between hidden sm:flex">
 						<LogoComponentCard

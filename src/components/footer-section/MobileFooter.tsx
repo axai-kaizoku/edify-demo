@@ -10,8 +10,7 @@ function MobileFooter() {
 			<div>
 				<Link
 					href="/"
-					aria-label="Read more "
-				>
+					aria-label="Read more ">
 					<Image
 						src="/assets/logo.webp"
 						alt="edify"
@@ -52,13 +51,13 @@ function MobileFooter() {
 								+91 95312 45671
 							</h1>
 
-							<h1 className="text-slate-500 text-sm font-norml leading-5 font-gaphik">
+							<h1 className="text-slate-600 text-sm font-norml leading-5 font-gaphik">
 								edify@winuall.com
 							</h1>
 						</div>
 					</div>
 
-					<h1 className="text-slate-500 font-graphik text-xs font-normal leading-5 text-wrap w-40">
+					<h1 className="text-slate-600 font-graphik text-xs font-normal leading-5 text-wrap w-40">
 						Winuall, 4th floor, Flexi HQ, 7, 19th Main Rd, Sector 4, HSR Layout,
 						Bengaluru, Karnataka - 560102
 					</h1>
@@ -66,11 +65,10 @@ function MobileFooter() {
 						<h1 className="text-slate-600 text-xs font-medium leading-5">
 							COMPANY
 						</h1>
-						<div className="gap-1 font-graphik font-normal leading-5 text-xs text-slate-500">
+						<div className="gap-1 font-graphik font-normal leading-5 text-xs text-slate-600">
 							<Link
 								href="/about-us"
-								aria-label="Read more "
-							>
+								aria-label="Read more ">
 								<h2>About US</h2>
 							</Link>
 							<h2>Blog</h2>
@@ -81,18 +79,16 @@ function MobileFooter() {
 						<h1 className="text-slate-600 text-xs font-medium leading-5">
 							LEGAL
 						</h1>
-						<div className="gap-1 font-graphik font-normal leading-5 text-xs text-slate-500">
+						<div className="gap-1 font-graphik font-normal leading-5 text-xs text-slate-600">
 							<Link
 								href="privacy-policy"
-								aria-label="Read more "
-							>
+								aria-label="Read more ">
 								<h2>Privacy Policy</h2>
 							</Link>
 							<h2>Customer Service</h2>
 							<Link
 								href="/terms-of-services"
-								aria-label="Read more "
-							>
+								aria-label="Read more ">
 								<h2>Terms and Conditions</h2>
 							</Link>
 						</div>

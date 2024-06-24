@@ -14,8 +14,7 @@ function WebFooter() {
 					<div>
 						<Link
 							href="/"
-							aria-label="Read more"
-						>
+							aria-label="Read more">
 							<Image
 								src={'/assets/logo.webp'}
 								alt="edify"
@@ -27,7 +26,7 @@ function WebFooter() {
 					<div className="flex  gap-16">
 						<div className="flex w-48  text-wrap ">
 							{' '}
-							<h1 className="font-medium font-graphik leading-6 text-sm text-gray-400">
+							<h1 className="font-medium font-graphik leading-6 text-sm text-gray-600">
 								Edify by Winuall 4th floor, Flexi HQ, 7, 19th Main Rd, Sector 4,
 								HSR Layout, Bengaluru, Karnataka - 560102, Ph:+91 9513245671
 								Email:contact@edify.club
@@ -38,8 +37,7 @@ function WebFooter() {
 								<FooterHeading title="Company" />
 								<Link
 									href="/about-us"
-									aria-label="Read more about us"
-								>
+									aria-label="Read more about us">
 									<FooterLinks title="About us" />
 								</Link>
 								<FooterLinks title="Blog" />
@@ -50,14 +48,12 @@ function WebFooter() {
 								<FooterHeading title="Legal" />
 								<Link
 									href="/terms-of-services"
-									aria-label="Read more about TOS"
-								>
+									aria-label="Read more about TOS">
 									<FooterLinks title="Terms and Conditions" />
 								</Link>
 								<Link
 									href="/privacy-policy"
-									aria-label="Read more about Policy"
-								>
+									aria-label="Read more about Policy">
 									<FooterLinks title="Privacy Policy" />
 								</Link>
 							</div>
@@ -68,7 +64,7 @@ function WebFooter() {
 
 			<div className="w-full sm:flex hidden items-center justify-center bg-[#F7F7F6]">
 				<div className=" flex items-center  justify-between py-6 w-[87%] sm:w-4/5 ">
-					<h2 className="text-gray-400 font-normal text-sm leading-6">
+					<h2 className="text-gray-600 font-normal text-sm leading-6">
 						© 2024 Winuall. All rights reserved.
 					</h2>
 
