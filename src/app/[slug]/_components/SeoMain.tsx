@@ -40,7 +40,7 @@ const SeoMain: React.FC<SeoMainProps> = ({ data }) => {
 
 			{/* Second Section */}
 
-			<div className="flex bg-[url('/assets/seo-bg.png')] bg-no-repeat border-b object-center object-cover h-fit lg:min-h-[95vh] justify-center items-start  w-full">
+			<div className="flex bg-[url('/assets/seo/seo-bg.webp')] bg-no-repeat border-b object-center object-cover h-fit lg:min-h-[95vh] justify-center items-start  w-full">
 				<div className="flex w-[87%] sm:w-4/5 flex-col">
 					<div className="flex w-full flex-col gap-10 lg:gap-0 lg:flex-row items-start justify-between">
 						<div className="lg:w-2/4 w-full flex flex-col  ">
@@ -50,9 +50,7 @@ const SeoMain: React.FC<SeoMainProps> = ({ data }) => {
 							</h1>
 							<div className="font-graphik font-normal text-lg sm:text-2xl leading-8 sm:leading-10 text-gray-700">
 								{data?.subHeading.map((v, i) => (
-									<div
-										key={i}
-										className="pt-3.5 sm:pt-9">
+									<div key={i} className="pt-3.5 sm:pt-9">
 										{v}
 									</div>
 								))}

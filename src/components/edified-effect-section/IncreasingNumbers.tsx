@@ -46,7 +46,7 @@ export default function IncreasingNumbers({
 					{value}
 				</span>
 			</div>
-			<div className="text-slate-500 w-full text-sm sm:text-base lg:text-center">
+			<div className="text-slate-600 w-full text-sm sm:text-base lg:text-center">
 				{description}
 			</div>
 		</div>

@@ -1,12 +1,24 @@
-import { type MetadataRoute } from 'next';
-
-import { siteConfig } from '@/config/site';
+import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	const routes = [''].map((route) => ({
-		url: `${siteConfig.url}${route}`,
-		lastModified: new Date().toISOString(),
-	}));
-
-	return [...routes];
+	return [
+		{
+			url: 'https://edify.club',
+			lastModified: new Date(),
+			changeFrequency: 'yearly',
+			priority: 1,
+		},
+		{
+			url: 'https://edify.club/about',
+			lastModified: new Date(),
+			changeFrequency: 'monthly',
+			priority: 0.8,
+		},
+		{
+			url: 'https://edify.club/blog',
+			lastModified: new Date(),
+			changeFrequency: 'weekly',
+			priority: 0.5,
+		},
+	];
 }

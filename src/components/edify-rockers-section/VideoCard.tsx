@@ -1,11 +1,11 @@
 import { EdifyRockeraCardProp } from '@/types';
 import React from 'react';
 
-const VideoCard = ({
+export default function VideoCard({
 	videoLink,
 	heading,
 	subHeading,
-}: EdifyRockeraCardProp) => {
+}: EdifyRockeraCardProp) {
 	return (
 		<div className="flex items-center justify-center flex-col w-full">
 			<div>
@@ -18,16 +18,14 @@ const VideoCard = ({
 					loop
 					preload="none"
 					className="rounded-lg"
-				>
-					<source
-						src={videoLink}
-						type="video/mp4"
-					/>
+					aria-label={heading}>
+					<source src={videoLink} type="video/mp4" />
 					<track
 						src="captions_en.vtt"
 						kind="captions"
 						srcLang="en"
 						label="english_captions"
+						default
 					/>
 					Your browser does not support the video tag.
 				</video>
@@ -38,6 +36,4 @@ const VideoCard = ({
 			</div>
 		</div>
 	);
-};
-
-export default VideoCard;
+}

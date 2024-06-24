@@ -10,27 +10,27 @@ const LogoComponent = () => {
 					<div className="flex justify-between w-full">
 						<CustomHeading heading="Get Laptops from Top Brands" />
 					</div>
-					<div className=" items-center justify-between hidden sm:flex">
+					<div className="items-center justify-between hidden sm:flex">
 						<LogoComponentCard
-							src={'/assets/hp_icon.jpeg.png'}
+							src="/assets/hp_icon.webp"
 							alt="HP"
 							width={60}
 							height={60}
 						/>
 						<LogoComponentCard
-							src={'/assets/apple.svg'}
+							src="/assets/apple.svg"
 							alt="Apple"
 							width={50}
 							height={60}
 						/>
 						<LogoComponentCard
-							src={'/assets/Lenovo.png'}
+							src="/assets/lenovo.webp"
 							alt="Lenovo"
 							width={150}
 							height={50}
 						/>
 						<LogoComponentCard
-							src={'/assets/Dell.png'}
+							src="/assets/dell.webp"
 							alt="Dell"
 							width={130}
 							height={40}
@@ -41,26 +41,25 @@ const LogoComponent = () => {
 
 			<div className="py-4  items-center justify-around sm:hidden flex">
 				<LogoComponentCard
-					src={'/assets/hp_icon.jpeg.png'}
+					src="/assets/hp_icon.webp"
 					alt="HP"
 					width={30}
 					height={30}
 				/>
 				<LogoComponentCard
-					src={'/assets/apple.svg'}
+					src="/assets/apple.svg"
 					alt="Apple"
 					width={25}
 					height={30}
 				/>
 				<LogoComponentCard
-					src={'/assets/Lenovo.png'}
+					src="/assets/lenovo.webp"
 					alt="Lenovo"
 					width={80}
 					height={25}
 				/>
-
 				<LogoComponentCard
-					src={'/assets/Dell.png'}
+					src="/assets/dell.webp"
 					alt="Dell"
 					width={30}
 					height={30}

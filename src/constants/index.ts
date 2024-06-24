@@ -359,14 +359,14 @@ Please feel free to reach out to us by e-mail at care@winuall.com in case of a
 
 export const reviewCardContent = [
 	{
-		src: '/assets/testimonials/review-1.jpg',
+		src: '/assets/testimonials/review-1.webp',
 		name: 'Mr. Arvind',
 		review:
 			'I had a fantastic experience with Edify. The laptop delivery was right on schedule, and I was impressed with the user experience.They have top-quality laptops with affordable pricing.',
 		date: 'May 30th, 2020',
 	},
 	{
-		src: '/assets/testimonials/review-2.jpg',
+		src: '/assets/testimonials/review-2.webp',
 		name: 'Gangadharan Chandragiri',
 		review:
 			'I bought a refurbished laptop from Edify for my personal use.The laptop is working buttery smooth and it looks like new.Happy with my purchase from Edify.',
@@ -928,7 +928,7 @@ If the Party’s performance of its obligations under this Terms and Conditions 
 
 export const AboutSectionInfo: AboutSectionProps[] = [
 	{
-		src: '/assets/about-1.png',
+		src: '/assets/about/about-1.webp',
 		title: 'Solving Problems Together',
 		description: [
 			`
@@ -939,7 +939,7 @@ export const AboutSectionInfo: AboutSectionProps[] = [
 		isImageFirst: false,
 	},
 	{
-		src: '/assets/about-2.png',
+		src: '/assets/about/about-2.webp',
 		title: 'Quality You Can Trust',
 		description: [
 			`We understand the importance of reliability when it comes to technology. That’s why every laptop we procure undergoes a rigorous refurbishment process. 
@@ -954,7 +954,7 @@ export const AboutSectionInfo: AboutSectionProps[] = [
 		isImageFirst: true,
 	},
 	{
-		src: '/assets/about-3.png',
+		src: '/assets/about/about-3.webp',
 		title: 'Sourcing Responsibly',
 		description: [
 			`
@@ -973,21 +973,21 @@ Instead, we give these devices a second life through our comprehensive refurbish
 
 export const EdifyRefurbishedCardInfo: EdifyRefurbishedCardProps[] = [
 	{
-		src: '/assets/edify-refurbished-1.png',
+		src: '/assets/refurbished/edify-refurbished-1.webp',
 		isImageFirst: true,
 		title: '50+ Quality Checks',
 		description:
 			'Each laptop is checked against 50+ quality points. Only those passing our strict tests get the Edify badge, showing top performance and reliability.',
 	},
 	{
-		src: '/assets/edify-refurbished-2.png',
+		src: '/assets/refurbished/edify-refurbished-2.webp',
 		isImageFirst: false,
 		title: 'Rigorous Refurbishment',
 		description:
 			'For those needing a little extra care, our team conducts rigorous refurbishment, ensuring every device functions at it’s peak, just like new.',
 	},
 	{
-		src: '/assets/edify-refurbished-3.png',
+		src: '/assets/refurbished/edify-refurbished-3.webp',
 		isImageFirst: true,
 		title: '6 Months Of Warranty',
 		description:

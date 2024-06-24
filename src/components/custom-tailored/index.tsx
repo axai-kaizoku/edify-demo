@@ -13,21 +13,21 @@ function CustomTailored() {
 				<div className="grid grid-cols-2  lg:grid-cols-3 gap-4 md:gap-8  lg:gap-16 pb-6 ">
 					<div className="lg:w-[360px] w-[130px] h-[70px] md:w-[300px] bg-white lg:bg-[#F7F7F6] sm:h-48 rounded flex justify-center p-4 items-center flex-col">
 						<CustomCards
-							src="../assets/custom-tailored/students.svg"
+							src="/assets/custom-tailored/students.svg"
 							alt="Laptops for Students"
 							subHeading="Laptops for Students"
 						/>
 					</div>
 					<div className="lg:w-[360px] w-[130px] h-[70px] md:w-[300px] bg-white lg:bg-[#F7F7F6] sm:h-48 rounded flex justify-center p-4 items-center flex-col">
 						<CustomCards
-							src="../assets/custom-tailored/laptop.svg"
+							src="/assets/custom-tailored/laptop.svg"
 							alt="Premium Laptops"
 							subHeading="Premium Laptops"
 						/>
 					</div>
 					<div className="lg:w-[360px] w-[130px] h-[70px] md:w-[300px] bg-white lg:bg-[#F7F7F6] sm:h-48 rounded flex justify-center p-4 items-center flex-col">
 						<CustomCards
-							src="../assets/custom-tailored/professionals.svg"
+							src="/assets/custom-tailored/professionals.svg"
 							alt="Laptops for Professionals"
 							subHeading="Laptops for Professionals"
 						/>

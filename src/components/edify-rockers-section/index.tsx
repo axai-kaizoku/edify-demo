@@ -39,14 +39,11 @@ export default function EdifyRockersSection() {
 									perPage: 4,
 								},
 							},
-						}}
-					>
+						}}>
 						{[
 							'/assets/videos/video-1.mp4',
 							'/assets/videos/video-2.mp4',
 							'/assets/videos/video-3.mp4',
-							'/assets/videos/video-4.mp4',
-							'/assets/videos/video-4.mp4',
 							'/assets/videos/video-4.mp4',
 						].map((src, i) => (
 							<SplideSlide key={i}>

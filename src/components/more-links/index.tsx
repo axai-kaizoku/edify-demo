@@ -53,9 +53,7 @@ export default function MoreLinks({ slug }: { slug?: string }) {
 				{data && (
 					<div className="sm:w-[85%] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 ">
 						{data?.map((res: FooterCategory, index: number) => (
-							<div
-								key={index}
-								className="">
+							<div key={index} className="">
 								<h1 className="text-lg font-semibold font-graphik mb-2 leading-7">
 									{res.categoryTitle}
 								</h1>
@@ -63,7 +61,7 @@ export default function MoreLinks({ slug }: { slug?: string }) {
 									{res.pages.map((page: FooterPage, pageIndex: number) => (
 										<li
 											key={pageIndex}
-											className="text-xs text-gray-500 font-graphik font-medium leading-5">
+											className="text-xs text-gray-500 font-graphik font-medium leading-5 py-0.5">
 											<a href={`/${page.slug}`}>
 												{page.first_title_name.text} {page.last_title_name.text}
 											</a>

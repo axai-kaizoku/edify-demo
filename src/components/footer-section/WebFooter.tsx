@@ -12,9 +12,7 @@ function WebFooter() {
 			<footer className="  items-center justify-center w-full pt-16 pb-12 hidden sm:flex">
 				<div className="w-[87%] sm:w-4/5  flex  flex-col gap-8">
 					<div>
-						<Link
-							href="/"
-							aria-label="Read more">
+						<Link href="/" aria-label="Read more">
 							<Image
 								src={'/assets/logo.webp'}
 								alt="edify"
@@ -35,9 +33,7 @@ function WebFooter() {
 						<div className="flex justify-around w-full">
 							<div className="flex flex-col gap-4">
 								<FooterHeading title="Company" />
-								<Link
-									href="/about-us"
-									aria-label="Read more about us">
+								<Link href="/about-us" aria-label="Read more about us">
 									<FooterLinks title="About us" />
 								</Link>
 								<FooterLinks title="Blog" />
@@ -67,7 +63,6 @@ function WebFooter() {
 					<h2 className="text-gray-600 font-normal text-sm leading-6">
 						© 2024 Winuall. All rights reserved.
 					</h2>
-
 					<div className="flex items-center justify-center gap-6">
 						<SocialElements
 							src="/assets/socials-icons/twitter.svg"

@@ -36,13 +36,13 @@ export const metadata: Metadata = {
 		title: siteConfig.name,
 		description: siteConfig.description,
 		siteName: siteConfig.name,
-		images: 'https://utfs.io/f/119f891a-3a8a-48fa-9be9-ab9366e23355-xuif36.jpg',
+		images: ['/og_main.jpg'],
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: siteConfig.name,
 		description: siteConfig.description,
-		images: 'https://utfs.io/f/119f891a-3a8a-48fa-9be9-ab9366e23355-xuif36.jpg',
+		images: ['/og_main.jpg'],
 	},
 	icons: {
 		icon: '/logo.png',
@@ -57,8 +57,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${inter.className} ${manuale.variable} ${tinos.variable}`}
-			>
+				className={`${inter.className} ${manuale.variable} ${tinos.variable}`}>
 				<Navbar />
 				<main className="pt-10 sm:pt-20">{children}</main>
 				<FooterSection />

@@ -15,7 +15,7 @@ const MetricsSection = () => {
 							<div className="flex justify-center items-center lg:-ml-20">
 								<Image
 									className="lg:h-[500px] lg:w-[700px] md:h-72 md:w-64 h-48 w-48 object-cover lg:object-contain"
-									src="/assets/metrics.png"
+									src="/assets/seo/metrics.webp"
 									alt="laptop-1"
 									width={505}
 									height={475}

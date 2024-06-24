@@ -15,13 +15,13 @@ export const metadata: Metadata = {
 		title: siteConfigAbout.name,
 		description: siteConfigAbout.description,
 		siteName: siteConfigAbout.name,
-		images: 'https://utfs.io/f/eec40c30-41d1-4ace-b3ed-1c9bf5afe3b0-xuif3b.jpg',
+		images: ['/og_about.jpg'],
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: siteConfigAbout.name,
 		description: siteConfigAbout.description,
-		images: 'https://utfs.io/f/eec40c30-41d1-4ace-b3ed-1c9bf5afe3b0-xuif3b.jpg',
+		images: ['/og_about.jpg'],
 	},
 	icons: {
 		icon: '/logo.png',
@@ -43,7 +43,7 @@ export default function AboutUs() {
 							</h3>
 						</div>
 						<Image
-							src="/assets/about-us.png"
+							src="/assets/about/about-us.webp"
 							alt="About Us"
 							width={480}
 							height={350}
@@ -51,7 +51,7 @@ export default function AboutUs() {
 						/>
 					</div>
 					<Image
-						src="/assets/about-impact.svg"
+						src="/assets/about/about-impact.svg"
 						alt="impact-about"
 						width={1200}
 						height={613}
@@ -71,7 +71,7 @@ export default function AboutUs() {
 					</div>
 				</div>
 
-				<div className="bg-center w-full h-[700px] flex flex-col-reverse justify-center sm:flex-row items-center bg-cover bg-[url('/assets/about-4.png')]">
+				<div className="bg-center w-full h-[700px] flex flex-col-reverse justify-center sm:flex-row items-center bg-cover bg-[url('/assets/about/about-4.webp')]">
 					<div className="w-2/4 lg:block hidden"></div>
 					<div className="w-full sm:w-[40%] flex flex-col gap-4 bg-white  p-8">
 						<h3 className="font-manuale font-semibold text-2xl sm:text-4xl">
