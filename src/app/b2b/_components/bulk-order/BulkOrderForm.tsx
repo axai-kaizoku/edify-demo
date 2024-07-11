@@ -1,10 +1,8 @@
 'use client';
 import { useState } from 'react';
-import { useSearchParams } from 'next/navigation';
 import axios from 'axios';
 
 export default function BulkOrderForm({ onButtonClick }: any) {
-	const params = useSearchParams();
 	const [selectedOption, setSelectedOption] = useState<string>('');
 	const [phone, setPhone] = useState<string>('');
 	const [formErrors, setFormErrors] = useState<string[]>([]);
@@ -55,10 +53,6 @@ export default function BulkOrderForm({ onButtonClick }: any) {
 				project: 'Edify Reseller',
 				store,
 				city,
-				utm_source: params.get('utm_source') || '',
-				utm_medium: params.get('utm_medium') || '',
-				utm_campaign: params.get('utm_campaign') || '',
-				utm_content: params.get('utm_content') || '',
 				pageTitle: window.location.href,
 			};
 
