@@ -29,10 +29,7 @@ export default function BestSellersSection() {
 		<div className="w-full flex justify-center items-center">
 			<div className="w-[87%] sm:w-4/5 flex flex-col">
 				<div className="flex justify-between items-center">
-					<CustomHeading
-						heading="Best Seller"
-						styles="py-6"
-					/>
+					<CustomHeading heading="Best Seller" styles="py-6" />
 					<div className="hidden lg:block">
 						<CustomButton
 							title="VIEW MORE"

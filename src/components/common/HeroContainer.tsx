@@ -1,13 +1,18 @@
 import React from 'react';
 
-interface HeroContainerProps {
+import { cn } from '@/lib/utils';
+
+interface ContainerProps {
 	children: React.ReactNode;
+	className?: string;
 }
 
-function Container({ children }: HeroContainerProps) {
+function Container({ children, className }: ContainerProps) {
 	return (
-		<div className="flex justify-center items-center w-full">
-			<div className="flex flex-col w-[87%] sm:w-4/5">{children}</div>
+		<div className="flex justify-center items-center w-full border-b-8 border-black">
+			<div className={cn('flex flex-col w-[95%] sm:w-[90%] ', className)}>
+				{children}
+			</div>
 		</div>
 	);
 }

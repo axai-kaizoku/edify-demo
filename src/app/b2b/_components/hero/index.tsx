@@ -3,6 +3,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import CatalogueModal from './CatalogueModal';
 import EnquireModal from './EnquireModal';
+import Container from '@/components/common/HeroContainer';
 
 function HeroSection() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -44,6 +45,7 @@ function HeroSection() {
 					</div>
 				</div>
 			</div>
+
 			{isThankYouVisible && (
 				<div className="w-full py-4 bg-green-500 absolute lg:fixed z-50 top-[68px] lg:top-[76px] flex justify-center items-center">
 					<div className="flex justify-center items-center gap-2.5">

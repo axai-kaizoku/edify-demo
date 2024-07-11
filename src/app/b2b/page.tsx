@@ -14,6 +14,10 @@ function B2B() {
 	return (
 		<Container>
 			<HeroSection />
+			<Container className="bg-red-300 w-full h-80">
+				<div className="bg-green-400 w-40 h-40" />
+			</Container>
+
 			<Brands />
 			<EdifyRefurbished />
 			<BestSellers />

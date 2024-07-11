@@ -15,7 +15,7 @@ export default function WebView() {
 	return (
 		<div className="lg:flex justify-between w-full items-center hidden">
 			{/* Web LOGO */}
-			<div className="lg:block hidden">
+			<div className="lg:block hidden w-fit h-fit">
 				<Link href="/" aria-label="Link">
 					<Image
 						src="/assets/logo.webp"
@@ -28,7 +28,7 @@ export default function WebView() {
 			</div>
 
 			{/* Web NavLinks */}
-			<ul className="hidden gap-12 font-semibold font-graphik lg:flex text-slate-500">
+			<ul className="hidden gap-12 w-fit h-fit font-semibold font-graphik lg:flex text-slate-500">
 				<li className={currentRoute === '/' ? 'text-black' : 'text-slate-500'}>
 					<Link href="/" aria-label="Read more">
 						HOME
@@ -73,7 +73,7 @@ export default function WebView() {
 				</li>
 			</ul>
 			{/* Web NavLinks */}
-			<div className="lg:flex gap-6 hidden">
+			<div className="lg:flex gap-6 hidden w-fit h-fit">
 				<Image
 					src="/assets/whatsapp.svg"
 					alt="whatsapp-icon"

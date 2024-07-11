@@ -4,7 +4,7 @@ import CustomButton from './common/CustomButton';
 const HeroComponent = () => {
 	return (
 		<div className="flex flex-col-reverse lg:flex-row items-center w-full py-10 px-4 sm:px-40 sm:py-10 sm:pb-8 sm:border-b gap-12">
-			<div className="flex flex-col justify-center items-center sm:items-start gap-4">
+			<div className="flex flex-col justify-center bg-green-200 items-center sm:items-start gap-4">
 				<div className="flex flex-col gap-4 text-center sm:text-left">
 					<h1 className="text-3xl sm:text-6xl font-semibold leading-tight sm:leading-[72px] text-slate-900 font-manuale">
 						Edify Refurbished Laptops
@@ -20,7 +20,7 @@ const HeroComponent = () => {
 					/>
 				</div>
 			</div>
-			<div className="w-full lg:w-auto flex justify-center lg:justify-end">
+			<div className="w-full lg:w-auto flex justify-center pb-40">
 				<Image
 					src="/assets/hero.webp"
 					alt="Hero-profile"

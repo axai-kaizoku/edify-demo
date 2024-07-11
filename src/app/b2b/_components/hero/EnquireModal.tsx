@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 // import { useSearchParams } from 'next/navigation';
 import axios from 'axios';
+import Container from '@/components/common/HeroContainer';
 
 interface EnquireModalProps {
 	onClose: () => void;
