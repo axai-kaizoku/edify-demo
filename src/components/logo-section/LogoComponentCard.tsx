@@ -15,6 +15,7 @@ const LogoComponentCard = ({
 				alt={alt}
 				width={width}
 				height={height}
+				className="object-contain"
 			/>
 		</>
 	);

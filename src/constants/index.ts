@@ -1018,3 +1018,41 @@ export const EdifyRefurbishedInfo: EdifyRefurbishedCardProps[] = [
 		src: '/assets/b2b/edify-refurbished-3.svg',
 	},
 ];
+
+export const EdifyTrustContent: EdifyRefurbishedCardProps[] = [
+	{
+		title: 'Quality Assurance',
+		description:
+			'Every laptop passes 50+ rigorous quality checks to ensure top performance.',
+		src: '/assets/startup/qualities/quality.svg',
+	},
+	{
+		title: 'Comprehensive Refurbishment',
+		description:
+			'Our skilled technicians refurbish each device to like-new condition.',
+		src: '/assets/startup/qualities/comprehensive.svg',
+	},
+	{
+		title: 'Sustainable Solutions',
+		description: 'Choosing refurbished means supporting a greener planet.',
+		src: '/assets/startup/qualities/sustainable.svg',
+	},
+	{
+		title: 'Customised Warranty Solution',
+		description:
+			'Enjoy peace of mind with our industry-leading warranty on all devices.',
+		src: '/assets/b2b/edify-refurbished-3.svg',
+	},
+	{
+		title: '24/7 Customer Support',
+		description:
+			'Our dedicated support team is available around the clock to assist you with any issues.',
+		src: '/assets/startup/qualities/support.svg',
+	},
+	{
+		title: 'On-Site Repair',
+		description:
+			'Quick and efficient on-site repair services to minimize downtime for your startup.',
+		src: '/assets/startup/qualities/repair.svg',
+	},
+];

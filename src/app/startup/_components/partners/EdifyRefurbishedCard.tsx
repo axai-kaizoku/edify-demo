@@ -10,7 +10,7 @@ export default function EdifyRefurbishedCard({
 }: EdifyRefurbishedCard) {
 	const { description, src, title } = cardData;
 	return (
-		<div className="flex flex-row lg:flex-col w-full h-full gap-5 lg:gap-8">
+		<div className="flex flex-row lg:flex-col w-full h-full lg:w-[340px] lg:h-[350px] lg:shadow-sm gap-5 lg:gap-8 lg:border lg:p-10">
 			<Image
 				src={src}
 				alt="reburfished"

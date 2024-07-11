@@ -1,8 +1,10 @@
 'use client';
 import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import axios from 'axios';
 
 export default function BulkOrderForm({ onButtonClick }: any) {
+	const params = useSearchParams();
 	const [selectedOption, setSelectedOption] = useState<string>('');
 	const [phone, setPhone] = useState<string>('');
 	const [formErrors, setFormErrors] = useState<string[]>([]);
@@ -50,16 +52,22 @@ export default function BulkOrderForm({ onButtonClick }: any) {
 			const resellerObject = {
 				name,
 				phone: `+91${phone}`,
-				project: 'Edify Reseller',
-				store,
+				project: 'Edify B2B',
+				// store,
 				city,
+				laptop_need: laptops,
+				utm_source: params.get('utm_source') || '',
+				utm_medium: params.get('utm_medium') || '',
+				utm_campaign: params.get('utm_campaign') || '',
+				utm_content: params.get('utm_content') || '',
 				pageTitle: window.location.href,
 			};
 
-			// await axios.post(
-			// 	'https://api.edify.club/v2/mkt/requests/interested/reseller',
-			// 	resellerObject,
-			// );
+			await axios.post(
+				'https://api.edify.club/v2/mkt/requests/bulkOrder',
+				resellerObject,
+			);
+			// console.log(resellerObject, 'object');
 
 			onButtonClick();
 

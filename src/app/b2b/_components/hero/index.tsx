@@ -1,10 +1,8 @@
 'use client';
-import CustomButton from '@/components/common/CustomButton';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import CatalogueModal from './CatalogueModal';
 import EnquireModal from './EnquireModal';
-import Link from 'next/link';
 
 function HeroSection() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -41,13 +39,13 @@ function HeroSection() {
 					</div>
 					<div
 						onClick={handleEnquireOpen}
-						className="w-[121px] h-3.5 text-white text-sm font-medium font-graphik underline">
+						className="w-[121px] h-3.5 text-white cursor-pointer text-sm font-medium font-graphik underline">
 						ENQUIRE NOW
 					</div>
 				</div>
 			</div>
 			{isThankYouVisible && (
-				<div className="w-full py-4 bg-green-500 absolute top-[68px] lg:top-[76px] flex justify-center items-center">
+				<div className="w-full py-4 bg-green-500 absolute lg:fixed z-50 top-[68px] lg:top-[76px] flex justify-center items-center">
 					<div className="flex justify-center items-center gap-2.5">
 						<div>
 							<span className="text-white text-sm sm:text-lg font-normal font-graphik leading-10 ">
@@ -60,11 +58,11 @@ function HeroSection() {
 									</span>
 								</span>
 							</span>
-							<Link
+							<a
 								href="tel:+919513245671"
-								className="text-white text-sm sm:text-lg font-medium font-graphik underline leading-10">
+								className="text-white text-sm sm:text-lg font-medium font-graphik cursor-pointer underline leading-10">
 								Call +91 95132 45671
-							</Link>
+							</a>
 						</div>
 					</div>
 				</div>
@@ -100,7 +98,12 @@ function HeroSection() {
 					onDownload={handleBrochureDownload}
 				/>
 			)}
-			{isEnquireOpen && <EnquireModal onClose={handleEnquireClose} />}
+			{isEnquireOpen && (
+				<EnquireModal
+					onClose={handleEnquireClose}
+					onDownload={handleBrochureDownload}
+				/>
+			)}
 		</div>
 	);
 }

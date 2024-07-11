@@ -1,7 +1,11 @@
+'use client';
 import React, { useEffect, useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import axios from 'axios';
 
 interface EnquireModalProps {
 	onClose: () => void;
+	onDownload?: any;
 }
 
 interface FormState {
@@ -12,7 +16,8 @@ interface FormState {
 	quantity: string;
 }
 
-const EnquireModal: React.FC<EnquireModalProps> = ({ onClose }) => {
+const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
+	const params = useSearchParams();
 	const [isClosing, setIsClosing] = useState(false);
 	const [form, setForm] = useState<FormState>({
 		name: '',
@@ -74,9 +79,31 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose }) => {
 		return isValid;
 	};
 
-	const handleDownloadClick = () => {
+	const handleDownloadClick = async () => {
 		if (validateForm()) {
 			setIsClosing(true);
+			onDownload();
+
+			// API integration
+			const resellerObject = {
+				name: form.name,
+				phone: `+91${form.phone}`,
+				project: 'Edify B2B',
+				// store:form.store,
+				city: form.city,
+				laptop_need: form.quantity,
+				utm_source: params.get('utm_source') || '',
+				utm_medium: params.get('utm_medium') || '',
+				utm_campaign: params.get('utm_campaign') || '',
+				utm_content: params.get('utm_content') || '',
+				pageTitle: window.location.href,
+			};
+			// console.log(resellerObject, 'object');
+
+			await axios.post(
+				'https://api.edify.club/v2/mkt/requests/bulkOrder',
+				resellerObject,
+			);
 		}
 	};
 
@@ -101,9 +128,7 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose }) => {
 							<div className="flex flex-col justify-start items-start gap-5">
 								<div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-6 lg:gap-10">
 									<div className="flex flex-col gap-2.5 w-full sm:w-auto">
-										<label
-											className="sr-only"
-											htmlFor="name">
+										<label className="sr-only" htmlFor="name">
 											Name
 										</label>
 										<input
@@ -118,9 +143,7 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose }) => {
 										)}
 									</div>
 									<div className="flex flex-col gap-2.5 w-full sm:w-auto">
-										<label
-											className="sr-only"
-											htmlFor="phone">
+										<label className="sr-only" htmlFor="phone">
 											Phone Number
 										</label>
 										<input
@@ -137,9 +160,7 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose }) => {
 								</div>
 								<div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-6 lg:gap-10">
 									<div className="flex flex-col gap-2.5 w-full sm:w-auto">
-										<label
-											className="sr-only"
-											htmlFor="store">
+										<label className="sr-only" htmlFor="store">
 											Email
 										</label>
 										<input
@@ -154,9 +175,7 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose }) => {
 										)}
 									</div>
 									<div className="flex flex-col gap-2.5 w-full sm:w-auto">
-										<label
-											className="sr-only"
-											htmlFor="city">
+										<label className="sr-only" htmlFor="city">
 											Enter your City Name
 										</label>
 										<input
@@ -173,9 +192,7 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose }) => {
 								</div>
 								<div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-6 lg:gap-10">
 									<div className="flex flex-col gap-2.5 w-full sm:w-auto">
-										<label
-											className="sr-only"
-											htmlFor="quantity">
+										<label className="sr-only" htmlFor="quantity">
 											Number Of Quantities
 										</label>
 										<div className="flex justify-between">
@@ -280,10 +297,7 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose }) => {
 					<button
 						className="absolute top-10 right-[19px] lg:top-[48.50px] lg:right-[66px] w-5 sm:w-8 lg:h-[33px] h-5"
 						onClick={handleClose}>
-						<img
-							src="/assets/b2b/cross.svg"
-							alt="close"
-						/>
+						<img src="/assets/b2b/cross.svg" alt="close" />
 					</button>
 				</div>
 			</div>
