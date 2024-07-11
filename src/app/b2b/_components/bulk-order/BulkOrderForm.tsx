@@ -3,11 +3,10 @@ import { useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import axios from 'axios';
 
-export default function CustomForm() {
+export default function BulkOrderForm({ onButtonClick }: any) {
 	const params = useSearchParams();
 	const [selectedOption, setSelectedOption] = useState<string>('');
 	const [phone, setPhone] = useState<string>('');
-	const [isTyping, setIsTyping] = useState<boolean>(false);
 	const [formErrors, setFormErrors] = useState<string[]>([]);
 
 	const handleRadioChange = (e: any) => {
@@ -24,19 +23,23 @@ export default function CustomForm() {
 	const handleSubmit = async (e: any) => {
 		e.preventDefault();
 		const name = e.target[0].value;
-		const city = e.target[1].value;
+		const store = e.target[1].value;
 		const phone = e.target[2].value;
+		const city = e.target[3].value;
 		const laptops = selectedOption;
 		const errors: string[] = [];
 
 		if (!name.trim()) {
 			errors.push('Name is required.');
 		}
-		if (!city.trim()) {
-			errors.push('City is required.');
+		if (!store.trim()) {
+			errors.push('Store is required.');
 		}
 		if (!phone.trim() || phone.length !== 10) {
 			errors.push('Phone number is invalid.');
+		}
+		if (!city.trim()) {
+			errors.push('City is required.');
 		}
 		if (!laptops) {
 			errors.push('Please select the number of laptops.');
@@ -50,6 +53,7 @@ export default function CustomForm() {
 				name,
 				phone: `+91${phone}`,
 				project: 'Edify Reseller',
+				store,
 				city,
 				utm_source: params.get('utm_source') || '',
 				utm_medium: params.get('utm_medium') || '',
@@ -58,68 +62,57 @@ export default function CustomForm() {
 				pageTitle: window.location.href,
 			};
 
-			await axios.post(
-				'https://api.edify.club/v2/mkt/requests/interested/reseller',
-				resellerObject,
-			);
+			// await axios.post(
+			// 	'https://api.edify.club/v2/mkt/requests/interested/reseller',
+			// 	resellerObject,
+			// );
+
+			onButtonClick();
 
 			setPhone('');
 			e.target[0].value = '';
 			e.target[1].value = '';
 			e.target[2].value = '';
+			e.target[3].value = '';
 			setSelectedOption('');
-			setIsTyping(false);
 		}
 	};
 
-	const handleTyping = () => {
-		setIsTyping(true);
-	};
-
 	return (
-		<div className="border bg-white w-full min-h-[450px] px-6 sm:px-8 py-6 mt-6">
+		<div className=" bg-white w-full min-h-[450px] px-6 sm:px-8 py-6 mt-6">
+			{/* Success message */}
 			<form
 				className="flex font-graphik flex-col justify-between h-[450px] text-sm"
 				onSubmit={handleSubmit}
-				onChange={handleTyping}
 				aria-describedby="form-errors">
-				<div className="flex flex-col gap-2.5">
-					<label htmlFor="fullName" className="font-bold">
-						FULL NAME
-					</label>
+				<div>
 					<input
 						type="text"
 						id="fullName"
 						placeholder="Enter your Full Name"
-						className="border-b p-3 outline-none focus:ring-2 focus:ring-gray-500"
+						className="border p-3 outline-none focus:ring-2 focus:ring-gray-500 w-full"
 						maxLength={30}
 						required
 						aria-required="true"
 					/>
 				</div>
-				<div className="flex flex-col gap-2.5">
-					<label htmlFor="city" className="font-bold">
-						CITY
-					</label>
+				<div>
 					<input
 						type="text"
-						id="city"
-						placeholder="Enter your City"
-						className="border-b p-3 outline-none focus:ring-2 focus:ring-gray-500"
+						id="store"
+						placeholder="Enter your Store"
+						className="border p-3 outline-none focus:ring-2 focus:ring-gray-500 w-full"
 						maxLength={35}
 						required
 						aria-required="true"
 					/>
 				</div>
-				<div className="flex flex-col gap-2.5">
-					<label htmlFor="phoneNumber" className="font-bold">
-						PHONE NUMBER
-					</label>
+				<div>
 					<input
 						type="tel"
 						id="phoneNumber"
-						placeholder="+91 - Phone Number"
-						className="border-b p-3 outline-none focus:ring-2 focus:ring-gray-500"
+						placeholder="+91 - Enter your phone number"
+						className="border p-3 outline-none focus:ring-2 focus:ring-gray-500 w-full"
 						value={phone}
 						onChange={handlePhoneChange}
 						required
@@ -128,12 +121,23 @@ export default function CustomForm() {
 						aria-required="true"
 					/>
 				</div>
+				<div>
+					<input
+						type="text"
+						id="city"
+						placeholder="Enter your City"
+						className="border p-3 outline-none focus:ring-2 focus:ring-gray-500 w-full"
+						maxLength={35}
+						required
+						aria-required="true"
+					/>
+				</div>
 				<fieldset
 					className="flex flex-col gap-2.5"
 					role="radiogroup"
 					aria-labelledby="noOfLaptops">
-					<legend id="noOfLaptops" className="font-bold pb-6">
-						NO OF LAPTOPS
+					<legend id="noOfLaptops" className="font-graphik text-slate-500 pb-6">
+						Number Of Laptops
 					</legend>
 					<div className="flex justify-between">
 						<div>
@@ -220,11 +224,9 @@ export default function CustomForm() {
 				</fieldset>
 				<button
 					type="submit"
-					className={`border py-2 text-base sm:text-lg font-graphik font-bold ${
-						isTyping ? 'bg-black text-white' : 'bg-slate-200 text-white'
-					} focus:ring-2 focus:ring-gray-500`}
+					className="border text-base sm:text-lg mt-5 font-graphik font-bold bg-black text-white focus:ring-2 focus:ring-gray-500 w-fit py-2.5 px-6"
 					aria-live="assertive">
-					ENQUIRE NOW
+					DOWNLOAD BROCHURE
 				</button>
 				{formErrors.length > 0 && (
 					<div id="form-errors" className="text-red-500 mt-2" role="alert">

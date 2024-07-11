@@ -8,15 +8,8 @@ function MobileFooter() {
 	return (
 		<footer className="p-4 block sm:hidden">
 			<div>
-				<Link
-					href="/"
-					aria-label="Read more ">
-					<Image
-						src="/assets/logo.webp"
-						alt="edify"
-						width={65}
-						height={30}
-					/>
+				<Link href="/" aria-label="Read more ">
+					<Image src="/assets/logo.webp" alt="edify" width={65} height={30} />
 				</Link>
 
 				<div className="flex py-8 gap-6">
@@ -66,13 +59,22 @@ function MobileFooter() {
 							COMPANY
 						</h1>
 						<div className="gap-1 font-graphik font-normal leading-5 text-xs text-slate-600">
-							<Link
-								href="/about-us"
-								aria-label="Read more ">
+							<Link href="/about-us" aria-label="Read more ">
 								<h2>About US</h2>
 							</Link>
+							<Link href="/b2b" aria-label="Read more ">
+								<h2>B2B Order</h2>
+							</Link>
 							<h2>Blog</h2>
-							<h2>Service and Warranty</h2>
+							<Link href="/startup" aria-label="Read more ">
+								<h2>Business</h2>
+							</Link>
+							<Link
+								href="https://warranty.edify.club"
+								target="_blank"
+								aria-label="Read more ">
+								<h2>Service and Warranty</h2>
+							</Link>
 						</div>
 					</div>
 					<div className="flex flex-col gap-2">
@@ -80,15 +82,11 @@ function MobileFooter() {
 							LEGAL
 						</h1>
 						<div className="gap-1 font-graphik font-normal leading-5 text-xs text-slate-600">
-							<Link
-								href="privacy-policy"
-								aria-label="Read more ">
+							<Link href="privacy-policy" aria-label="Read more ">
 								<h2>Privacy Policy</h2>
 							</Link>
 							<h2>Customer Service</h2>
-							<Link
-								href="/terms-of-services"
-								aria-label="Read more ">
+							<Link href="/terms-of-services" aria-label="Read more ">
 								<h2>Terms and Conditions</h2>
 							</Link>
 						</div>

@@ -160,7 +160,7 @@ export type CustomCardProps = {
 
 export type EdifyRefurbishedCardProps = {
 	src: string;
-	isImageFirst: boolean;
+	isImageFirst?: boolean;
 	title: string;
 	description: string;
 };

@@ -36,9 +36,13 @@ function WebFooter() {
 								<Link href="/about-us" aria-label="Read more about us">
 									<FooterLinks title="About us" />
 								</Link>
+								<Link href="/startup" aria-label="Read more ">
+									<FooterLinks title="Business" />
+								</Link>
 								<FooterLinks title="Blog" />
-								<FooterLinks title="B2B Order" />
-								<FooterLinks title="Service and Warranty" />
+								<Link href="/b2b" aria-label="Read more about b2b order">
+									<FooterLinks title="B2B Order" />
+								</Link>
 							</div>
 							<div className="flex flex-col gap-4">
 								<FooterHeading title="Legal" />
@@ -51,6 +55,12 @@ function WebFooter() {
 									href="/privacy-policy"
 									aria-label="Read more about Policy">
 									<FooterLinks title="Privacy Policy" />
+								</Link>
+								<Link
+									href="https://warranty.edify.club"
+									target="_blank"
+									aria-label="Read more ">
+									<FooterLinks title="Service and Warranty" />
 								</Link>
 							</div>
 						</div>

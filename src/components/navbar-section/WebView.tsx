@@ -16,9 +16,7 @@ export default function WebView() {
 		<div className="lg:flex justify-between w-full items-center hidden">
 			{/* Web LOGO */}
 			<div className="lg:block hidden">
-				<Link
-					href="/"
-					aria-label="Link">
+				<Link href="/" aria-label="Link">
 					<Image
 						src="/assets/logo.webp"
 						alt="logo"
@@ -32,10 +30,16 @@ export default function WebView() {
 			{/* Web NavLinks */}
 			<ul className="hidden gap-12 font-semibold font-graphik lg:flex text-slate-500">
 				<li className={currentRoute === '/' ? 'text-black' : 'text-slate-500'}>
-					<Link
-						href="/"
-						aria-label="Read more">
+					<Link href="/" aria-label="Read more">
 						HOME
+					</Link>
+				</li>
+				<li
+					className={
+						currentRoute === '/startup' ? 'text-black' : 'text-slate-500'
+					}>
+					<Link href="/startup" aria-label="Read more">
+						BUSINESS
 					</Link>
 				</li>
 
@@ -57,10 +61,14 @@ export default function WebView() {
 					className={
 						currentRoute === '/about-us' ? 'text-black' : 'text-slate-500'
 					}>
-					<Link
-						href="/about-us"
-						aria-label="Read more">
+					<Link href="/about-us" aria-label="Read more">
 						ABOUT US
+					</Link>
+				</li>
+				<li
+					className={currentRoute === '/b2b' ? 'text-black' : 'text-slate-500'}>
+					<Link href="/b2b" aria-label="Read more">
+						B2B
 					</Link>
 				</li>
 			</ul>

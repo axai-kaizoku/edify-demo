@@ -994,3 +994,27 @@ export const EdifyRefurbishedCardInfo: EdifyRefurbishedCardProps[] = [
 			'Rest easy with our 6-month warranty, offering peace of mind. Each purchase is protected, ensuring satisfaction, and top performance.',
 	},
 ];
+
+export const EdifyRefurbishedInfo: EdifyRefurbishedCardProps[] = [
+	{
+		title: 'Laptops your Customers can Rely On',
+		description:
+			'Each laptop is checked against 50+ quality points. Only those passing our strict tests get the Edify badge, showing top performance and reliability.',
+
+		src: '/assets/b2b/edify-refurbished-1.svg',
+	},
+	{
+		title: 'Price like Never Heard Before',
+		description:
+			'Quality comes at a price but that price is the best one you have heard of. Best prices for the best quality.',
+
+		src: '/assets/b2b/edify-refurbished-2.svg',
+	},
+	{
+		title: 'Support your business can rely on',
+		description:
+			'When you source from Edify, you get support that lasts for months. Replacement or repair, we are always there.',
+
+		src: '/assets/b2b/edify-refurbished-3.svg',
+	},
+];

@@ -9,7 +9,9 @@ export default function MobileView() {
 
 	const menuItems = [
 		{ name: 'HOME', path: '/' },
+		{ name: 'BUSINESS', path: '/startup' },
 		{ name: 'ABOUT', path: '/about-us' },
+		{ name: 'B2B', path: '/b2b' },
 		{ name: 'BLOG', path: 'https://edify.club/blog/' },
 	];
 
@@ -28,9 +30,7 @@ export default function MobileView() {
 	return (
 		<>
 			{/* Mobile LOGO */}
-			<Link
-				href="/"
-				aria-label="Read more ">
+			<Link href="/" aria-label="Read more ">
 				<Image
 					src="/assets/logo.webp"
 					alt="logo"
