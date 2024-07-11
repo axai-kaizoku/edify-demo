@@ -1,6 +1,6 @@
-'use client';
+// 'use client';
 import React, { useEffect, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+// import { useSearchParams } from 'next/navigation';
 import axios from 'axios';
 
 interface EnquireModalProps {
@@ -17,7 +17,7 @@ interface FormState {
 }
 
 const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
-	const params = useSearchParams();
+	// const params = useSearchParams();
 	const [isClosing, setIsClosing] = useState(false);
 	const [form, setForm] = useState<FormState>({
 		name: '',
@@ -92,18 +92,18 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 				// store:form.store,
 				city: form.city,
 				laptop_need: form.quantity,
-				utm_source: params.get('utm_source') || '',
-				utm_medium: params.get('utm_medium') || '',
-				utm_campaign: params.get('utm_campaign') || '',
-				utm_content: params.get('utm_content') || '',
+				// utm_source: params.get('utm_source') || '',
+				// utm_medium: params.get('utm_medium') || '',
+				// utm_campaign: params.get('utm_campaign') || '',
+				// utm_content: params.get('utm_content') || '',
 				pageTitle: window.location.href,
 			};
 			// console.log(resellerObject, 'object');
 
-			await axios.post(
-				'https://api.edify.club/v2/mkt/requests/bulkOrder',
-				resellerObject,
-			);
+			// await axios.post(
+			// 	'https://api.edify.club/v2/mkt/requests/bulkOrder',
+			// 	resellerObject,
+			// );
 		}
 	};
 
