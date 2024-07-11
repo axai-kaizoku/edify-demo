@@ -4,6 +4,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import CatalogueModal from './CatalogueModal';
 import EnquireModal from './EnquireModal';
+import Link from 'next/link';
 
 function HeroSection() {
 	const [isModalOpen, setIsModalOpen] = useState(false);
@@ -59,11 +60,11 @@ function HeroSection() {
 									</span>
 								</span>
 							</span>
-							<a
+							<Link
 								href="tel:+919513245671"
 								className="text-white text-sm sm:text-lg font-medium font-graphik underline leading-10">
 								Call +91 95132 45671
-							</a>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -91,12 +92,7 @@ function HeroSection() {
 						</div>
 					</div>
 				</div>
-				<Image
-					alt=""
-					width={650}
-					height={650}
-					src="/assets/b2b/hero.png"
-				/>
+				<Image alt="" width={650} height={650} src="/assets/b2b/hero.png" />
 			</div>
 			{isModalOpen && (
 				<CatalogueModal
