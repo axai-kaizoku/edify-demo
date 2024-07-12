@@ -9,6 +9,7 @@ const nextConfig = {
 			},
 		],
 	},
+
 	experimental: {
 		missingSuspenseWithCSRBailout: false,
 	},
@@ -18,6 +19,7 @@ const nextConfig = {
 	eslint: {
 		ignoreDuringBuilds: true,
 	},
+
 };
 
 export default nextConfig;

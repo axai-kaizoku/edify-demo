@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Product } from '@/types';
 import Link from 'next/link';
 
@@ -13,15 +12,15 @@ export default function BestSellerCard({
 }: Product) {
 	return (
 		<div
-			className="w-[250px] flex flex-col rounded-lg duration-300 ease-in-out overflow-hidden bg-white h-[392px]"
+			className=" flex flex-col rounded-lg duration-300 ease-in-out overflow-hidden bg-white h-[392px]"
 			role="article"
 			aria-labelledby={`product-title-${title}`}
 			aria-describedby={`product-brief-${title}`}>
-			<div className="flex justify-center items-center p-2 h-1/2 w-full pb-4">
-				<Image
+			<div className="flex justify-center items-center  h-1/2 w-full ">
+				<img
 					src={image}
 					alt={alt_tag}
-					className="h-[100px] md:h-[150px] w-36 md:w-52 object-cover "
+					className="h-[100px] md:h-[150px] w-36 md:w-52 object-contain "
 					width={668}
 					height={350}
 					aria-hidden="true"

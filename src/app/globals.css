@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-}
-
 @layer base {
 	:root {
 		--background: 0 0% 100%;
@@ -143,6 +137,10 @@ input[type='number'] {
 	animation: fadeOut 0.3s ease-in forwards;
 }
 
-.splide__slide {
-	height: fit-content;
+.splide__pagination__page.is-active{
+	background: #000 !important;
+}
+
+.splide__pagination__page{
+	background: #CACED1 !important;
 }

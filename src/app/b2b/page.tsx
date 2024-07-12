@@ -7,26 +7,31 @@ import Partners from './_components/partners';
 import PartnersTestimonials from './_components/partners-testimonials';
 import FAQ from './_components/faq';
 import BulkOrder from './_components/bulk-order';
-import Container from '@/components/common/HeroContainer';
 import MoreLinksSection from './_components/more-links';
+import Container from '@/components/common/Container';
 
 function B2B() {
 	return (
-		<Container>
-			<HeroSection />
-			<Container className="bg-red-300 w-full h-80">
-				<div className="bg-green-400 w-40 h-40" />
+		<>
+			<Container isBorder={false}>
+				<HeroSection />
+				<Brands />
 			</Container>
-
-			<Brands />
-			<EdifyRefurbished />
-			<BestSellers />
-			<Partners />
-			<PartnersTestimonials />
-			<FAQ />
-			<BulkOrder />
-			<MoreLinksSection />
-		</Container>
+			{/* <img
+				src="/assets/b2b/wave-1.svg"
+				alt="wave"
+				className="w-[50px] h-[200px] object-contain relative"
+			/> */}
+			<Container isBorder={false}>
+				<EdifyRefurbished />
+				<BestSellers />
+				<Partners />
+				<PartnersTestimonials />
+				<FAQ />
+				<BulkOrder />
+				<MoreLinksSection />
+			</Container>
+		</>
 	);
 }
 

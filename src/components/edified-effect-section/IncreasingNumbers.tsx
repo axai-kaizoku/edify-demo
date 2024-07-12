@@ -28,10 +28,10 @@ export default function IncreasingNumbers({
 
 	const decimalPlaces = getDecimalPlaces(endNumber);
 	return (
-		<div className={`flex flex-col  w-full lg:w-1/5 gap-3 lg:items-center`}>
+		<div className="flex flex-col w-full lg:w-1/5 gap-3 lg:items-center">
 			<div
 				ref={numberRef}
-				className="text-3xl sm:text-5xl text-[#267C46] font-bold font-manuale  lg:text-center">
+				className="text-[1.7rem] sm:text-5xl text-[#98C23B] sm:text-[#267C46] font-bold font-manuale  lg:text-center">
 				{isInView && (
 					<CountUp
 						start={0}
@@ -42,11 +42,11 @@ export default function IncreasingNumbers({
 						duration={2}
 					/>
 				)}
-				<span className="text-[#267C46] sm:text-xl text-base pl-1 sm:pl-2 lg:pl-4">
+				<span className="text-[#98C23B] sm:text-[#267C46] sm:text-xl text-[0.8rem] pl-1 sm:pl-2 lg:pl-4">
 					{value}
 				</span>
 			</div>
-			<div className="text-slate-600 w-full text-sm sm:text-base lg:text-center">
+			<div className="text-slate-600 w-full text-[0.77rem] sm:text-base lg:text-center">
 				{description}
 			</div>
 		</div>

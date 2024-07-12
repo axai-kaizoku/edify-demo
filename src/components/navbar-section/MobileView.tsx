@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 export default function MobileView() {
-	const [isOpen, setIsOpen] = useState<boolean>(false);
+	const [isOpen, setIsOpen] = useState(false);
 	const genericHamburgerLine = `h-1 w-6 my-0.5 rounded-full bg-black transition ease transform duration-300`;
 
 	const menuItems = [
@@ -28,21 +28,19 @@ export default function MobileView() {
 	}, [isOpen]);
 
 	return (
-		<>
+		<div className="border-b">
 			{/* Mobile LOGO */}
-			<Link href="/" aria-label="Read more ">
-				<Image
+			<Link href="/" aria-label="Edify Logo">
+				<img
 					src="/assets/logo.webp"
 					alt="logo"
-					width={120}
-					height={60}
-					className="block lg:hidden"
+					className="block lg:hidden object-contain w-[120px] h-[60px] mx-4 my-3"
 				/>
 			</Link>
 
 			{/* Mobile Hamburger icon (menu icon) */}
 			<div
-				className="lg:hidden flex flex-col absolute pr-2.5 right-0 h-6 w-6 rounded justify-center items-center "
+				className="lg:hidden flex flex-col absolute pr-2.5 top-8 right-0 h-6 w-6 rounded justify-center items-center "
 				onClick={() => setIsOpen(!isOpen)}>
 				{renderHamburgerLine(
 					isOpen ? 'rotate-45 translate-y-2.5  ' : 'opacity-100 ',
@@ -76,6 +74,6 @@ export default function MobileView() {
 					))}
 				</ul>
 			</div>
-		</>
+		</div>
 	);
 }

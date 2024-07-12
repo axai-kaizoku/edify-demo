@@ -4,18 +4,17 @@ import React from 'react';
 
 function CustomCards({ src, alt, subHeading }: CustomCardProps) {
 	return (
-		<div className="flex justify-center items-center gap-2 flex-col p-2">
-			<Image
-				width={64}
-				height={60}
+		<div className="flex flex-col justify-center items-center gap-2 bg-[#F7F7F6] py-5 lg:py-6 xl:py-8 rounded">
+			<img
 				src={src}
 				alt={alt}
-				className="w-7 h-7 sm:w-16 sm:h-16"
+				className="w-7 h-7  lg:w-12 lg:h-12  xl:w-16 xl:h-16 object-contain"
 			/>
-
-			<p className="leading-4 sm:leading-6 font-normal font-graphik text-xs sm:text-xl text-wrap w-full sm:w-28 text-center">
-				{subHeading}
-			</p>
+			<div className="flex justify-center items-center ">
+				<div className="w-[70%] text-center text-sm lg:text-[0.9rem] xl:text-base">
+					{subHeading}
+				</div>
+			</div>
 		</div>
 	);
 }

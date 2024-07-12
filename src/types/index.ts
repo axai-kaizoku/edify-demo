@@ -96,13 +96,6 @@ export type AboutSectionProps = {
 	isImageFirst?: boolean;
 };
 
-export type LogoComponentCardProps = {
-	src: string;
-	alt: string;
-	width: number;
-	height: number;
-};
-
 type Title = {
 	text: string;
 	bgColour?: string;

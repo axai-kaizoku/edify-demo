@@ -38,7 +38,6 @@ function BulkOrder() {
 					</div>
 				</div>
 			)}
-
 			<div className="hidden flex-col py-14 sm:flex">
 				<div className="text-center">
 					<CustomHeading heading="Looking to Buy Laptops in Bulk?" />

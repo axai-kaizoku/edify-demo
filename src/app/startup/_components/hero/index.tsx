@@ -46,33 +46,39 @@ function HeroSection() {
 					</div>
 				</div>
 			)}
-			<div className="w-full flex flex-col-reverse lg:flex-row justify-center items-center pt-12 pb-10">
+
+			<div className="w-full flex flex-col-reverse lg:flex-row justify-center items-center pt-12  pb-12 xl:pt-16">
 				<div className="flex flex-col justify-start items-start gap-4 w-full">
-					<div className="w-full flex flex-col justify-start items-start gap-5 lg:gap-[60px]">
-						<div className="w-full flex flex-col lg:justify-start justify-center items-center lg:items-start gap-5">
-							<div className="text-black md:text-4xl lg:text-6xl text-xl font-semibold font-manuale leading-loose sm:leading-[72px]">
-								Give your team what <br className="hidden lg:block" />
-								they <span className="inline-block line-through">
-									need
-								</span>{' '}
-								deserve
-							</div>
-							<div className="text-gray-600  text-base md:text-2xl lg:text-3xl font-normal font-graphik leading-snug md:leading-10">
-								Now get best in class laptops for your team
-							</div>
+					<div className="w-full flex flex-col justify-start items-start gap-5 md:gap-8  xl:gap-11">
+						<div className="pt-12 hidden lg:block">
+							<div className="w-[200px] h-0.5 bg-black " />
+						</div>
+						<div className="flex lg:block justify-center items-center w-full lg:justify-start lg:items-start text-black md:text-3xl xl:text-[3.8rem] text-xl font-semibold font-manuale leading-loose sm:leading-[72px] xl:leading-[80px]">
+							Give your team what <br className="hidden lg:block" />
+							they <span className="inline-block px-1 line-through">
+								need
+							</span>{' '}
+							DESERVE
+						</div>
+						<div className="flex justify-center items-center w-full lg:justify-start lg:items-start  text-gray-600  text-base md:text-[2rem]  xl:text-[1.7rem] font-normal font-graphik leading-snug md:leading-10">
+							Now get best in class laptops for your team
 						</div>
 						<div className="w-full flex justify-start items-center">
 							<div className="w-full flex flex-col justify-center lg:justify-start items-center lg:items-start pb-12">
 								<button
 									className="px-4 sm:px-7 py-2 sm:py-3.5 leading-5 bg-black rounded text-white flex justify-center items-center font-medium text-xs sm:text-lg"
 									onClick={handleModalOpen}>
-									TALK TO HUMAN
+									DOWNLOAD CATALOGUE
 								</button>
 							</div>
 						</div>
 					</div>
 				</div>
-				<Image alt="" width={650} height={650} src="/assets/startup/hero.png" />
+				<img
+					alt=""
+					className="lg:w-[650px] lg:h-[350px] xl:h-[500px] object-contain xl:w-[700px] pb-12 lg:pb-0"
+					src="/assets/startup/hero.png"
+				/>
 			</div>
 			{isModalOpen && (
 				<StartupForm

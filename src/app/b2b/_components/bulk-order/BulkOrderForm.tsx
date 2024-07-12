@@ -62,12 +62,10 @@ export default function BulkOrderForm({ onButtonClick }: any) {
 				utm_content: params.get('utm_content') || '',
 				pageTitle: window.location.href,
 			};
-
 			await axios.post(
 				'https://api.edify.club/v2/mkt/requests/bulkOrder',
 				resellerObject,
 			);
-			// console.log(resellerObject, 'object');
 
 			onButtonClick();
 
@@ -81,7 +79,7 @@ export default function BulkOrderForm({ onButtonClick }: any) {
 	};
 
 	return (
-		<div className=" bg-white w-full min-h-[450px] px-6 sm:px-8 py-6 mt-6">
+		<div className=" bg-white w-full min-h-[450px] py-6 mt-6">
 			{/* Success message */}
 			<form
 				className="flex font-graphik flex-col justify-between h-[450px] text-sm"

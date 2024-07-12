@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import React from 'react';
-import SocialElemets from './SocialElemets';
 import SocialElementsMobile from './SocialElementsMobile';
 import Link from 'next/link';
 

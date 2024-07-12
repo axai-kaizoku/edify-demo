@@ -15,16 +15,30 @@ function Partners() {
 				/>
 			</div>
 			<div className="flex flex-col w-full gap-16">
-				<div className="w-full lg:w-[52%] flex justify-between">
-					<NumCard num={1} content="Fill the form to get started" />
-					<NumCard num={2} content="Our Expert team will contact you" />
-				</div>
-				<div className="w-full lg:w-[52%] flex justify-between">
+				<div className="w-full flex justify-between">
 					<NumCard
+						num={1}
+						src="/assets/b2b/partners/partner-1.png"
+						style="sm:w-[180px] w-[50px] h-[50px] sm:h-[180px]"
+						content="Fill the form to get started"
+					/>
+					<NumCard
+						src="/assets/b2b/partners/partners-2.png"
+						style="sm:w-[150px] w-[50px] h-[60px] sm:h-[180px]"
+						num={2}
+						content="Our Expert team will contact you"
+					/>
+				</div>
+				<div className="w-full flex justify-between">
+					<NumCard
+						src="/assets/b2b/partners/partners-3.png"
+						style="sm:w-[180px] w-[50px] h-[50px] sm:h-[180px]"
 						num={3}
 						content="Select and customise models, and place order"
 					/>
 					<NumCard
+						src="/assets/b2b/partners/partners-4.png"
+						style="sm:w-[150px] w-[60px] h-[45px] sm:h-[114px]"
 						num={4}
 						content="Laptops will be shipped  in  1-2 business days"
 					/>
@@ -34,14 +48,32 @@ function Partners() {
 	);
 }
 
-function NumCard({ num, content }: { num: number; content: string }) {
+function NumCard({
+	num,
+	content,
+	style,
+	src,
+}: {
+	src: string;
+	num: number;
+	content: string;
+	style: string;
+}) {
 	return (
-		<div className="flex flex-col gap-4 w-[210px]">
-			<div className="text-2xl sm:text-4xl text-black font-manuale font-bold">
-				{num}.
-			</div>
-			<div className="font-graphik w-5/6 lg:w-[280px] text-sm md:text-xl leading-6 md:leading-relaxed text-[#333333]">
-				{content}
+		<div className="flex flex-row items-center justify-start gap-4 w-full">
+			<img
+				alt="partners"
+				src={src}
+				className={` object-contain ${style}`}
+			/>
+			<div className="flex flex-col  gap-4">
+				<div className="text-[20px] sm:text-4xl text-black font-manuale font-semibold">
+					{num}.
+				</div>
+
+				<div className="text-xs font-graphik w-5/6 lg:w-[280px]  md:text-xl  md:leading-relaxed text-[#333333]">
+					{content}
+				</div>
 			</div>
 		</div>
 	);

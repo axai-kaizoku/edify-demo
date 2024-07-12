@@ -1,5 +1,4 @@
 import { EdifyRefurbishedCardProps } from '@/types';
-import Image from 'next/image';
 
 interface EdifyRefurbishedCard {
 	cardData: EdifyRefurbishedCardProps;
@@ -11,19 +10,19 @@ export default function EdifyRefurbishedCard({
 	const { description, isImageFirst, src, title } = cardData;
 	return (
 		<div
-			className={`w-full lg:w-[30.8%] flex flex-col ${
-				isImageFirst ? 'md:flex-row-reverse' : 'md:flex-row'
-			} lg:flex-col items-center gap-0 lg:gap-9 justify-between`}>
-			<Image
+			className={`w-full lg:w-[30%] h-full flex ${
+				isImageFirst ? 'flex-row' : 'flex-row-reverse'
+			} lg:flex-col items-center gap-4 lg:gap-9 justify-between`}>
+			<img
 				src={src}
 				alt="edify-refurbished"
-				width={305}
-				height={250}
-				className="md:w-[305px] md:h-[250px] w-[55%] h-[55%]"
+				className="lg:w-[305px] lg:h-[250px] sm:w-[36%] sm:h-[36%] w-[43%] h-[43%] object-contain"
 			/>
-			<div className="flex flex-col w-full  h-fit items-center md:items-start gap-1.5 md:gap-12 lg:gap-4">
-				<h3 className="font-manuale font-bold text-lg md:text-3xl">{title}</h3>
-				<div className="font-graphik text-sm md:text-base leading-6 md:leading-normal text-slate-500">
+			<div className="flex flex-col gap-2 sm:gap-6 lg:gap-4">
+				<h3 className="font-manuale whitespace-nowrap font-bold text-lg md:text-[1.6rem] w-full">
+					{title}
+				</h3>
+				<div className="font-graphik text-xs sm:text-base lg:text-[0.95rem] leading-snug sm:leading-relaxed md:leading-relaxed lg:leading-normal text-slate-500">
 					{description}
 				</div>
 			</div>

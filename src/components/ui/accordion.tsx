@@ -4,7 +4,6 @@ import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 
 import { cn } from '@/lib/utils';
-import Image from 'next/image';
 
 const Accordion = AccordionPrimitive.Root;
 
@@ -14,7 +13,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
 	<AccordionPrimitive.Item
 		ref={ref}
-		className={cn('border-b pb-4', className)}
+		className={cn('border-b pb-1 sm:pb-4', className)}
 		{...props}
 	/>
 ));
@@ -43,20 +42,16 @@ const AccordionTrigger = React.forwardRef<
 				{children}
 				<div className="transition-transform duration-500">
 					{isOpen ? (
-						<Image
-							width={24}
-							height={24}
+						<img
 							src="/assets/minus-circle.svg"
 							alt="minus-circle"
-							className="w-3 h-3 sm:w-6 sm:h-6"
+							className="w-3 h-3 sm:w-6 sm:h-6 object-contain"
 						/>
 					) : (
-						<Image
-							width={24}
-							height={24}
+						<img
 							src="/assets/plus-circle.svg"
 							alt="plus-circle"
-							className="w-3 h-3 sm:w-6 sm:h-6"
+							className="w-3 h-3 sm:w-6 sm:h-6 object-contain"
 						/>
 					)}
 				</div>
@@ -74,7 +69,7 @@ const AccordionContent = React.forwardRef<
 		ref={ref}
 		className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
 		{...props}>
-		<div className={cn('pb-4 pt-0', className)}>
+		<div className={cn('pb-1 sm:pb-4 pt-0', className)}>
 			<div className={cn('mb-3', className)}></div>
 			{children}
 		</div>
