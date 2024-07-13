@@ -47,25 +47,25 @@ function B2B() {
 				<HeroSection />
 				<Brands />
 			</Container>
-			<div className="w-full h-full relative">
+			<div className="w-full h-full relative flex justify-start">
 				<img
 					src="/assets/b2b/wave-1.svg"
 					alt="wave"
-					className="w-full h-[150px] absolute -mt-20 left-0 max-sm:hidden xl:-left-12 2xl:-left-24"
+					className="w-fit sm:h-[90px] lg:h-[110px] max-sm:hidden absolute -mt-16 left-0 "
 				/>
 			</div>
-			<Container isBorder={false} className="pt-10">
+			<Container isBorder={false} className="pt-5 lg:pt-10">
 				<EdifyRefurbished />
 				<BestSellers />
 			</Container>
-			<div className="w-full h-full relative">
+			<div className="w-full h-full relative flex justify-end">
 				<img
-					src="/assets/b2b/wave-1.svg"
+					src="/assets/b2b/wave-2.svg"
 					alt="wave"
-					className="w-full rotate-180 h-[150px] absolute -mb-20 right-0 max-sm:hidden xl:-right-12 2xl:-right-24"
+					className="w-fit sm:h-[80px] lg:h-[100px] absolute right-0 max-sm:hidden"
 				/>
 			</div>
-			<Container isBorder={false} className="pt-16">
+			<Container isBorder={false} className=" sm:pt-9 lg:pt-20">
 				<Partners />
 				<PartnersTestimonials />
 				<FAQ />
