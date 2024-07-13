@@ -26,3 +26,17 @@ export const siteConfigTermsOfServices = {
 		'Review the terms of service for using Edify.club. Understand the conditions and user agreement that govern your access to our refurbished laptop platform.',
 	url: 'https://edify.club',
 };
+
+export const siteConfigB2B = {
+	name: 'Get Top-Quality Refurbished Laptops for Your Store',
+	description:
+		'Top-quality, affordable refurbished laptops for your store. Buy refurbished laptops in bulk.',
+	url: 'https://edify.club',
+};
+
+export const siteConfigStartUp = {
+	name: 'Empower Your Startup with Refurbished Laptops | Edify.club',
+	description:
+		'Equip your startup with high-quality, affordable refurbished laptops from Edify. Discover top brands like HP, Apple, Dell, and Lenovo, all with a 6-month warranty.',
+	url: 'https://edify.club',
+};

@@ -139,7 +139,7 @@ export default function BulkOrderForm({ onButtonClick }: any) {
 					<legend id="noOfLaptops" className="font-graphik text-slate-500 pb-6">
 						Number Of Laptops
 					</legend>
-					<div className="flex justify-between">
+					<div className="flex" style={{justifyContent: 'flex-start', gap: 10}}>
 						<div>
 							<input
 								type="radio"

@@ -1,6 +1,4 @@
 'use client';
-import CustomButton from '@/components/common/CustomButton';
-import Image from 'next/image';
 import React, { useState } from 'react';
 import StartupForm from './StartupForm';
 
@@ -24,7 +22,7 @@ function HeroSection() {
 	return (
 		<div className="flex flex-col justify-center items-center w-full">
 			{isThankYouVisible && (
-				<div className="w-full py-4 bg-green-500 fixed top-[68px] lg:top-[76px] flex justify-center items-center">
+				<div className="w-full py-4 bg-green-500 fixed top-[68px]  lg:top-[5rem] flex justify-center items-center">
 					<div className="flex justify-center items-center gap-2.5">
 						<div>
 							<span className="text-white text-sm sm:text-lg font-normal font-graphik leading-10 ">
@@ -75,7 +73,7 @@ function HeroSection() {
 					</div>
 				</div>
 				<img
-					alt=""
+					alt="Hero"
 					className="lg:w-[650px] lg:h-[350px] xl:h-[500px] object-contain xl:w-[700px] pb-12 lg:pb-0"
 					src="/assets/startup/hero.png"
 				/>

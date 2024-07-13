@@ -1,5 +1,5 @@
 'use server';
-import { FooterCategory, SEOPageData } from '@/types';
+import { FooterCategory, Product, SEOPageData } from '@/types';
 import axios from 'axios';
 
 export async function fetchPageWithSlug(slug: string): Promise<SEOPageData> {
@@ -21,5 +21,16 @@ export async function fetchFooterLinks(
 		return response.data.footerByCategory;
 	} catch (error: any) {
 		throw new Error(`Error fetching links for footer with slug ${slug}.`);
+	}
+}
+
+export async function fetchBestSellers(): Promise<Product[]> {
+	const url =
+		'https://api.edify.club/v2/mkt/dynamic/seo/landingpage?slug=refurbished-laptops-nashik';
+	try {
+		const response = await axios.get(url);
+		return response.data.products;
+	} catch (error: any) {
+		throw new Error(`Error fetching products`);
 	}
 }

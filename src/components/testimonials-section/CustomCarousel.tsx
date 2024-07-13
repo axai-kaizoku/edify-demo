@@ -58,6 +58,7 @@ export default function CustomCarousel() {
 								<ReviewCard
 									src={item.src}
 									name={item.name}
+									subText={item.subText}
 									review={item.review}
 									date={item.date}
 								/>

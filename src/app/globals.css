@@ -137,10 +137,10 @@ input[type='number'] {
 	animation: fadeOut 0.3s ease-in forwards;
 }
 
-.splide__pagination__page.is-active{
+.splide__pagination__page.is-active {
 	background: #000 !important;
 }
 
-.splide__pagination__page{
-	background: #CACED1 !important;
+.splide__pagination__page {
+	background: #caced1 !important;
 }

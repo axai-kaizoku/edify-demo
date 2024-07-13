@@ -2,7 +2,7 @@ import React from 'react';
 import FooterHeading from './FooterHeading';
 import FooterLinks from './FooterLinks';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 import SocialElements from './SocialElemets';
 import Container from '../common/Container';
@@ -13,7 +13,7 @@ function WebFooter() {
 			<Container isBorder={false} className="pt-16 pb-12 hidden sm:flex gap-8">
 				<div>
 					<Link href="/" aria-label="Read more">
-						<Image
+						<img
 							src={'/assets/logo.webp'}
 							alt="edify"
 							width={132}
@@ -25,9 +25,13 @@ function WebFooter() {
 					<div className="flex w-48  text-wrap ">
 						{' '}
 						<h1 className="font-medium font-graphik leading-6 text-sm text-gray-600">
-							Edify by Winuall 4th floor, Flexi HQ, 7, 19th Main Rd, Sector 4,
-							HSR Layout, Bengaluru, Karnataka - 560102, Ph:+91 9513245671
-							Email:contact@edify.club
+							Edify by Winuall 2nd Floor, SRS Arcade, 15/2, Hosa Rd,
+							Kasavanahalli, Bengaluru, Karnataka 560035, <br />
+							Ph:{' '}
+							<a style={{ color: 'cornflowerblue' }} href="tel:+91 9513245671">
+								+91 9513245671
+							</a>
+							, Email:contact@edify.club
 						</h1>
 					</div>
 					<div className="flex justify-around w-full">
@@ -71,7 +75,7 @@ function WebFooter() {
 			<div className="w-full sm:flex hidden items-center justify-center bg-[#F7F7F6]">
 				<div className=" flex items-center  justify-between py-6 w-[95%] sm:w-[87%] ">
 					<h2 className="text-gray-600 font-normal text-sm leading-6">
-						© 2024 Winuall. All rights reserved.
+						© 2024 Edify by Winuall. All rights reserved.
 					</h2>
 					<div className="flex items-center justify-center gap-6">
 						<SocialElements

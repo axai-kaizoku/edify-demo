@@ -7,25 +7,22 @@ import BestSellerCard from './BestSellerCard';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 import { Product } from '@/types';
-import axios from 'axios';
 import Container from '../common/Container';
+import { Skeleton } from '../ui/skeleton';
+import { fetchBestSellers } from '@/server/actions';
 
 export default function BestSellersSection() {
 	const [products, setProducts] = useState<Product[]>([]);
 	const splideRef = useRef<any>(null);
-	const [isMobile, setIsMobile] = useState<boolean>(false);
+	const [isMobile, setIsMobile] = useState(false);
 
 	useEffect(() => {
-		axios
-			.get(
-				'https://api.edify.club/v2/mkt/dynamic/seo/landingpage?slug=refurbished-laptops-nashik',
-			)
-			.then((response) => {
-				setProducts(response.data.products);
-			})
-			.catch((error) => {
-				throw new Error('Error fetching data:', error);
-			});
+		const fetchProducts = async () => {
+			const products = await fetchBestSellers();
+			setProducts(products);
+		};
+
+		fetchProducts();
 	}, []);
 
 	useEffect(() => {
@@ -62,51 +59,68 @@ export default function BestSellersSection() {
 			</div>
 
 			<div className="relative py-10">
-				<Splide
-					ref={splideRef}
-					options={{
-						type: 'slide',
-						rewind: true,
-						width: '100%',
-						gap: '1.25rem',
-						pagination: false,
-						cover: false,
-						start: 0,
-						focus: 'center',
-						autoplay: false,
-						isNavigation: false,
-						arrows: false,
-						updateOnMove: true,
-						perMove: 2, // Move one slide at a time
-						perPage: 4,
-						breakpoints: {
-							640: {
-								perPage: 2,
+				{!products.length ? (
+					<div className="flex w-full justify-between">
+						<div className="w-[45%] sm:w-[28%] lg:w-[23%] h-full lg:block block">
+							<Skeleton className="w-full h-[392px] bg-slate-200" />
+						</div>
+						<div className="w-[45%] sm:w-[28%]  lg:w-[23%] h-full lg:block block">
+							<Skeleton className="w-full h-[392px] bg-slate-200" />
+						</div>
+						<div className="w-[50%] sm:w-[28%] lg:w-[23%] h-full md:block hidden">
+							<Skeleton className="w-full h-[392px] bg-slate-200" />
+						</div>
+						<div className="w-[50%] sm:w-[28%] lg:w-[23%] h-full lg:block hidden">
+							<Skeleton className="w-full h-[392px] bg-slate-200" />
+						</div>
+					</div>
+				) : (
+					<Splide
+						ref={splideRef}
+						options={{
+							type: 'slide',
+							rewind: true,
+							width: '100%',
+							gap: '1.25rem',
+							pagination: false,
+							cover: false,
+							start: 0,
+							focus: 'center',
+							autoplay: false,
+							isNavigation: false,
+							arrows: false,
+							updateOnMove: true,
+							perMove: 2, // Move one slide at a time
+							perPage: 4,
+							breakpoints: {
+								640: {
+									perPage: 2,
+								},
+								1024: {
+									perPage: 2,
+								},
+								1280: {
+									perPage: 4,
+								},
 							},
-							1024: {
-								perPage: 2,
-							},
-							1280: {
-								perPage: 4,
-							},
-						},
-					}}>
-					{products.map((product, index) => (
-						<SplideSlide key={`list ${index}`}>
-							<div className="border shadow-md hover:shadow-lg duration-300 rounded-sm flex sm:w-fit">
-								<BestSellerCard
-									selling_price={product.selling_price}
-									image={product.image}
-									alt_tag={product.alt_tag}
-									title={product.title}
-									mrp={product.mrp}
-									brief={product.brief}
-									product_url={product.product_url}
-								/>
-							</div>
-						</SplideSlide>
-					))}
-				</Splide>
+						}}>
+						{products.map((product, index) => (
+							<SplideSlide key={`list ${index}`}>
+								<div className="border shadow-md hover:shadow-lg duration-300 rounded-sm flex sm:w-fit">
+									<BestSellerCard
+										selling_price={product.selling_price}
+										image={product.image}
+										alt_tag={product.alt_tag}
+										title={product.title}
+										mrp={product.mrp}
+										brief={product.brief}
+										product_url={product.product_url}
+									/>
+								</div>
+							</SplideSlide>
+						))}
+					</Splide>
+				)}
 
 				{/* Custom Arrow Buttons */}
 				{!isMobile && (

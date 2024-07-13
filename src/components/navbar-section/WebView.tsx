@@ -78,12 +78,12 @@ export default function WebView() {
 					</ul>
 					{/* Web NavLinks */}
 					<div className="lg:flex gap-7 hidden">
-						<img
+						{/* <img
 							src="/assets/whatsapp.svg"
 							alt="whatsapp-icon"
 							className="w-6 h-6"
-						/>
-						<img src="/assets/phone.svg" alt="phone-icon" className="w-6 h-6" />
+						/> */}
+						<a style={{color: 'cornflowerblue'}} href="tel:+91 9513245671"><img src="/assets/phone.svg" alt="phone-icon" className="w-6 h-6" /></a>
 					</div>
 				</div>
 			</div>

@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import LaptopCard from './LaptopCard';
 import DetailedLaptopCard from './DetailedLaptopCard';
 import CustomHeading from '../common/CustomHeading';
@@ -8,10 +8,7 @@ export default function SecondSection() {
 	return (
 		<div className="w-full flex justify-center items-center">
 			<div className="w-[87%] sm:w-4/5 flex flex-col">
-				<CustomHeading
-					heading="Most Popular"
-					styles="pt-8 pb-16"
-				/>
+				<CustomHeading heading="Most Popular" styles="pt-8 pb-16" />
 				<div className="flex justify-between gap-12 flex-col lg:flex-row">
 					{/* Static Image start*/}
 					<div className="flex flex-row lg:flex-col lg:justify-start justify-between gap-4 sm:gap-14">
@@ -27,15 +24,14 @@ export default function SecondSection() {
 								href={
 									'https://shop.edify.club/products/refurbished-dell-latitude-5490-core-i7-8th-gen-8gb-256gb-ssd-windows-10-pro'
 								}
-								target="_blank"
-							>
+								target="_blank">
 								<p className="font-bold sm:text-base text-sm font-graphik border-b-2 border-b-navlink w-fit">
 									SHOP NOW
 								</p>
 							</Link>
 						</div>
 						<div className="lg:-ml-16 lg:-mt-8">
-							<Image
+							<img
 								className="lg:h-[500px] md:h-[150px] md:w-60 h-[100px] w-36 lg:w-[700px] object-contain"
 								src="/assets/laptop-1.png"
 								alt="laptop-1"

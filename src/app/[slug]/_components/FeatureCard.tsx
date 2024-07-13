@@ -1,12 +1,12 @@
 import { FeatureCardProps } from '@/types';
-import Image from 'next/image';
+// import Image from 'next/image';
 import React from 'react';
 
 const FeatureCard = ({ logo, title, description }: FeatureCardProps) => {
 	return (
 		<div>
 			<div className="flex  gap-4 items-center">
-				<Image
+				<img
 					src={logo}
 					alt="check-square"
 					width={20}

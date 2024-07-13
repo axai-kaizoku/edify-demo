@@ -15,7 +15,7 @@ const SeoBestSellersSection: React.FC<SeoBestSellersSectionProps> = ({
 	lastTitle,
 }) => {
 	return (
-		<Container isBorder={false}>
+		<Container isBorder={false} className="py-5 lg:pt-12 lg:pb-4">
 			<div className="flex justify-between items-center w-full pb-6 px-4 sm:px-0">
 				<h1 className="text-[1.29rem] w-full text-center sm:text-left sm:text-4xl text-black font-manuale font-semibold">
 					{firstTitle} {lastTitle}

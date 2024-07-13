@@ -1,16 +1,12 @@
 import { SocialIconsProps } from '@/types';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
 function SocialElementsMobile({ src, href, alt }: SocialIconsProps) {
 	return (
-		<Link
-			href={href}
-			aria-label="Read more "
-			target="_blank"
-		>
-			<Image
+		<Link href={href} aria-label="Read more " target="_blank">
+			<img
 				src={src}
 				alt={alt}
 				width={24}

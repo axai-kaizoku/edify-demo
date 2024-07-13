@@ -17,7 +17,7 @@ export default function FAQCard({ title, description }: FAQCardProps) {
 					<AccordionTrigger className="font-manuale text-sm sm:text-[1.3rem] text-slate-900 font-semibold pt-2 sm:pt-7">
 						{title}
 					</AccordionTrigger>
-					<AccordionContent className="w-full text-slate-600 lg:leading-relaxed font-graphik text-xs sm:text-sm lg:text-[0.8rem]  font-light">
+					<AccordionContent className="w-full text-slate-600 leading-[1.6rem] lg:leading-[2rem] font-graphik text-xs sm:text-sm lg:text-[1rem]  font-light">
 						{description}
 					</AccordionContent>
 				</AccordionItem>

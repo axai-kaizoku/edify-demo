@@ -1,7 +1,6 @@
 import CustomHeading from '@/components/common/CustomHeading';
 import FAQCard from '@/components/faq-section/FAQCard';
 import { frequentlyAskedQuestions } from '@/constants';
-import React from 'react';
 
 export default function FAQ() {
 	return (

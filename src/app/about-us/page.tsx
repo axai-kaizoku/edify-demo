@@ -4,7 +4,7 @@ import AboutSection from './_components/AboutSection';
 import { AboutSectionInfo } from '@/constants';
 import { siteConfigAbout } from '@/config/site';
 import Container from '@/components/common/Container';
-import CustomButtom from '@/components/common/CustomButton';
+import MoreLinks from '@/components/more-links';
 
 export const metadata: Metadata = {
 	title: siteConfigAbout.name,
@@ -16,13 +16,17 @@ export const metadata: Metadata = {
 		title: siteConfigAbout.name,
 		description: siteConfigAbout.description,
 		siteName: siteConfigAbout.name,
-		images: ['/og_about.jpg'],
+		images: [
+			'https://utfs.io/f/14182d35-bbaf-4920-b58d-1dc6d5f757f4-nvqhci.jpg',
+		],
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: siteConfigAbout.name,
 		description: siteConfigAbout.description,
-		images: ['/og_about.jpg'],
+		images: [
+			'https://utfs.io/f/14182d35-bbaf-4920-b58d-1dc6d5f757f4-nvqhci.jpg',
+		],
 	},
 	icons: {
 		icon: '/logo.png',
@@ -90,6 +94,10 @@ export default function AboutUs() {
 								/>
 							))}
 						</div>
+					</Container>
+					<div className="border-b"></div>
+					<Container isBorder={false}>
+						<MoreLinks />
 					</Container>
 				</div>
 				{/* Aboutus last section */}

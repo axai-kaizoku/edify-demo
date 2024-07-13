@@ -45,6 +45,7 @@ export type ReviewCardProps = {
 	name: string;
 	review: string;
 	date: string;
+	subText: string;
 };
 
 export type FAQCardProps = {

@@ -1,5 +1,4 @@
 import { CustomCardProps } from '@/types';
-import Image from 'next/image';
 import React from 'react';
 
 function CustomCards({ src, alt, subHeading }: CustomCardProps) {

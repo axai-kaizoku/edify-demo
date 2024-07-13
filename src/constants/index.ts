@@ -359,18 +359,20 @@ Please feel free to reach out to us by e-mail at care@winuall.com in case of a
 
 export const reviewCardContent = [
 	{
-		src: '/assets/testimonials/review-1.webp',
-		name: 'Mr. Arvind',
+		src: '/assets/testimonials/osp.webp',
+		name: 'Manjunath Bhat',
+		subText: '',
 		review:
-			'I had a fantastic experience with Edify. The laptop delivery was right on schedule, and I was impressed with the user experience.They have top-quality laptops with affordable pricing.',
-		date: 'May 30th, 2020',
+			'I have a Shop and i frequently buy laptops from edify .The best thing I like about the company is their quick response and good quality product with excellent service From Orange service point.',
+		date: 'May 30th, 2024',
 	},
 	{
-		src: '/assets/testimonials/review-2.webp',
-		name: 'Gangadharan Chandragiri',
+		src: '/assets/testimonials/streak.webp',
+		name: 'Shiv Bidani',
+		subText: 'Cofounder - Streak',
 		review:
-			'I bought a refurbished laptop from Edify for my personal use.The laptop is working buttery smooth and it looks like new.Happy with my purchase from Edify.',
-		date: 'May 30th, 2020',
+			'I recently bought a Dell laptop from Edify, and the experience was fantastic. The customer service was friendly and knowledgeable, answering all my questions. The ordering process was smooth. The computer was refurbished with a new battery so the quality was excellent. The customer executive was helpful and was able to answer technical questions as well. In a world full of automation, the touch of human was just correct. I highly recommend Edify for their quality products and exceptional service.',
+		date: 'June 30th, 2024',
 	},
 ];
 

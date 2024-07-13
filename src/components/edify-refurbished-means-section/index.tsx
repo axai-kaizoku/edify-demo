@@ -7,7 +7,7 @@ export default function EdifyRefurbishedMeansSection() {
 	return (
 		<Container isBorder={false} className="gap-16 py-1 sm:py-6">
 			<div className="flex justify-between w-full">
-				<h2 className="text-2xl sm:text-4xl text-black font-manuale font-bold">
+				<h2 className="text-2xl sm:text-4xl text-black font-manuale font-semibold">
 					What it means to be Edify Refurbished?
 				</h2>
 				<CustomButtom

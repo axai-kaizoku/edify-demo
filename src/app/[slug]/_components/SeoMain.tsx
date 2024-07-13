@@ -23,7 +23,7 @@ const SeoMain: React.FC<SeoMainProps> = ({ data }) => {
 				<p className="text-sm sm:text-lg text-gray-500 mb-8 text-wrap">
 					Sorry, the page you are looking for does not exist.
 				</p>
-				<Link href={'/'}>
+				<Link href="/">
 					<button className="px-6 py-2 bg-slate-600 text-white rounded-full hover:bg-slate-800 transition-all duration-300">
 						Go Back Home
 					</button>

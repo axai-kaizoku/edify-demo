@@ -1,10 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 import CustomButtom from '@/components/common/CustomButton';
 
 function Partners() {
 	return (
 		<div className="flex flex-col gap-10 md:gap-14 lg:gap-20 pt-10">
 			<div className="flex justify-between w-full">
-				<h2 className="text-2xl sm:text-4xl text-black font-manuale font-bold">
+				<h2 className="text-2xl sm:text-4xl text-black font-manuale font-semibold">
 					How smooth it is to Partner
 					<br className="hidden lg:block" /> with Edify?
 				</h2>
@@ -61,11 +62,7 @@ function NumCard({
 }) {
 	return (
 		<div className="flex flex-row items-center justify-start gap-4 w-full">
-			<img
-				alt="partners"
-				src={src}
-				className={` object-contain ${style}`}
-			/>
+			<img alt="partners" src={src} className={` object-contain ${style}`} />
 			<div className="flex flex-col  gap-4">
 				<div className="text-[20px] sm:text-4xl text-black font-manuale font-semibold">
 					{num}.

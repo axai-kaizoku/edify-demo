@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import React from 'react';
 import SocialElementsMobile from './SocialElementsMobile';
 import Link from 'next/link';
@@ -8,7 +8,7 @@ function MobileFooter() {
 		<footer className="p-4 block sm:hidden">
 			<div>
 				<Link href="/" aria-label="Read more ">
-					<Image src="/assets/logo.webp" alt="edify" width={65} height={30} />
+					<img src="/assets/logo.webp" alt="edify" width={65} height={30} />
 				</Link>
 
 				<div className="flex py-8 gap-6">
@@ -40,7 +40,7 @@ function MobileFooter() {
 						</h1>
 						<div className="py-2">
 							<h1 className="text-slate-900 text-sm font-medium leading-5 font-gaphik">
-								+91 95312 45671
+								+91 9513245671
 							</h1>
 
 							<h1 className="text-slate-600 text-sm font-norml leading-5 font-gaphik">
@@ -50,8 +50,8 @@ function MobileFooter() {
 					</div>
 
 					<h1 className="text-slate-600 font-graphik text-xs font-normal leading-5 text-wrap w-40">
-						Winuall, 4th floor, Flexi HQ, 7, 19th Main Rd, Sector 4, HSR Layout,
-						Bengaluru, Karnataka - 560102
+						Edify by Winuall 2nd Floor, SRS Arcade, 15/2, Hosa Rd,
+						Kasavanahalli, Bengaluru, Karnataka 560035,
 					</h1>
 					<div className="flex flex-col gap-2">
 						<h1 className="text-slate-600 text-xs font-medium leading-5">

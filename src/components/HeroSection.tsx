@@ -4,7 +4,7 @@ import Container from './common/Container';
 
 const HeroComponent = () => {
 	return (
-		<Container isBorder={false} className="py-16 sm:pt-5 lg:pt-2 xl:pt-12">
+		<Container isBorder={false} className="py-[5rem] sm:pt-5 lg:pt-2 xl:pt-12">
 			<div className="w-full flex flex-col-reverse lg:flex-row sm:gap-6 lg:gap-0 justify-center items-center lg:pt-16 lg:pb-14 xl:py-1">
 				<div className="flex flex-col justify-start items-start gap-4  w-full lg:pt-[3.1rem] xl:pt-[3.3rem]">
 					<div className="w-full flex flex-col justify-start items-start gap-5 lg:gap-8 xl:gap-[60px]">
@@ -19,7 +19,7 @@ const HeroComponent = () => {
 						</div>
 						<div className="w-full flex justify-start items-center">
 							<div className="w-full flex flex-col justify-center lg:justify-start items-center lg:items-start pb-12">
-								<CustomButton href="" title="EXPLORE" />
+								<CustomButton href="https://shop.edify.club/collections/all" title="EXPLORE" />
 							</div>
 						</div>
 					</div>
@@ -27,7 +27,7 @@ const HeroComponent = () => {
 				<img
 					alt="hero-image"
 					src="/assets/hero.png"
-					className="w-[240px] h-[180px] sm:w-[440px] sm:h-[350px] lg:w-[490px] p-1 lg:h-[420px] xl:w-[550px] xl:h-[520px] object-contain"
+					className="w-[350px] h-[250px] sm:w-[440px] sm:h-[350px] lg:w-[490px] p-1 lg:h-[420px] xl:w-[550px] xl:h-[520px] object-contain"
 				/>
 			</div>
 		</Container>

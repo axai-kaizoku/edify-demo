@@ -1,5 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
-import Image from 'next/image';
 import React, { useState } from 'react';
 import CatalogueModal from './CatalogueModal';
 import EnquireModal from './EnquireModal';

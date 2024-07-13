@@ -1,5 +1,5 @@
 'use client';
-import Image from 'next/image';
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
