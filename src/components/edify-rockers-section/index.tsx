@@ -16,7 +16,7 @@ export default function EdifyRockersSection() {
 						rewind: true,
 						width: '100%',
 						gap: '1.25rem',
-						pagination: false,
+						pagination: true,
 						cover: false,
 						start: 0,
 						focus: 'center',

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import HeroSection from './_components/hero';
 import Brands from './_components/brands';
 import EdifyRefurbished from './_components/edify-refurbished';
@@ -42,18 +43,29 @@ export const metadata: Metadata = {
 function B2B() {
 	return (
 		<>
-			<Container isBorder={false}>
+			<Container isBorder={false} className="pb-9">
 				<HeroSection />
 				<Brands />
 			</Container>
-			{/* <img
-				src="/assets/b2b/wave-1.svg"
-				alt="wave"
-				className="w-[50px] h-[200px] object-contain relative"
-			/> */}
-			<Container isBorder={false}>
+			<div className="w-full h-full relative">
+				<img
+					src="/assets/b2b/wave-1.svg"
+					alt="wave"
+					className="w-full h-[150px] absolute -mt-20 left-0 max-sm:hidden xl:-left-12 2xl:-left-24"
+				/>
+			</div>
+			<Container isBorder={false} className="pt-10">
 				<EdifyRefurbished />
 				<BestSellers />
+			</Container>
+			<div className="w-full h-full relative">
+				<img
+					src="/assets/b2b/wave-1.svg"
+					alt="wave"
+					className="w-full rotate-180 h-[150px] absolute -mb-20 right-0 max-sm:hidden xl:-right-12 2xl:-right-24"
+				/>
+			</div>
+			<Container isBorder={false} className="pt-16">
 				<Partners />
 				<PartnersTestimonials />
 				<FAQ />

@@ -16,17 +16,13 @@ export const metadata: Metadata = {
 		title: siteConfigAbout.name,
 		description: siteConfigAbout.description,
 		siteName: siteConfigAbout.name,
-		images: [
-			'https://utfs.io/f/14182d35-bbaf-4920-b58d-1dc6d5f757f4-nvqhci.jpg',
-		],
+		images: ['/og-aboutus.jpg'],
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: siteConfigAbout.name,
 		description: siteConfigAbout.description,
-		images: [
-			'https://utfs.io/f/14182d35-bbaf-4920-b58d-1dc6d5f757f4-nvqhci.jpg',
-		],
+		images: ['/og-aboutus.jpg'],
 	},
 	icons: {
 		icon: '/logo.png',
