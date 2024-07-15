@@ -36,11 +36,13 @@ export const metadata: Metadata = {
 		title: siteConfig.name,
 		description: siteConfig.description,
 		siteName: siteConfig.name,
+		images: `${siteConfig.url}og_main.png`,
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: siteConfig.name,
 		description: siteConfig.description,
+		images: `https://${siteConfig.url}og_main.png`,
 	},
 	icons: {
 		icon: '/logo.png',
