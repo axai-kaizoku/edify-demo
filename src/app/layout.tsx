@@ -4,6 +4,7 @@ import './globals.css';
 import Navbar from '@/components/navbar-section';
 import FooterSection from '@/components/footer-section';
 import { siteConfig } from '@/config/site';
+import twitterOg from './twitter-image.png';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -36,11 +37,13 @@ export const metadata: Metadata = {
 		title: siteConfig.name,
 		description: siteConfig.description,
 		siteName: siteConfig.name,
+		images: `${twitterOg}`,
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: siteConfig.name,
 		description: siteConfig.description,
+		images: `${twitterOg}`,
 	},
 	icons: {
 		icon: '/logo.png',
