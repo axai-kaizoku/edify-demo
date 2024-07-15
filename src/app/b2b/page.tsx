@@ -23,17 +23,11 @@ export const metadata: Metadata = {
 		title: siteConfigB2B.name,
 		description: siteConfigB2B.description,
 		siteName: siteConfigB2B.name,
-		images: [
-			'https://github-production-user-asset-6210df.s3.amazonaws.com/126662285/249216805-c67a524e-6535-44c0-b134-1dc10c8b8dc8.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA/20240713/us-east-1/s3/aws4_request&X-Amz-Date=20240713T071355Z&X-Amz-Expires=300&X-Amz-Signature=2ffa21185840dc9e01b85604660f6279031091f49f48bd1ac8b0084c8fb771c3&X-Amz-SignedHeaders=host&actor_id=171006316&key_id=0&repo_id=75189195',
-		],
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: siteConfigB2B.name,
 		description: siteConfigB2B.description,
-		images: [
-			'https://github-production-user-asset-6210df.s3.amazonaws.com/126662285/249216805-c67a524e-6535-44c0-b134-1dc10c8b8dc8.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA/20240713/us-east-1/s3/aws4_request&X-Amz-Date=20240713T071355Z&X-Amz-Expires=300&X-Amz-Signature=2ffa21185840dc9e01b85604660f6279031091f49f48bd1ac8b0084c8fb771c3&X-Amz-SignedHeaders=host&actor_id=171006316&key_id=0&repo_id=75189195',
-		],
 	},
 	icons: {
 		icon: '/logo.png',

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { fetchFooterLinks } from '@/server/actions';
 import { FooterCategory, FooterPage } from '@/types';
+import { Skeleton } from '../ui/skeleton';
 
 export default function MoreLinks({ slug }: { slug?: string }) {
 	const [data, setData] = useState<FooterCategory[]>([]);
@@ -50,7 +51,14 @@ export default function MoreLinks({ slug }: { slug?: string }) {
 						? 'h-fit  opacity-100'
 						: 'max-h-0 opacity-0 overflow-hidden'
 				}`}>
-				{data && (
+				{!data.length ? (
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full  xl:gap-5">
+						<Skeleton className="w-full lg:w-11/12 lg:h-52 " />
+						<Skeleton className="w-11/12 h-40 hidden lg:block" />
+						<Skeleton className="w-11/12 h-32 hidden lg:block" />
+						<Skeleton className="w-11/12 h-32 hidden lg:block" />
+					</div>
+				) : (
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full  xl:gap-5">
 						{data?.map((res: FooterCategory, index: number) => (
 							<div key={index} className="">

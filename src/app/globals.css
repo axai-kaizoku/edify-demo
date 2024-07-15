@@ -79,8 +79,8 @@
 		font-style: normal;
 		font-weight: 400, 500;
 		font-display: swap;
-		src: url('/fonts/Graphik-Regular.woff2') format('woff2'),
-			url('/fonts/Graphik-Medium.woff2') format('woff2');
+		src: url('/Fonts/Graphik-Regular.woff2') format('woff2'),
+			url('/Fonts/Graphik-Medium.woff2') format('woff2');
 	}
 }
 
@@ -135,12 +135,4 @@ input[type='number'] {
 
 .modal-exit {
 	animation: fadeOut 0.3s ease-in forwards;
-}
-
-.splide__pagination__page.is-active {
-	background: #000 !important;
-}
-
-.splide__pagination__page {
-	background: #caced1 !important;
 }

@@ -21,7 +21,7 @@ export default function VideoCard({
 					aria-label={heading}>
 					<source src={videoLink} type="video/mp4" />
 					<track
-						src="captions_en.vtt"
+						src="/captions_en.vtt"
 						kind="captions"
 						srcLang="en"
 						label="english_captions"

@@ -99,7 +99,6 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 				utm_content: params.get('utm_content') || '',
 				pageTitle: window.location.href,
 			};
-			// console.log(resellerObject, 'object');
 
 			await axios.post(
 				'https://api.edify.club/v2/mkt/requests/bulkOrder',

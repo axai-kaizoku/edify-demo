@@ -13,13 +13,11 @@ export const metadata: Metadata = {
 		title: siteConfigPrivacyPolicy.name,
 		description: siteConfigPrivacyPolicy.description,
 		siteName: siteConfigPrivacyPolicy.name,
-		images: '/logo.png',
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: siteConfigPrivacyPolicy.name,
 		description: siteConfigPrivacyPolicy.description,
-		images: '/logo.png',
 	},
 	icons: {
 		icon: '/logo.png',
