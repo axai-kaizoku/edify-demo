@@ -16,12 +16,13 @@ export const metadata: Metadata = {
 		title: siteConfigAbout.name,
 		description: siteConfigAbout.description,
 		siteName: siteConfigAbout.name,
-		images: `${siteConfigAbout.url}og_about.png`,
+		images: `${siteConfigAbout.url}/og_about.png`,
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: siteConfigAbout.name,
 		description: siteConfigAbout.description,
+		images: `${siteConfigAbout.url}/og_about.png`,
 	},
 	icons: {
 		icon: '/logo.png',

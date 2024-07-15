@@ -23,11 +23,13 @@ export const metadata: Metadata = {
 		title: siteConfigB2B.name,
 		description: siteConfigB2B.description,
 		siteName: siteConfigB2B.name,
+		images: `${siteConfigB2B.url}/og_b2b.png`,
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: siteConfigB2B.name,
 		description: siteConfigB2B.description,
+		images: `${siteConfigB2B.url}/og_b2b.png`,
 	},
 	icons: {
 		icon: '/logo.png',
