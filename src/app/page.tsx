@@ -1,13 +1,25 @@
+import dynamic from 'next/dynamic';
 import HeroComponent from '@/components/HeroSection';
-import LogoComponent from '@/components/logo-section';
-import EdifyRockersSection from '@/components/edify-rockers-section';
-import TestiMonialsSection from '@/components/testimonials-section';
-import FAQSection from '@/components/faq-section';
 import CustomTailored from '@/components/custom-tailored';
+import LogoComponent from '@/components/logo-section';
+const BestSellersSectionDynamic = dynamic(
+	() => import('@/components/best-sellers-section'),
+);
+
+const EdifiedEffectSectionDynamic = dynamic(
+	() => import('@/components/edified-effect-section'),
+	{ ssr: false },
+);
+
 import EdifyRefurbishedMeansSection from '@/components/edify-refurbished-means-section';
-import BestSellersSection from '@/components/best-sellers-section';
-import EdifiedEffectSection from '@/components/edified-effect-section';
-import MoreLinksSection from '@/components/more-links/MoreLinks';
+const EdifyRockersSectionDynamic = dynamic(
+	() => import('@/components/edify-rockers-section'),
+);
+import TestiMonialsSection from '@/components/testimonials-section';
+const FAQSection = dynamic(() => import('@/components/faq-section'));
+const MoreLinksSectionDynamic = dynamic(
+	() => import('@/components/more-links/MoreLinks'),
+);
 
 export default function Home() {
 	return (
@@ -15,13 +27,13 @@ export default function Home() {
 			<HeroComponent />
 			<CustomTailored />
 			<LogoComponent />
-			<BestSellersSection />
+			<BestSellersSectionDynamic />
 			<EdifyRefurbishedMeansSection />
-			<EdifiedEffectSection />
-			<EdifyRockersSection />
+			<EdifiedEffectSectionDynamic />
+			<EdifyRockersSectionDynamic />
 			<TestiMonialsSection />
 			<FAQSection />
-			<MoreLinksSection />
+			<MoreLinksSectionDynamic />
 		</div>
 	);
 }

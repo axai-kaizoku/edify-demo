@@ -16,11 +16,11 @@ export default function EdifyRefurbishedCard({
 				alt="reburfished"
 				className="w-[30px] h-[30px] lg:w-[60px] lg:h-[60px]"
 			/>
-			<div className="w-full flex flex-col gap-0 lg:gap-5 -mt-2 lg:-mt-0">
-				<h3 className="font-manuale font-semibold text-xl leading-snug lg:leading-normal md:text-[1.6rem]">
+			<div className="w-full flex flex-col gap-1 lg:gap-5 -mt-2 lg:-mt-0">
+				<h3 className="font-manuale font-semibold text-[0.9rem] sm:text-xl leading-snug lg:leading-normal md:text-[1.6rem]">
 					{title}
 				</h3>
-				<div className="font-graphik text-sm md:text-base leading-6 md:leading-relaxed text-slate-500 w-[90%]">
+				<div className="font-graphik text-[0.7rem] md:text-base leading-5 md:leading-relaxed text-slate-500 w-[90%]">
 					{description}
 				</div>
 			</div>

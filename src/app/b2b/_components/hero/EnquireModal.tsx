@@ -114,21 +114,23 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 				className={`flex justify-center items-center w-full h-screen fixed inset-0 z-50 ${
 					isClosing ? 'modal-exit' : 'modal-enter'
 				}`}>
-				<div className="w-[90.5%] max-w-[1210px] h-auto p-10 relative bg-white/90 rounded-lg shadow backdrop-blur-[17px]">
+				<div className="w-[90.5%] max-w-[1210px] h-auto p-10 relative bg-white rounded-lg shadow backdrop-blur-[17px]">
 					<div className="flex flex-col justify-start items-center gap-10">
 						<div className="flex flex-col justify-start items-center gap-[25px]">
 							<div className="text-center text-black text-base lg:text-3xl font-medium leading-normal">
-								Download the Brochure
+								Looking to buy Laptops in Bulk?{' '}
 							</div>
 							<div className="text-center text-zinc-700 text-sm lg:text-xl font-normal leading-none">
-								Fill the form to receive the brochure.
+								Fill the form to receive the brochure.{' '}
 							</div>
 						</div>
 						<div className="flex flex-col justify-start items-center gap-6 lg:gap-12">
 							<div className="flex flex-col justify-start items-start gap-5">
 								<div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-6 lg:gap-10">
 									<div className="flex flex-col gap-2.5 w-full sm:w-auto">
-										<label className="sr-only" htmlFor="name">
+										<label
+											className="sr-only"
+											htmlFor="name">
 											Name
 										</label>
 										<input
@@ -143,7 +145,9 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 										)}
 									</div>
 									<div className="flex flex-col gap-2.5 w-full sm:w-auto">
-										<label className="sr-only" htmlFor="phone">
+										<label
+											className="sr-only"
+											htmlFor="phone">
 											Phone Number
 										</label>
 										<input
@@ -160,7 +164,9 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 								</div>
 								<div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-6 lg:gap-10">
 									<div className="flex flex-col gap-2.5 w-full sm:w-auto">
-										<label className="sr-only" htmlFor="store">
+										<label
+											className="sr-only"
+											htmlFor="store">
 											Email
 										</label>
 										<input
@@ -175,7 +181,9 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 										)}
 									</div>
 									<div className="flex flex-col gap-2.5 w-full sm:w-auto">
-										<label className="sr-only" htmlFor="city">
+										<label
+											className="sr-only"
+											htmlFor="city">
 											Enter your City Name
 										</label>
 										<input
@@ -192,7 +200,9 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 								</div>
 								<div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-6 lg:gap-10">
 									<div className="flex flex-col gap-2.5 w-full sm:w-auto">
-										<label className="sr-only" htmlFor="quantity">
+										<label
+											className="sr-only"
+											htmlFor="quantity">
 											Number Of Quantities
 										</label>
 										<div className="flex justify-between">
@@ -297,7 +307,10 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 					<button
 						className="absolute top-10 right-[19px] lg:top-[48.50px] lg:right-[66px] w-5 sm:w-8 lg:h-[33px] h-5"
 						onClick={handleClose}>
-						<img src="/assets/b2b/cross.svg" alt="close" />
+						<img
+							src="/assets/b2b/cross.svg"
+							alt="close"
+						/>
 					</button>
 				</div>
 			</div>

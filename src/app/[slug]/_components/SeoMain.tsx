@@ -13,7 +13,7 @@ interface SeoMainProps {
 const SeoMain: React.FC<SeoMainProps> = ({ data }) => {
 	return data.subHeading === null ? (
 		<>
-			<div className="flex flex-col justify-center items-center h-screen -mt-1 w-full bg-gray-100">
+			<div className="flex flex-col justify-center items-center h-[90vh] sm:h-screen -mt-10 sm:-mt-20 lg:-mt-1 w-full bg-gray-100">
 				<h1 className="text-5xl font-bold font-manuale text-gray-800 mb-4">
 					404
 				</h1>
@@ -46,10 +46,10 @@ const SeoMain: React.FC<SeoMainProps> = ({ data }) => {
 					<div className="flex w-full flex-col gap-10 lg:gap-0 lg:flex-row items-start justify-between">
 						<div className="lg:w-2/4 w-full flex flex-col">
 							{/* {!isLoading && <p>{JSON.stringify(data)}</p>} */}
-							<h1 className="text-3xl lg:text-4xl xl:text-4xl  text-black font-manuale font-semibold py-3 sm:py-5 xl:py-8">
+							<h1 className="text-[1rem] sm:text-3xl lg:text-4xl xl:text-4xl  text-black font-manuale font-semibold py-3 sm:py-5 xl:py-8">
 								{data.first_title_name.text} {data.last_title_name.text}
 							</h1>
-							<div className="font-graphik font-normal text-lg sm:text-[1.2rem] leading-8 xl:leading-10 text-gray-700">
+							<div className="font-graphik font-normal text-[0.75rem] sm:text-[1.2rem] leading-6 sm:leading-8 xl:leading-10 text-gray-700">
 								{data?.subHeading.map((v, i) => (
 									<div key={i} className="pt-3 xl:pt-4">
 										{v}

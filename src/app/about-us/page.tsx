@@ -33,18 +33,18 @@ export default function AboutUs() {
 	return (
 		<div className="flex justify-center items-center w-full">
 			<div className="flex flex-col w-full justify-center items-center">
-				<div className="flex flex-col pb-20 gap-10 ">
+				<div className="flex flex-col  sm:pb-20 gap-10 ">
 					<Container
 						isBorder={false}
-						className="py-16 sm:pt-5 lg:pt-2 xl:pt-12">
-						<div className="w-full flex flex-col-reverse lg:flex-row gap-3 sm:gap-6 lg:gap-0 justify-center items-center lg:pt-24 lg:pb-20 xl:py-12">
+						className="py-4 lg:py-16 sm:pt-5 lg:pt-2 xl:pt-12">
+						<div className="w-full flex flex-col-reverse lg:flex-row gap-6  lg:gap-0 justify-center items-center lg:pt-24 lg:pb-20 xl:py-12">
 							<div className="flex flex-col justify-start items-start gap-4  w-full lg:pt-[3.1rem] xl:pt-[3.3rem]">
-								<div className="w-full flex flex-col justify-start items-start gap-5 lg:gap-8 xl:gap-[60px]">
-									<div className="w-full flex flex-col-reverse lg:flex-col lg:justify-start justify-center items-center lg:items-start sm:gap-8">
-										<div className="text-slate-600 md:text-grey-800 text-lg lg:text-[1.3rem] xl:text-3xl whitespace-nowrap font-normal font-graphik">
+								<div className="w-full flex flex-col h-fit justify-start items-start gap-5 lg:gap-8 xl:gap-[60px]">
+									<div className="w-full flex flex-col-reverse lg:flex-col h-fit lg:justify-start justify-center items-center lg:items-start sm:gap-8">
+										<div className="text-slate-600 md:text-grey-800 text-base lg:text-[1.3rem] xl:text-3xl whitespace-nowrap font-normal font-graphik">
 											ONE REFURBISHED LAPTOP AT A TIME
 										</div>
-										<div className="text-black text-2xl sm:text-5xl lg:text-[2.9rem] xl:text-6xl whitespace-nowrap font-semibold font-manuale leading-[3.5rem] lg:leading-[46px] xl:leading-[72px]">
+										<div className="text-black text-[1.3rem] sm:text-5xl lg:text-[2.9rem] xl:text-6xl whitespace-nowrap font-semibold font-manuale leading-[3.5rem] lg:leading-[46px] xl:leading-[72px]">
 											PROMOTING CIRCULAR <br className="hidden lg:block" />
 											ECONOMY
 										</div>
@@ -54,8 +54,8 @@ export default function AboutUs() {
 							</div>
 							<img
 								alt="hero-image"
-								src="/assets/about/about-us.png"
-								className="w-[240px] h-[180px] sm:w-[440px] sm:h-[350px] lg:w-[420px] p-1 lg:h-[360px] xl:w-[550px] xl:h-[500px] object-contain"
+								src="/assets/about/about-us.webp"
+								className="w-[320px] h-[280px] sm:w-[440px] sm:h-[350px] lg:w-[420px] p-1 lg:h-[360px] xl:w-[550px] xl:h-[500px] object-contain"
 							/>
 						</div>
 					</Container>
@@ -93,7 +93,7 @@ export default function AboutUs() {
 					</Container>
 					<div className="border-b"></div>
 					<Container isBorder={false}>
-						<MoreLinks slug="refurbished-laptops-nashik" />
+						<MoreLinks slug="refurbished-laptops-delhi" />
 					</Container>
 				</div>
 				{/* Aboutus last section */}

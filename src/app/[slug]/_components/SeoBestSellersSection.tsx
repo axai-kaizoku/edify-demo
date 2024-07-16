@@ -30,7 +30,7 @@ const SeoBestSellersSection: React.FC<SeoBestSellersSectionProps> = ({
 			<div className="w-full">
 				{products.length > 0 ? (
 					<>
-						<div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-[78px] md:pt-12 w-full px-4 sm:px-0">
+						<div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-[78px] md:pt-12 w-full px-4 sm:px-0">
 							{products.map((product, index) => (
 								<div
 									key={`liet ${index}`}

@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import { Inter, Manuale, Tinos } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/navbar-section';
-import FooterSection from '@/components/footer-section';
+const FooterSection = dynamic(() => import('@/components/footer-section'));
 import { siteConfig } from '@/config/site';
+import dynamic from 'next/dynamic';
 
 const inter = Inter({ subsets: ['latin'] });
 

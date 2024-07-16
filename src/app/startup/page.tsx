@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 export default function StartUp() {
 	return (
 		<>
-			<Container isBorder={false}>
+			<Container isBorder={false} className="pb-8">
 				<HeroSection />
 				<StartUps />
 				<Partners />

@@ -1,28 +1,41 @@
-/* eslint-disable @next/next/no-img-element */
-'use client';
-import React, { useEffect, useState } from 'react';
-import BulkOrderForm from '../bulk-order/BulkOrderForm';
+import { useEffect, useState, ChangeEvent } from 'react';
 
-function CatalogueModal({ onClose, onDownload }: any) {
+interface FormData {
+	name: string;
+
+	phone: string;
+	email: string;
+	teamSize: string;
+}
+
+interface FormErrors {
+	name: string;
+
+	phone: string;
+	email: string;
+	teamSize: string;
+}
+
+export default function CatalogueModal({ onClose, onDownload }: any) {
 	const [isClosing, setIsClosing] = useState(false);
-	const [form, setForm] = useState({
+	const [phone, setPhone] = useState<string>('');
+	const [formData, setFormData] = useState<FormData>({
 		name: '',
-		phone: '',
-		email: '',
-		quantity: '',
-	});
-	const [errors, setErrors] = useState({
-		name: '',
-		phone: '',
-		email: '',
-		quantity: '',
-	});
-	const [messageOpen, setMessageOpen] = useState(false);
 
-	const handleMessage = () => {
-		setIsClosing(true);
-		setMessageOpen(true);
-	};
+		phone: '',
+		email: '',
+		teamSize: '',
+	});
+
+	const [errors, setErrors] = useState<FormErrors>({
+		name: '',
+
+		phone: '',
+		email: '',
+		teamSize: '',
+	});
+
+	const [errorMessage, setErrorMessage] = useState('');
 
 	useEffect(() => {
 		if (isClosing) {
@@ -36,34 +49,64 @@ function CatalogueModal({ onClose, onDownload }: any) {
 		setIsClosing(true);
 	};
 
-	const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		const { id, value } = e.target;
-		setForm({ ...form, [id]: value });
-		setErrors({ ...errors, [id]: '' });
+	const handleChange = (
+		e: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+	) => {
+		const { name, value } = e.target;
+		setFormData({
+			...formData,
+			[name]: value,
+		});
+
+		// Remove error state when user starts typing
+		if (errors[name as keyof FormErrors] && value.trim()) {
+			setErrors({
+				...errors,
+				[name as keyof FormErrors]: '',
+			});
+		}
 	};
 
 	const validateForm = () => {
 		let isValid = true;
-		const newErrors = { name: '', phone: '', email: '', quantity: '' };
+		const newErrors: FormErrors = {
+			name: '',
 
-		if (!form.name) {
+			phone: '',
+			email: '',
+			teamSize: '',
+		};
+		let errorMessage = '';
+
+		if (!formData.name.trim()) {
 			newErrors.name = 'Name is required';
+			errorMessage += 'Name is required. ';
 			isValid = false;
 		}
-		if (!form.phone) {
-			newErrors.phone = 'Phone number is required';
+
+		if (!phone.trim() || !/^\+91\d{10}$/.test(phone.trim())) {
+			newErrors.phone =
+				'Phone number is invalid and it should starts with +91 ';
+			errorMessage += 'Phone number should starts with +91 . ';
 			isValid = false;
 		}
-		if (!form.email) {
-			newErrors.email = 'Email is required';
+		if (
+			!formData.email.trim() ||
+			!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())
+		) {
+			newErrors.email = 'Email is invalid';
+			errorMessage += 'Email is invalid. ';
 			isValid = false;
 		}
-		if (!form.quantity) {
-			newErrors.quantity = 'Quantity is required';
+		if (!formData.teamSize.trim()) {
+			newErrors.teamSize = 'Team Size is required';
+			errorMessage += 'Team Size is required. ';
 			isValid = false;
 		}
 
 		setErrors(newErrors);
+		setErrorMessage(errorMessage);
+
 		return isValid;
 	};
 
@@ -76,54 +119,107 @@ function CatalogueModal({ onClose, onDownload }: any) {
 		}
 	};
 
+	const handleTeamSizeChange = (size: string) => {
+		setFormData({
+			...formData,
+			teamSize: size,
+		});
+	};
+
 	return (
-		<>
-			{messageOpen && (
-				<div className="absolute lg:fixed z-50 top-[4rem] lg:top-[4.7rem] left-0 w-full h-20">
-					<div className="w-full py-4 bg-green-500 flex justify-center items-center">
-						<div className="flex justify-center items-center gap-2.5">
-							<div>
-								<span className="text-white text-sm sm:text-lg font-normal font-graphik leading-10 ">
-									Thank you for your interest .{' '}
-									<span className="hidden lg:inline-block">
-										You will shortly receive the brochure on your registered
-										number.
-										<span className="underline hidden lg:inline-block ">
-											For more details .{' '}
-										</span>
-									</span>
-								</span>
-								<a
-									href="tel:+919513245671"
-									className="text-white text-sm sm:text-lg font-medium font-graphik underline leading-10">
-									Call +91 95132 45671
-								</a>
-							</div>
-						</div>
+		<div className="fixed  mt-28 sm:mt-20 inset-0 z-40 flex justify-center items-center bg-black bg-opacity-80">
+			<div
+				className={`relative w-full max-sm:w-[90%] max-w-sm md:max-w-2xl lg:max-w-4xl bg-white rounded-lg shadow-lg transition-transform transform ${
+					isClosing ? 'scale-95 modal-exit' : 'scale-100 modal-enter'
+				} ${isClosing ? 'opacity-0' : 'opacity-100'}`}>
+				<button
+					className="absolute top-4 right-4 w-6 h-6 text-gray-500 hover:text-gray-800"
+					onClick={handleClose}>
+					<img
+						src="/assets/b2b/cross.svg"
+						alt="close"
+					/>
+				</button>
+				<div className="flex justify-center items-center w-full flex-col pt-4 gap-3">
+					<div className="text-base sm:text-2xl font-semibold font-manuale">
+						Download Catalogue
+					</div>
+					<div className="text-xs sm:text-base text-neutral-500 px-2">
+						Fill the form to receive the brochure.{' '}
 					</div>
 				</div>
-			)}
-			<div className="fixed inset-0 z-40 bg-black opacity-50"></div>
-			<div
-				className={`flex justify-center items-center w-full h-screen fixed inset-0 z-50 ${
-					isClosing ? 'modal-exit' : 'modal-enter'
-				}`}>
-				<div className="w-[60%] max-w-[1210px] h-auto p-10 relative bg-white rounded-lg shadow backdrop-blur-[17px]">
-					<BulkOrderForm
-						onButtonClick={() => {
-							handleMessage();
-						}}
-					/>
-					<button
-						className="absolute top-10 right-[19px] lg:top-[48.50px] lg:right-[66px] w-5 sm:w-8 lg:h-[33px] h-5"
-						style={{ top: 20, right: 36 }}
-						onClick={handleClose}>
-						<img src="/assets/b2b/cross.svg" alt="close" />
-					</button>
+				<div className="flex flex-col justify-center items-center md:flex-row">
+					<div className=" w-[80%]   p-4">
+						<form className="space-y-4">
+							<input
+								type="text"
+								required
+								name="name"
+								placeholder="Enter your name"
+								value={formData.name}
+								onChange={handleChange}
+								className={`w-full px-4 py-2 border rounded-sm border-gray-400 focus:outline-none focus:ring-2 focus:ring-black ${
+									errors.name ? 'border-red-500' : ''
+								}`}
+							/>
+
+							<input
+								type="tel"
+								required
+								name="phone"
+								placeholder="+91 Enter your phone number"
+								prefix="+91"
+								maxLength={13}
+								value={`${phone}`}
+								onChange={(e) => setPhone(e.target.value)}
+								className={`w-full px-4 py-2 border rounded-sm border-gray-400 focus:outline-none focus:ring-2 focus:ring-black ${
+									errors.phone ? 'border-red-500' : ''
+								}`}
+							/>
+							<input
+								type="email"
+								required
+								name="email"
+								placeholder="Email"
+								value={formData.email}
+								onChange={handleChange}
+								className={`w-full px-4 py-2 border rounded-sm border-gray-400 focus:outline-none focus:ring-2 focus:ring-black ${
+									errors.email ? 'border-red-500' : ''
+								}`}
+							/>
+
+							<div className="space-y-2">
+								<div className="text-base font-normal text-zinc-400">
+									Team Size
+								</div>
+								<div className="flex space-x-2">
+									{['5 - 25', '26 - 50', '51 - 100', '100 +'].map((size) => (
+										<div
+											key={size}
+											onClick={() => handleTeamSizeChange(size)}
+											className={`flex-1 py-2 border rounded-sm text-center cursor-pointer transition-colors ${
+												formData.teamSize === size
+													? 'bg-black text-white'
+													: 'bg-white text-zinc-400 border-zinc-400 hover:bg-gray-100'
+											}`}>
+											{size}
+										</div>
+									))}
+								</div>
+							</div>
+							{errorMessage && (
+								<p className="text-red-500 text-xs">{errorMessage}</p>
+							)}
+							<button
+								onClick={handleDownloadClick}
+								type="button"
+								className="w-full py-3 bg-black text-white text-lg font-medium rounded-sm focus:outline-none hover:bg-gray-800">
+								DOWNLOAD CATALOGUE
+							</button>
+						</form>
+					</div>
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }
-
-export default CatalogueModal;

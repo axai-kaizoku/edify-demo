@@ -7,7 +7,7 @@ const MetricsSection = () => {
 	return (
 		<>
 			<Container isBorder={false}>
-				<div className="pt-8 pb-10 flex flex-col lg:flex-row justify-normal gap-8 sm:gap-16 xl:gap-12">
+				<div className="pt-8 lg:pb-10  flex flex-col lg:flex-row justify-normal gap-8 sm:gap-16 xl:gap-12">
 					<div className="flex flex-col  items-center lg:items-start gap-8">
 						<div className="text-slate-900 font-semibold text-2xl sm:text-4xl flex justify-start">
 							<CustomHeading heading="What it means to be Edify Refurbished?" />

@@ -161,7 +161,10 @@ export default function StartupForm({ onClose, onDownload }: any) {
 				<button
 					className="absolute top-4 right-4 w-6 h-6 text-gray-500 hover:text-gray-800"
 					onClick={handleClose}>
-					<img src="/assets/b2b/cross.svg" alt="close" />
+					<img
+						src="/assets/b2b/cross.svg"
+						alt="close"
+					/>
 				</button>
 				<div className="flex justify-center items-center w-full flex-col py-2 gap-3">
 					<div className="text-base sm:text-2xl font-semibold font-manuale">
@@ -207,7 +210,9 @@ export default function StartupForm({ onClose, onDownload }: any) {
 									}`}>
 									<option value="">Select Role</option>
 									{roleOptions.map((role, index) => (
-										<option key={index} value={role}>
+										<option
+											key={index}
+											value={role}>
 											{role}
 										</option>
 									))}
@@ -276,7 +281,7 @@ export default function StartupForm({ onClose, onDownload }: any) {
 							width={626}
 							height={450}
 							alt="human illustration"
-							src="/assets/startup/startup-form.png"
+							src="/assets/startup/startup-form.webp"
 							className="object-contain"
 						/>
 					</div>

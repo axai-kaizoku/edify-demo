@@ -1,7 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import { SocialIconsProps } from '@/types';
-// import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 
 function SocialElements({ src, href, alt }: SocialIconsProps) {
 	return (

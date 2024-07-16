@@ -107,6 +107,7 @@ input[type='number'] {
 	-moz-appearance: textfield;
 }
 
+/*Styling for Modals*/
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -135,4 +136,17 @@ input[type='number'] {
 
 .modal-exit {
 	animation: fadeOut 0.3s ease-in forwards;
+}
+
+.edify-rockers-root .splide__pagination {
+	position: absolute;
+	bottom: -1.5rem;
+}
+
+.splide__pagination__page.is-active {
+	background: #000 !important;
+}
+
+.splide__pagination__page {
+	background: #caced1 !important;
 }

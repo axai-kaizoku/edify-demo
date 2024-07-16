@@ -47,7 +47,7 @@ function B2B() {
 				<img
 					src="/assets/b2b/wave-1.svg"
 					alt="wave"
-					className="w-fit sm:h-[90px] lg:h-[110px] max-sm:hidden absolute -mt-16 left-0 "
+					className="w-fit sm:h-[90px] lg:h-[110px] hidden lg:block absolute -mt-16 left-0 "
 				/>
 			</div>
 			<Container isBorder={false} className="pt-5 lg:pt-10">
@@ -58,7 +58,7 @@ function B2B() {
 				<img
 					src="/assets/b2b/wave-2.svg"
 					alt="wave"
-					className="w-fit sm:h-[80px] lg:h-[100px] absolute right-0 max-sm:hidden"
+					className="w-fit sm:h-[80px] lg:h-[100px] absolute right-0 hidden lg:block"
 				/>
 			</div>
 			<Container isBorder={false} className=" sm:pt-9 lg:pt-20">

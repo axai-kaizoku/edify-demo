@@ -13,11 +13,11 @@ export default function BestSellerCard({
 }: Product) {
 	return (
 		<div
-			className=" flex flex-col rounded-lg duration-300 ease-in-out overflow-hidden bg-white h-[392px]"
+			className=" flex flex-col rounded-lg duration-300 ease-in-out overflow-hidden bg-white h-[350px] sm:h-[392px]"
 			role="article"
 			aria-labelledby={`product-title-${title}`}
 			aria-describedby={`product-brief-${title}`}>
-			<div className="flex justify-center items-center  h-1/2 w-full ">
+			<div className="flex justify-center items-center h-1/2  w-full ">
 				<img
 					src={image}
 					alt={alt_tag}
@@ -29,20 +29,20 @@ export default function BestSellerCard({
 			</div>
 			<hr className=" mx-4  border-t border-gray-200" />
 
-			<div className="flex flex-col p-4">
-				<h3
+			<div className="flex  flex-col p-4 ">
+				<div
 					id={`product-title-${title}`}
-					className="text-xs md:text-sm  lg:text-lg text-gray-900 font-graphik font-semibold leading-6">
+					className="text-xs md:text-sm  lg:text-lg text-gray-900 font-graphik font-semibold ">
 					{title}
-				</h3>
-				<div className="flex flex-row justify-between items-center mt-2 text-wrap">
-					<p
-						id={`product-brief-${title}`}
-						className="text-xs sm:text-md text-gray-500 font-normal">
-						{brief}
-					</p>
 				</div>
-				<div className="flex items-center justify-start py-4 gap-3">
+				<div className="flex flex-row justify-between items-center mt-2 text-wrap">
+					<div
+						id={`product-brief-${title}`}
+						className="text-[10px] sm:text-base text-gray-500 font-normal">
+						{brief}
+					</div>
+				</div>
+				<div className="flex items-center justify-start py-2 gap-3">
 					<p
 						aria-label={`Selling price ₹${selling_price}`}
 						className="text-gray-900 font-graphik font-semibold text-sm md:text-lg lg:text-xl">
@@ -57,9 +57,9 @@ export default function BestSellerCard({
 				<Link
 					href={product_url}
 					target="_blank"
-					className="flex justify-center items-center bg-black hover:opacity-70 duration-300 rounded-sm w-fit sm:px-4 px-2 sm:py-1 py-0.5">
+					className="flex  bg-black  hover:opacity-70 duration-300 rounded-sm w-fit ">
 					<button
-						className="text-white font-graphik leading-8 text-xs sm:text-sm font-medium"
+						className="text-white font-graphik p-1 sm:p-2 text-xs sm:text-sm font-medium"
 						aria-label={`Buy ${title} now for ₹${selling_price}`}>
 						BUY NOW
 					</button>

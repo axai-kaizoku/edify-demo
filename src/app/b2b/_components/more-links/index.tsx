@@ -1,5 +1,9 @@
 import MoreLinks from '@/components/more-links';
 
 export default function MoreLinksSection() {
-	return <MoreLinks slug="refurbished-laptops-nashik" />;
+	return (
+		<div className="pt-4 w-full">
+			<MoreLinks slug="refurbished-laptops-delhi" />
+		</div>
+	);
 }

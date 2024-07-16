@@ -51,7 +51,7 @@ function BulkOrder() {
 					</div>
 					<div className="lg:w-2/4 w-full mt-24 flex justify-center">
 						<Image
-							src="/assets/b2b/bulk-order.png"
+							src="/assets/b2b/bulk-order.webp"
 							alt="Bulk Order Image"
 							width={650}
 							height={436}

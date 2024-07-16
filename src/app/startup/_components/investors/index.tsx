@@ -15,17 +15,17 @@ export default function StartUps() {
 				{/* Desktop */}
 				<div className="hidden lg:flex items-center flex-wrap justify-between pb-10 gap-4">
 					<img
-						src="/assets/startup/investors/beenext-logo.png"
-						alt="electric pe"
-						width={365}
-						height={40}
-						className="object-contain"
-					/>
-					<img
 						src="/assets/startup/investors/prime-venture-partners.png"
 						alt="prime-venture-partners"
 						width={156}
 						height={50}
+						className="object-contain"
+					/>
+					<img
+						src="/assets/startup/investors/beenext-logo.png"
+						alt="electric pe"
+						width={365}
+						height={40}
 						className="object-contain"
 					/>
 					<img
@@ -93,7 +93,7 @@ export default function StartUps() {
 					</div>
 				</div>
 				{/* Mobile */}
-				<div className="py-4 w-full items-center justify-between sm:hidden flex pb-8 px-7">
+				<div className="py-4 w-full items-center justify-between sm:hidden flex pb-8 px-5">
 					<img
 						src="/assets/startup/investors/inflection-point-ventures.png"
 						alt="inflection-point-ventures"
@@ -120,8 +120,8 @@ export default function StartUps() {
 						src="/assets/startup/investors/beenext.png"
 						alt="electric pe"
 						className="object-contain"
-						width={60}
-						height={60}
+						width={80}
+						height={80}
 					/>
 				</div>
 			</div>

@@ -15,13 +15,13 @@ export default function AboutSection({
 					: 'lg:flex-row flex-col-reverse'
 			}`}>
 			<div className="flex flex-col w-full lg:w-[50%] justify-center ">
-				<h3 className="font-manuale font-semibold text-2xl sm:text-4xl py-3 sm:py-5">
+				<h3 className="font-manuale font-semibold text-lg  sm:text-4xl pt-3 pb-1.5 sm:py-5">
 					{title}
 				</h3>
 				{description.map((desc, i) => (
 					<div
 						key={i}
-						className="text-slate-500 text-base py-2 sm:py-4 sm:text-lg ">
+						className="text-slate-500 text-xs py-2 sm:py-4 sm:text-lg ">
 						{desc}
 					</div>
 				))}

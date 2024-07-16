@@ -1,4 +1,5 @@
 'use client';
+import { useEffect, useRef } from 'react';
 import Container from '../common/Container';
 import CustomHeading from '../common/CustomHeading';
 import VideoModal from './VideoModal';
@@ -6,11 +7,26 @@ import VideoModal from './VideoModal';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 export default function EdifyRockersSection() {
+	const splideRef = useRef<any>(null);
+
+	useEffect(() => {
+		if (splideRef.current) {
+			const { root } = splideRef.current.splide.Components.Elements;
+
+			// root element
+			root.classList.add('edify-rockers-root');
+
+			// track element
+			// list.classList.add('edify-rockers-list');
+			// slides.classList.add('edify-rockers-slides');
+		}
+	});
 	return (
 		<Container isBorder={false}>
 			<CustomHeading heading="Edify Rockers" styles="py-4 sm:py-8" />
-			<div className="pt-6 pb-2">
+			<div className="pt-6 pb-2" id="edify-rockers">
 				<Splide
+					ref={splideRef}
 					options={{
 						type: 'slide',
 						rewind: true,

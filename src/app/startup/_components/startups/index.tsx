@@ -22,7 +22,7 @@ export default function StartUps() {
 						className=" object-contain h-[50px] w-[230px]"
 					/>
 					<img
-						src="/assets/startup/startups/apna-logo.png"
+						src="/assets/startup/startups/apna-logo.webp"
 						alt="Apna"
 						className="w-[100px] h-[100px] object-contain"
 					/>
@@ -34,7 +34,7 @@ export default function StartUps() {
 						className="w-[150px] h-[70px] object-contain"
 					/>
 					<img
-						src="/assets/startup/startups/apnamart-logo.png"
+						src="/assets/startup/startups/apnamart-logo.webp"
 						alt="apnamart"
 						width={140}
 						height={70}
@@ -69,7 +69,7 @@ export default function StartUps() {
 							className="object-contain"
 						/>
 						<img
-							src="/assets/startup/startups/apna-logo.png"
+							src="/assets/startup/startups/apna-logo.webp"
 							alt="Apna"
 							width={80}
 							height={80}
@@ -85,7 +85,7 @@ export default function StartUps() {
 					</div>
 					<div className="flex flex-row justify-between w-full">
 						<img
-							src="/assets/startup/startups/apnamart-logo.png"
+							src="/assets/startup/startups/apnamart-logo.webp"
 							alt="apnamart"
 							width={140}
 							height={70}
@@ -155,7 +155,7 @@ export default function StartUps() {
 							className="object-contain"
 						/>
 						<img
-							src="/assets/startup/startups/apnamart-logo.png"
+							src="/assets/startup/startups/apnamart-logo.webp"
 							alt="apnamart"
 							width={60}
 							height={60}
@@ -179,7 +179,7 @@ export default function StartUps() {
 							className="object-contain"
 						/>
 						<img
-							src="/assets/startup/startups/brown-unknown.png"
+							src="/assets/startup/startups/brown-unknown.webp"
 							alt="brown-unknown"
 							width={40}
 							height={40}
@@ -200,7 +200,7 @@ export default function StartUps() {
 							className="object-contain"
 						/>
 						<img
-							src="/assets/startup/startups/apna-logo.png"
+							src="/assets/startup/startups/apna-logo.webp"
 							alt="Apna"
 							width={40}
 							height={40}

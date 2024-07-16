@@ -10,7 +10,7 @@ export default function ImageSliderComponent() {
 				aria-label="React Compare Slider"
 				itemOne={
 					<ReactCompareSliderImage
-						src="/assets/slider/slider-img-2.png"
+						src="/assets/slider/slider-img-2.webp"
 						alt="Image one"
 						className="rounded-xl"
 						aria-label="React Compare Slider"
@@ -18,7 +18,7 @@ export default function ImageSliderComponent() {
 				}
 				itemTwo={
 					<ReactCompareSliderImage
-						src="/assets/slider/slider-img-1.png"
+						src="/assets/slider/slider-img-1.webp"
 						alt="Image two"
 						className="rounded-xl"
 						aria-label="React Compare Slider"

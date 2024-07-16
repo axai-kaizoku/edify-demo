@@ -1,10 +1,11 @@
 'use client';
+/* eslint-disable @next/next/no-img-element */
+
 import React, { useState, useEffect } from 'react';
 import { fetchFooterLinks } from '@/server/actions';
 import { FooterCategory, FooterPage } from '@/types';
-import { Skeleton } from '../ui/skeleton';
 
-export default function MoreLinks({ slug }: { slug?: string }) {
+export default function MoreLinks({ slug }: { slug: string }) {
 	const [data, setData] = useState<FooterCategory[]>([]);
 	const [showLinks, setShowLinks] = useState<boolean>(false);
 	const [isMobileOrTablet, setIsMobileOrTablet] = useState<boolean>(false);
@@ -41,7 +42,7 @@ export default function MoreLinks({ slug }: { slug?: string }) {
 			{isMobileOrTablet && (
 				<button
 					onClick={toggleLinks}
-					className="px-3 sm:px-24 text-sm hover:underline flex ">
+					className="px-3 sm:px-24 text-sm hover:underline flex max-sm:py-3.5">
 					More Links
 				</button>
 			)}
@@ -52,11 +53,12 @@ export default function MoreLinks({ slug }: { slug?: string }) {
 						: 'max-h-0 opacity-0 overflow-hidden'
 				}`}>
 				{!data.length ? (
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full  xl:gap-5">
-						<Skeleton className="w-full lg:w-11/12 lg:h-52 " />
-						<Skeleton className="w-11/12 h-40 hidden lg:block" />
-						<Skeleton className="w-11/12 h-32 hidden lg:block" />
-						<Skeleton className="w-11/12 h-32 hidden lg:block" />
+					<div className="flex justify-center items-center w-full">
+						<img
+							src="/assets/loading.svg"
+							className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
+							alt="loading"
+						/>
 					</div>
 				) : (
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full  xl:gap-5">

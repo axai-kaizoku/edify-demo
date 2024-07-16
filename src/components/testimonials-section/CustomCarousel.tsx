@@ -54,7 +54,7 @@ export default function CustomCarousel() {
 					}}>
 					{reviewCardContent.map((item, index) => (
 						<SplideSlide key={`list ${index}`}>
-							<div className="duration-300 rounded-sm flex px-10 sm:px-16">
+							<div className="duration-300 rounded-sm flex  px-10 sm:px-16">
 								<ReviewCard
 									src={item.src}
 									name={item.name}
@@ -88,7 +88,7 @@ export default function CustomCarousel() {
 							</svg>
 						</button>
 						<button
-							className="absolute top-1/2 -right-1 sm:-right-12 -translate-y-1/2 hover:text-white  text-black p-3 rounded-full hover:bg-black focus:outline-none transition-all duration-500 ease-in-out"
+							className="absolute top-1/2 -right-1 sm:-right-12 -translate-y-1/2 hover:text-white  text-black p-1 sm:p-3 rounded-full hover:bg-black focus:outline-none transition-all duration-500 ease-in-out"
 							onClick={handleNext}>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"

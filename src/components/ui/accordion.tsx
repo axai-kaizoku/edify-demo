@@ -1,5 +1,5 @@
 'use client';
-
+/* eslint-disable @next/next/no-img-element */
 import * as React from 'react';
 import * as AccordionPrimitive from '@radix-ui/react-accordion';
 
@@ -45,13 +45,13 @@ const AccordionTrigger = React.forwardRef<
 						<img
 							src="/assets/minus-circle.svg"
 							alt="minus-circle"
-							className="w-3 h-3 sm:w-6 sm:h-6 object-contain"
+							className="w-4 h-4 sm:w-6 sm:h-6 object-contain"
 						/>
 					) : (
 						<img
 							src="/assets/plus-circle.svg"
 							alt="plus-circle"
-							className="w-3 h-3 sm:w-6 sm:h-6 object-contain"
+							className="w-4 h-4 sm:w-6 sm:h-6 object-contain"
 						/>
 					)}
 				</div>

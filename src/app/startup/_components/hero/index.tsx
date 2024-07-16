@@ -75,7 +75,7 @@ function HeroSection() {
 				<img
 					alt="Hero"
 					className="lg:w-[650px] lg:h-[350px] xl:h-[500px] object-contain xl:w-[700px] pb-12 lg:pb-0"
-					src="/assets/startup/hero.png"
+					src="/assets/startup/hero.webp"
 				/>
 			</div>
 			{isModalOpen && (

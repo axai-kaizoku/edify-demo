@@ -30,7 +30,9 @@ export default function MobileView() {
 	return (
 		<div className="border-b">
 			{/* Mobile LOGO */}
-			<Link href="/" aria-label="Edify Logo">
+			<Link
+				href="/"
+				aria-label="Edify Logo">
 				<img
 					src="/assets/logo.webp"
 					alt="logo"
@@ -40,7 +42,7 @@ export default function MobileView() {
 
 			{/* Mobile Hamburger icon (menu icon) */}
 			<div
-				className="lg:hidden flex flex-col absolute pr-2.5 top-8 right-0 h-6 w-6 rounded justify-center items-center "
+				className="lg:hidden flex flex-col absolute pr-[2.5rem] top-8 right-0 h-6 w-6 rounded justify-center items-center "
 				onClick={() => setIsOpen(!isOpen)}>
 				{renderHamburgerLine(
 					isOpen ? 'rotate-45 translate-y-2.5  ' : 'opacity-100 ',

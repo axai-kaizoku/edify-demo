@@ -35,15 +35,15 @@ function MobileFooter() {
 				</div>
 				<div className="flex flex-col gap-4">
 					<div className="flex flex-col gap-2">
-						<h1 className="font-graphik text-xs font-medium leading-5 text-slate-600">
+						<h1 className="font-graphik text-sm font-semibold leading-5 text-black">
 							CONTACT US
 						</h1>
-						<div className="py-2">
-							<h1 className="text-slate-900 text-sm font-medium leading-5 font-gaphik">
+						<div className="">
+							<h1 className="text-slate-600 text-xs font-medium leading-5 font-gaphik">
 								+91 9513245671
 							</h1>
 
-							<h1 className="text-slate-600 text-sm font-norml leading-5 font-gaphik">
+							<h1 className="text-slate-600 text-xs font-normal leading-5 font-gaphik">
 								edify@winuall.com
 							</h1>
 						</div>
@@ -54,7 +54,7 @@ function MobileFooter() {
 						Kasavanahalli, Bengaluru, Karnataka 560035,
 					</h1>
 					<div className="flex flex-col gap-2">
-						<h1 className="text-slate-600 text-xs font-medium leading-5">
+						<h1 className="text-black text-xs font-semibold leading-5">
 							COMPANY
 						</h1>
 						<div className="gap-1 font-graphik font-normal leading-5 text-xs text-slate-600">
@@ -77,7 +77,7 @@ function MobileFooter() {
 						</div>
 					</div>
 					<div className="flex flex-col gap-2">
-						<h1 className="text-slate-600 text-xs font-medium leading-5">
+						<h1 className="text-black text-xs font-semibold leading-5">
 							LEGAL
 						</h1>
 						<div className="gap-1 font-graphik font-normal leading-5 text-xs text-slate-600">

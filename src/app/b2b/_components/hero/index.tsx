@@ -91,19 +91,19 @@ function HeroSection() {
 				</div>
 				<img
 					alt="hero-image"
-					src="/assets/b2b/hero.png"
-					className="w-[240px] h-[180px] sm:w-[440px] sm:h-[350px] lg:w-[490px] p-1 lg:h-[420px] xl:w-[550px] xl:h-[520px] object-contain"
+					src="/assets/b2b/hero.webp"
+					className="w-[350px] h-[300px] sm:w-[440px] sm:h-[350px] lg:w-[490px] p-1 lg:h-[420px] xl:w-[550px] xl:h-[520px] object-contain"
 				/>
 			</div>
-			{isModalOpen && (
-				<CatalogueModal
-					onClose={handleModalClose}
-					onDownload={handleBrochureDownload}
-				/>
-			)}
 			{isEnquireOpen && (
 				<EnquireModal
 					onClose={handleEnquireClose}
+					onDownload={handleBrochureDownload}
+				/>
+			)}
+			{isModalOpen && (
+				<CatalogueModal
+					onClose={handleModalClose}
 					onDownload={handleBrochureDownload}
 				/>
 			)}
