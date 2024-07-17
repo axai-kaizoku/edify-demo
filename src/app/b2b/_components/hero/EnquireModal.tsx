@@ -111,12 +111,12 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 		<>
 			<div className="fixed inset-0 z-40 bg-black opacity-50"></div>
 			<div
-				className={`flex justify-center items-center w-full h-screen fixed inset-0 z-50 ${
+				className={`flex justify-center items-center w-full h-full fixed inset-0 z-50 ${
 					isClosing ? 'modal-exit' : 'modal-enter'
 				}`}>
 				<div className="w-[90.5%] max-w-[1210px] h-auto p-10 relative bg-white rounded-lg shadow backdrop-blur-[17px]">
-					<div className="flex flex-col justify-start items-center gap-10">
-						<div className="flex flex-col justify-start items-center gap-[25px]">
+					<div className="flex flex-col justify-start items-center gap-5">
+						<div className="flex flex-col justify-start items-center gap-[20px]">
 							<div className="text-center text-black text-base lg:text-3xl font-medium leading-normal">
 								Looking to buy Laptops in Bulk?{' '}
 							</div>
@@ -127,10 +127,8 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 						<div className="flex flex-col justify-start items-center gap-6 lg:gap-12">
 							<div className="flex flex-col justify-start items-start gap-5">
 								<div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-6 lg:gap-10">
-									<div className="flex flex-col gap-2.5 w-full sm:w-auto">
-										<label
-											className="sr-only"
-											htmlFor="name">
+									<div className="flex flex-col  w-full sm:w-auto">
+										<label className="sr-only" htmlFor="name">
 											Name
 										</label>
 										<input
@@ -141,13 +139,13 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 											onChange={handleInputChange}
 										/>
 										{errors.name && (
-											<span className="text-red-500">{errors.name}</span>
+											<span className="text-red-500 text-xs">
+												{errors.name}
+											</span>
 										)}
 									</div>
-									<div className="flex flex-col gap-2.5 w-full sm:w-auto">
-										<label
-											className="sr-only"
-											htmlFor="phone">
+									<div className="flex flex-col  w-full sm:w-auto">
+										<label className="sr-only" htmlFor="phone">
 											Phone Number
 										</label>
 										<input
@@ -158,15 +156,15 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 											onChange={handleInputChange}
 										/>
 										{errors.phone && (
-											<span className="text-red-500">{errors.phone}</span>
+											<span className="text-red-500 text-xs">
+												{errors.phone}
+											</span>
 										)}
 									</div>
 								</div>
 								<div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-6 lg:gap-10">
-									<div className="flex flex-col gap-2.5 w-full sm:w-auto">
-										<label
-											className="sr-only"
-											htmlFor="store">
+									<div className="flex flex-col  w-full sm:w-auto">
+										<label className="sr-only" htmlFor="store">
 											Email
 										</label>
 										<input
@@ -177,13 +175,13 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 											onChange={handleInputChange}
 										/>
 										{errors.store && (
-											<span className="text-red-500">{errors.store}</span>
+											<span className="text-red-500 text-xs">
+												{errors.store}
+											</span>
 										)}
 									</div>
-									<div className="flex flex-col gap-2.5 w-full sm:w-auto">
-										<label
-											className="sr-only"
-											htmlFor="city">
+									<div className="flex flex-col  w-full sm:w-auto">
+										<label className="sr-only" htmlFor="city">
 											Enter your City Name
 										</label>
 										<input
@@ -194,15 +192,15 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 											onChange={handleInputChange}
 										/>
 										{errors.city && (
-											<span className="text-red-500">{errors.city}</span>
+											<span className="text-red-500 text-xs">
+												{errors.city}
+											</span>
 										)}
 									</div>
 								</div>
 								<div className="flex flex-col sm:flex-row justify-start items-start sm:items-center gap-6 lg:gap-10">
 									<div className="flex flex-col gap-2.5 w-full sm:w-auto">
-										<label
-											className="sr-only"
-											htmlFor="quantity">
+										<label className="sr-only" htmlFor="quantity">
 											Number Of Quantities
 										</label>
 										<div className="flex justify-between">
@@ -288,7 +286,9 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 											</div>
 										</div>
 										{errors.quantity && (
-											<span className="text-red-500">{errors.quantity}</span>
+											<span className="text-red-500 text-xs">
+												{errors.quantity}
+											</span>
 										)}
 									</div>
 								</div>
@@ -307,10 +307,7 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 					<button
 						className="absolute top-10 right-[19px] lg:top-[48.50px] lg:right-[66px] w-5 sm:w-8 lg:h-[33px] h-5"
 						onClick={handleClose}>
-						<img
-							src="/assets/b2b/cross.svg"
-							alt="close"
-						/>
+						<img src="/assets/b2b/cross.svg" alt="close" />
 					</button>
 				</div>
 			</div>

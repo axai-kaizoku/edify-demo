@@ -1,27 +1,39 @@
-// import Image from 'next/image';
-import React from 'react';
+/* eslint-disable @next/next/no-img-element */
 import SocialElementsMobile from './SocialElementsMobile';
 import Link from 'next/link';
 
 function MobileFooter() {
 	return (
-		<footer className="p-4 block sm:hidden">
-			<div>
-				<Link href="/" aria-label="Read more ">
-					<img src="/assets/logo.webp" alt="edify" width={65} height={30} />
+		<footer className="py-4 px-2.5 block sm:hidden">
+			<div className="">
+				<Link className="flex w-fit" href="/" aria-label="Read more ">
+					<img
+						src="/assets/logo.webp"
+						alt="edify"
+						className="-ml-4 w-[150px] h-[50px] object-contain"
+					/>
 				</Link>
 
-				<div className="flex py-8 gap-6">
-					<SocialElementsMobile
-						src="/assets/socials-icons/twitter.svg"
-						href="https://twitter.com/edify_club"
-						alt="twitter"
-					/>
-					<SocialElementsMobile
+				<div className="flex py-8 gap-6 items-center">
+					<Link href="https://twitter.com/edify_club">
+						<img
+							className="h-[1.4rem] w-[1.4rem] rounded-sm"
+							alt="twitter"
+							src="/assets/socials-icons/twitter.svg"
+						/>
+					</Link>
+					<Link href="https://twitter.com/edify_club">
+						<img
+							className="black-and-white h-[1.8rem] w-[1.8rem] rounded-sm"
+							alt="Instagram"
+							src="/assets/socials-icons/insta.svg"
+						/>
+					</Link>
+					{/* <SocialElementsMobile
 						src="/assets/socials-icons/insta.svg"
 						href="https://instagram.com/edify_club"
 						alt="Instagram"
-					/>
+					/> */}
 					<SocialElementsMobile
 						src="/assets/socials-icons/fb.svg"
 						href="https://facebook.com/edifyclub"

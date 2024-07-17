@@ -34,7 +34,7 @@ const SeoBestSellersSection: React.FC<SeoBestSellersSectionProps> = ({
 							{products.map((product, index) => (
 								<div
 									key={`liet ${index}`}
-									className="border shadow-md hover:shadow-lg duration-300 rounded-sm flex justify-center items-center">
+									className="border hover:shadow-xl duration-300 rounded-sm flex justify-center items-center">
 									<BestSellerCard
 										selling_price={product.selling_price}
 										image={product.image}

@@ -5,17 +5,19 @@ import LogoComponent from '@/components/logo-section';
 const BestSellersSectionDynamic = dynamic(
 	() => import('@/components/best-sellers-section'),
 );
-
+const EdifyRefurbishedMeansSection = dynamic(
+	() => import('@/components/edify-refurbished-means-section'),
+);
 const EdifiedEffectSectionDynamic = dynamic(
 	() => import('@/components/edified-effect-section'),
 	{ ssr: false },
 );
-
-import EdifyRefurbishedMeansSection from '@/components/edify-refurbished-means-section';
 const EdifyRockersSectionDynamic = dynamic(
 	() => import('@/components/edify-rockers-section'),
 );
-import TestiMonialsSection from '@/components/testimonials-section';
+const TestiMonialsSection = dynamic(
+	() => import('@/components/testimonials-section'),
+);
 const FAQSection = dynamic(() => import('@/components/faq-section'));
 const MoreLinksSectionDynamic = dynamic(
 	() => import('@/components/more-links/MoreLinks'),

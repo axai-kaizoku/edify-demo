@@ -4,13 +4,13 @@ import CustomHeading from '@/components/common/CustomHeading';
 export default function StartUps() {
 	return (
 		<>
-			<div className="flex flex-col pt-20">
+			<div className="flex flex-col pt-6 lg:pt-20">
 				<div className="text-center">
 					<CustomHeading
 						heading="Trusted by 50+ Startups"
 						styles="pb-0 sm:pb-1"
 					/>
-					<div className="font-graphik py-2.5 sm:py-6 text-slate-500 text-[0.9rem] sm:text-lg">
+					<div className="font-graphik py-2.5 sm:py-6 text-slate-500 text-[0.8rem] sm:text-lg">
 						Empowering the best teams
 					</div>
 				</div>

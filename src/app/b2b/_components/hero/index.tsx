@@ -48,13 +48,13 @@ function HeroSection() {
 				<div className="w-full py-4 bg-green-500 absolute lg:fixed z-50 top-[68px] lg:top-[76px] flex justify-center items-center">
 					<div className="flex justify-center items-center gap-2.5">
 						<div>
-							<span className="text-white text-sm sm:text-lg font-normal font-graphik leading-10 ">
-								Thank you for your interest .{' '}
+							<span className="text-white text-sm sm:text-lg font-normal font-graphik leading-10">
+								Thank you for your interest.{' '}
 								<span className="hidden lg:inline-block">
 									You will shortly receive the brochure on your registered
 									number.
-									<span className="underline hidden lg:inline-block ">
-										For more details .{' '}
+									<span className="underline hidden lg:inline-block">
+										For more details.
 									</span>
 								</span>
 							</span>
@@ -69,14 +69,14 @@ function HeroSection() {
 			)}
 
 			<div className="w-full flex flex-col-reverse lg:flex-row sm:gap-6 lg:gap-0 justify-center items-center lg:pt-16 lg:pb-14 xl:py-16">
-				<div className="flex flex-col justify-start items-start gap-4  w-full lg:pt-[3.1rem] xl:pt-[3.3rem]">
+				<div className="flex flex-col justify-start items-start gap-4 w-full lg:pt-[3.1rem] xl:pt-[3.3rem]">
 					<div className="w-full flex flex-col justify-start items-start gap-5 lg:gap-8 xl:gap-[60px]">
 						<div className="w-full flex flex-col lg:justify-start justify-center items-center lg:items-start gap-5">
-							<div className="text-black text-2xl sm:text-5xl lg:text-[2.5rem] xl:text-6xl whitespace-nowrap  font-semibold font-manuale leading-loose lg:leading-[46px] xl:leading-[72px]">
+							<div className="text-black text-[1.2rem] sm:text-5xl lg:text-[2.5rem] xl:text-6xl whitespace-nowrap font-semibold font-manuale leading-loose lg:leading-[46px] xl:leading-[72px]">
 								Edify Refurbished <br className="hidden lg:block" />
 								Laptops
 							</div>
-							<div className="text-grey-600 md:text-grey-800 text-lg lg:text-lg xl:text-3xl whitespace-nowrap font-normal font-graphik leading-snug md:leading-10">
+							<div className="text-gray-600 md:text-grey-800 text-[0.9rem] lg:text-lg xl:text-3xl whitespace-nowrap font-normal font-graphik leading-snug md:leading-10">
 								Best Partner for your Business
 							</div>
 						</div>
@@ -93,6 +93,7 @@ function HeroSection() {
 					alt="hero-image"
 					src="/assets/b2b/hero.webp"
 					className="w-[350px] h-[300px] sm:w-[440px] sm:h-[350px] lg:w-[490px] p-1 lg:h-[420px] xl:w-[550px] xl:h-[520px] object-contain"
+					loading="eager"
 				/>
 			</div>
 			{isEnquireOpen && (

@@ -7,28 +7,19 @@ import BestSellerCard from './BestSellerCard';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 import { Product } from '@/types';
-import Container from '../common/Container';
 import { Skeleton } from '../ui/skeleton';
+import useIsMobile from '@/hooks/useIsMobile';
 
 export default function BestSellersMain({ products }: { products: Product[] }) {
 	const splideRef = useRef<any>(null);
-	const [isMobile, setIsMobile] = useState(false);
 	const [loading, setLoading] = useState(true);
+	const isMobile = useIsMobile();
 
 	useEffect(() => {
 		if (products.length > 0) {
 			setLoading(false);
 		}
 	}, [products]);
-
-	useEffect(() => {
-		const handleResize = () => {
-			setIsMobile(window.innerWidth <= 640);
-		};
-		handleResize();
-		window.addEventListener('resize', handleResize);
-		return () => window.removeEventListener('resize', handleResize);
-	}, []);
 
 	const handlePrev = () => {
 		if (splideRef.current) {
@@ -43,7 +34,7 @@ export default function BestSellersMain({ products }: { products: Product[] }) {
 	};
 
 	return (
-		<Container isBorder={false} className="pt-3.5 pb-0 sm:pb-6">
+		<>
 			<div className="flex justify-between items-center">
 				<CustomHeading heading="Best Sellers" styles="pl-2 py-0.5 sm:py-6" />
 				<div className="hidden lg:block">
@@ -158,6 +149,6 @@ export default function BestSellersMain({ products }: { products: Product[] }) {
 					</>
 				)}
 			</div>
-		</Container>
+		</>
 	);
 }

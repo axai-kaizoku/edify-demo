@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { EdifyRefurbishedCardProps } from '@/types';
 
 interface EdifyRefurbishedCard {
@@ -17,12 +18,13 @@ export default function EdifyRefurbishedCard({
 				src={src}
 				alt="edify-refurbished"
 				className="lg:w-[305px] lg:h-[250px] sm:w-[36%] sm:h-[36%] w-[43%] h-[43%] object-contain"
+				loading="eager"
 			/>
-			<div className="flex flex-col gap-2 sm:gap-6 lg:gap-4">
-				<h3 className="font-manuale whitespace-nowrap font-semibold text-lg md:text-[1.6rem] w-full">
+			<div className="flex flex-col   md:w-[92%] p-2 gap-1 sm:gap-6 lg:gap-4">
+				<h3 className="font-manuale font-semibold text-[0.9rem] md:text-[1.6rem] w-full">
 					{title}
 				</h3>
-				<div className="font-graphik text-xs sm:text-base lg:text-[0.95rem] leading-snug sm:leading-relaxed md:leading-relaxed lg:leading-normal text-slate-500">
+				<div className="font-graphik text-[0.7rem] sm:text-base lg:text-[0.95rem] leading-snug sm:leading-relaxed md:leading-relaxed lg:leading-normal text-slate-600">
 					{description}
 				</div>
 			</div>

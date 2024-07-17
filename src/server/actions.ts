@@ -8,7 +8,7 @@ export async function fetchPageWithSlug(slug: string): Promise<SEOPageData> {
 		const response = await axios.get(url);
 		return response.data;
 	} catch (error: any) {
-		throw new Error(`❌ Error fetching page with slug ${slug}.`);
+		throw new Error(`❌ Error fetching page with slug ${slug}.`, error);
 	}
 }
 
@@ -20,7 +20,10 @@ export async function fetchFooterLinks(
 		const response = await axios.get(url);
 		return response.data.footerByCategory;
 	} catch (error: any) {
-		throw new Error(`❌ Error fetching links for footer with slug ${slug}.`);
+		throw new Error(
+			`❌ Error fetching links for footer with slug ${slug}.`,
+			error,
+		);
 	}
 }
 
@@ -31,6 +34,6 @@ export async function fetchBestSellers(): Promise<Product[]> {
 		const response = await axios.get(url);
 		return response.data.products;
 	} catch (error: any) {
-		throw new Error(`❌ Error fetching products `);
+		throw new Error(`❌ Error fetching products `, error);
 	}
 }

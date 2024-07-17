@@ -1,6 +1,6 @@
 import MoreLinks from '@/components/more-links';
 import CustomForm from './CustomForm';
-import MetricsSection from './MetricComponent';
+import MetricsSection from './MetricSection';
 import { SEOPageData } from '@/types';
 import SeoBestSellersSection from './SeoBestSellersSection';
 import Link from 'next/link';
@@ -20,7 +20,7 @@ const SeoMain: React.FC<SeoMainProps> = ({ data }) => {
 				<h2 className="text-3xl font-medium font-manuale text-gray-600 mb-4">
 					Page Not Found
 				</h2>
-				<p className="text-sm sm:text-lg text-gray-500 mb-8 text-wrap">
+				<p className="text-sm sm:text-lg text-gray-600 mb-8 text-wrap">
 					Sorry, the page you are looking for does not exist.
 				</p>
 				<Link href="/">
@@ -41,11 +41,10 @@ const SeoMain: React.FC<SeoMainProps> = ({ data }) => {
 
 			{/* Second Section */}
 
-			<div className="flex bg-[url('/assets/seo/seo-bg.webp')] bg-no-repeat sm:border-b object-center object-cover h-fit lg:min-h-[95vh] justify-center items-start  w-full lg:pt-10 xl:pt-14">
+			<div className="flex bg-[url('/assets/seo/seo-bg.webp')] bg-no-repeat sm:border-b object-center object-cover h-fit lg:h-[86vh] justify-center items-start  w-full lg:pt-10 xl:pt-14 pb-4 lg:pb-0">
 				<div className="flex w-[95%] sm:w-[87%] flex-col">
 					<div className="flex w-full flex-col gap-10 lg:gap-0 lg:flex-row items-start justify-between">
 						<div className="lg:w-2/4 w-full flex flex-col">
-							{/* {!isLoading && <p>{JSON.stringify(data)}</p>} */}
 							<h1 className="text-[1rem] sm:text-3xl lg:text-4xl xl:text-4xl  text-black font-manuale font-semibold py-3 sm:py-5 xl:py-8">
 								{data.first_title_name.text} {data.last_title_name.text}
 							</h1>
@@ -67,7 +66,7 @@ const SeoMain: React.FC<SeoMainProps> = ({ data }) => {
 			{/* Third Section */}
 			<MetricsSection />
 			{/* More Links Section */}
-			<Container isBorder={false}>
+			<Container isBorder={false} className="lg:pt-2">
 				<MoreLinks slug={data.slug} />
 			</Container>
 		</div>

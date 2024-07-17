@@ -133,12 +133,9 @@ export default function CatalogueModal({ onClose, onDownload }: any) {
 					isClosing ? 'scale-95 modal-exit' : 'scale-100 modal-enter'
 				} ${isClosing ? 'opacity-0' : 'opacity-100'}`}>
 				<button
-					className="absolute top-4 right-4 w-6 h-6 text-gray-500 hover:text-gray-800"
+					className="absolute top-4 right-4 w-6 h-6 text-gray-600 hover:text-gray-800"
 					onClick={handleClose}>
-					<img
-						src="/assets/b2b/cross.svg"
-						alt="close"
-					/>
+					<img src="/assets/b2b/cross.svg" alt="close" />
 				</button>
 				<div className="flex justify-center items-center w-full flex-col pt-4 gap-3">
 					<div className="text-base sm:text-2xl font-semibold font-manuale">
@@ -192,12 +189,12 @@ export default function CatalogueModal({ onClose, onDownload }: any) {
 								<div className="text-base font-normal text-zinc-400">
 									Team Size
 								</div>
-								<div className="flex space-x-2">
+								<div className="flex sm:space-x-2 max-sm:gap-1">
 									{['5 - 25', '26 - 50', '51 - 100', '100 +'].map((size) => (
 										<div
 											key={size}
 											onClick={() => handleTeamSizeChange(size)}
-											className={`flex-1 py-2 border rounded-sm text-center cursor-pointer transition-colors ${
+											className={`flex-1 py-2 border rounded-sm text-xs sm:text-base text-center cursor-pointer transition-colors ${
 												formData.teamSize === size
 													? 'bg-black text-white'
 													: 'bg-white text-zinc-400 border-zinc-400 hover:bg-gray-100'

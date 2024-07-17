@@ -5,20 +5,10 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 import ReviewCard from './ReviewCard';
 import { reviewCardContent } from '@/constants';
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 
 export default function CustomCarousel() {
-	const [isMobile, setIsMobile] = useState<boolean>(false);
 	const splideRef = useRef<any>(null);
-
-	useEffect(() => {
-		const handleResize = () => {
-			setIsMobile(window.innerWidth <= 0);
-		};
-		handleResize();
-		window.addEventListener('resize', handleResize);
-		return () => window.removeEventListener('resize', handleResize);
-	}, []);
 
 	const handlePrev = () => {
 		if (splideRef.current) {
@@ -68,7 +58,7 @@ export default function CustomCarousel() {
 				</Splide>
 
 				{/* Custom Arrow Buttons */}
-				{!isMobile && (
+				{
 					<>
 						<button
 							className="absolute top-1/2 -left-1 sm:-left-12 -translate-y-1/2 hover:text-white  text-black p-1 sm:p-3 rounded-full hover:bg-black focus:outline-none transition-all duration-500 ease-in-out"
@@ -76,9 +66,10 @@ export default function CustomCarousel() {
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
+								aria-label="arrow-button"
 								viewBox="0 0 24 24"
 								stroke="currentColor"
-								className="w-3 h-3 sm:w-4 sm:h-4">
+								className="w-[0.85rem] h-[0.85rem] sm:w-6 sm:h-6">
 								<path
 									strokeLinecap="round"
 									strokeLinejoin="round"
@@ -94,8 +85,9 @@ export default function CustomCarousel() {
 								xmlns="http://www.w3.org/2000/svg"
 								fill="none"
 								viewBox="0 0 24 24"
+								aria-label="arrow-button"
 								stroke="currentColor"
-								className="w-3 h-3 sm:w-4 sm:h-4">
+								className="w-[0.85rem] h-[0.85rem] sm:w-6 sm:h-6">
 								<path
 									strokeLinecap="round"
 									strokeLinejoin="round"
@@ -105,7 +97,7 @@ export default function CustomCarousel() {
 							</svg>
 						</button>
 					</>
-				)}
+				}
 			</div>
 		</>
 	);

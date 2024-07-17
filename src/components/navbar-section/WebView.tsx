@@ -17,7 +17,9 @@ export default function WebView() {
 				<div className="flex justify-between items-center w-full">
 					{/* Web LOGO */}
 					<div className="lg:block hidden">
-						<Link href="/" aria-label="Link">
+						<Link
+							href="/"
+							aria-label="Link">
 							<img
 								src="/assets/logo.webp"
 								alt="logo"
@@ -32,7 +34,9 @@ export default function WebView() {
 							className={
 								currentRoute === '/' ? 'text-black' : 'text-[#656B70]'
 							}>
-							<Link href="/" aria-label="Read more">
+							<Link
+								href="/"
+								aria-label="Read more">
 								HOME
 							</Link>
 						</li>
@@ -54,7 +58,9 @@ export default function WebView() {
 							className={
 								currentRoute === '/startup' ? 'text-black' : 'text-[#656B70]'
 							}>
-							<Link href="/startup" aria-label="Read more">
+							<Link
+								href="/startup"
+								aria-label="Read more">
 								BUSINESS
 							</Link>
 						</li>
@@ -63,7 +69,9 @@ export default function WebView() {
 							className={
 								currentRoute === '/b2b' ? 'text-black' : 'text-[#656B70]'
 							}>
-							<Link href="/b2b" aria-label="Read more">
+							<Link
+								href="/b2b"
+								aria-label="Read more">
 								B2B
 							</Link>
 						</li>
@@ -71,19 +79,31 @@ export default function WebView() {
 							className={
 								currentRoute === '/about-us' ? 'text-black' : 'text-[#656B70]'
 							}>
-							<Link href="/about-us" aria-label="Read more">
+							<Link
+								href="/about-us"
+								aria-label="Read more">
 								ABOUT US
 							</Link>
 						</li>
 					</ul>
 					{/* Web NavLinks */}
 					<div className="lg:flex gap-7 hidden">
-						{/* <img
-							src="/assets/whatsapp.svg"
-							alt="whatsapp-icon"
-							className="w-6 h-6"
-						/> */}
-						<a style={{color: 'cornflowerblue'}} href="tel:+91 9513245671"><img src="/assets/phone.svg" alt="phone-icon" className="w-6 h-6" /></a>
+						<a href="https://wa.me//+919513245671">
+							<img
+								src="/assets/whatsapp.svg"
+								alt="whatsapp-icon"
+								className="w-6 h-6"
+							/>
+						</a>
+						<a
+							style={{ color: 'cornflowerblue' }}
+							href="tel:+91 9513245671">
+							<img
+								src="/assets/phone.svg"
+								alt="phone-icon"
+								className="w-6 h-6"
+							/>
+						</a>
 					</div>
 				</div>
 			</div>

@@ -5,7 +5,7 @@ function Partners() {
 	return (
 		<div className="flex flex-col gap-10 md:gap-14 lg:gap-20 pt-10">
 			<div className="flex justify-between w-full">
-				<h2 className="text-2xl sm:text-4xl text-black font-manuale font-semibold">
+				<h2 className="text-[1.2rem] sm:text-4xl text-black font-manuale font-semibold">
 					How smooth it is to Partner
 					<br className="hidden lg:block" /> with Edify?
 				</h2>
@@ -30,10 +30,10 @@ function Partners() {
 						content="Our Expert team will contact you"
 					/>
 				</div>
-				<div className="w-full flex justify-between">
+				<div className="w-full flex justify-between ">
 					<NumCard
 						src="/assets/b2b/partners/partners-3.png"
-						style="sm:w-[180px] w-[50px] h-[50px] sm:h-[180px]"
+						style="sm:w-[180px]  w-[50px] h-[50px] sm:h-[180px]"
 						num={3}
 						content="Select and customise models, and place order"
 					/>
@@ -62,13 +62,17 @@ function NumCard({
 }) {
 	return (
 		<div className="flex flex-row items-center justify-start gap-4 w-full">
-			<img alt="partners" src={src} className={` object-contain ${style}`} />
-			<div className="flex flex-col  gap-4">
-				<div className="text-[20px] sm:text-4xl text-black font-manuale font-semibold">
+			<img
+				alt="partners"
+				src={src}
+				className={` object-contain ${style}`}
+			/>
+			<div className="flex flex-col  gap-2 sm:gap-4">
+				<div className="text-[0.9rem] sm:text-4xl text-black font-manuale font-semibold">
 					{num}.
 				</div>
 
-				<div className="text-xs font-graphik w-5/6 lg:w-[280px]  md:text-xl  md:leading-relaxed text-[#333333]">
+				<div className="text-[0.7rem] font-graphik w-5/6 lg:w-[280px]  md:text-xl  md:leading-relaxed text-[#333333]">
 					{content}
 				</div>
 			</div>

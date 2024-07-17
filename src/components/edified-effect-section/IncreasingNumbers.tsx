@@ -31,7 +31,7 @@ export default function IncreasingNumbers({
 		<div className="flex flex-col w-full lg:w-1/5 gap-3 lg:items-center">
 			<div
 				ref={numberRef}
-				className="text-[1.7rem] sm:text-5xl text-[#98C23B] sm:text-[#267C46] font-bold font-manuale  lg:text-center">
+				className="text-[1.7rem] sm:text-5xl text-[#267C46] font-bold font-manuale  lg:text-center">
 				{isInView && (
 					<CountUp
 						start={0}
@@ -42,7 +42,7 @@ export default function IncreasingNumbers({
 						duration={2}
 					/>
 				)}
-				<span className="text-[#98C23B] sm:text-[#267C46] sm:text-xl text-[0.8rem] pl-1 sm:pl-2 lg:pl-4">
+				<span className="text-[#267C46] sm:text-xl text-[0.8rem] pl-1 sm:pl-2 lg:pl-4">
 					{value}
 				</span>
 			</div>

@@ -13,7 +13,7 @@ export default function ReviewCard({
 			<img
 				src={src}
 				alt="user-1"
-				className="rounded-[50%] md:w-36 md:h-36 sm:w-24 sm:h-24 h-12 w-12 object-cover object-center "
+				className="rounded-[50%] md:w-36 md:h-36 sm:w-24 sm:h-24 h-12 w-12 object-contain object-center "
 			/>
 			<div className="flex flex-col justify-start gap-1 md:gap-2 lg:gap-4 sm:justify-start w-3/4 sm:w-full">
 				<h3 className="font-manuale font-semibold text-sm sm:text-2xl">

@@ -1,6 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import { FeatureCardProps } from '@/types';
-// import Image from 'next/image';
-import React from 'react';
 
 const FeatureCard = ({ logo, title, description }: FeatureCardProps) => {
 	return (
@@ -13,12 +12,12 @@ const FeatureCard = ({ logo, title, description }: FeatureCardProps) => {
 					height={20}
 					className="text-slate-600"
 				/>
-				<h1 className="text-[1rem] sm:text-xl font-semibold font-manuale text-black">
+				<h1 className="text-[1rem] sm:text-xl lg:text-[1.4rem] xl:text-2xl font-semibold font-manuale text-black">
 					{title}
 				</h1>
 			</div>
-			<div className="flex justify-center items-center  pt-4 pb-7 pl-9 w-fit lg:w-[500px]  text-wrap">
-				<p className="text-slate-600 font-normal leading-5 text-[0.75rem] sm:text-[0.9rem] font-graphik">
+			<div className="flex justify-center items-center  pt-4 pb-7 pl-9 w-fit lg:w-[95%]  text-wrap">
+				<p className="text-slate-600 font-normal leading-5 text-[0.75rem] sm:text-[0.9rem] lg:text-base xl:text-xl font-graphik">
 					{description}
 				</p>
 			</div>

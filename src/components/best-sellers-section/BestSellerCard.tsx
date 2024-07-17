@@ -25,6 +25,7 @@ export default function BestSellerCard({
 					width={668}
 					height={350}
 					aria-hidden="true"
+					loading="eager"
 				/>
 			</div>
 			<hr className=" mx-4  border-t border-gray-200" />
@@ -38,7 +39,7 @@ export default function BestSellerCard({
 				<div className="flex flex-row justify-between items-center mt-2 text-wrap">
 					<div
 						id={`product-brief-${title}`}
-						className="text-[10px] sm:text-base text-gray-500 font-normal">
+						className="text-[10px] sm:text-base text-gray-600 font-normal">
 						{brief}
 					</div>
 				</div>
@@ -50,7 +51,7 @@ export default function BestSellerCard({
 					</p>
 					<p
 						aria-label={`Original price ₹${mrp}`}
-						className="font-graphik  text-sm sm:text-lg lg:text-xl font-normal leading-6 line-through text-gray-500">
+						className="font-graphik  text-sm sm:text-lg lg:text-xl font-normal leading-6 line-through text-gray-600">
 						₹{mrp}
 					</p>
 				</div>

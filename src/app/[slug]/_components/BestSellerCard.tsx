@@ -1,4 +1,4 @@
-import Image from 'next/image';
+/* eslint-disable @next/next/no-img-element */
 import { Product } from '@/types';
 import Link from 'next/link';
 
@@ -18,7 +18,7 @@ export default function BestSellerCard({
 			aria-labelledby={`product-title-${title}`}
 			aria-describedby={`product-brief-${title}`}>
 			<div className="flex justify-center items-center p-2 h-1/2 w-full pb-4">
-				<Image
+				<img
 					src={image}
 					alt={alt_tag}
 					className="h-[100px] md:h-[150px] w-36 md:w-52 object-cover "
@@ -38,7 +38,7 @@ export default function BestSellerCard({
 				<div className="flex flex-row justify-between items-center mt-2 text-wrap">
 					<p
 						id={`product-brief-${title}`}
-						className="text-sm sm:text-md text-gray-500 font-normal ">
+						className="text-sm sm:text-md text-gray-600 font-normal ">
 						{brief}
 					</p>
 				</div>
@@ -50,7 +50,7 @@ export default function BestSellerCard({
 					</p>
 					<p
 						aria-label={`Original price ₹${mrp}`}
-						className="font-graphik  text-sm sm:text-lg lg:text-xl font-normal leading-6 line-through text-gray-500">
+						className="font-graphik  text-sm sm:text-lg lg:text-xl font-normal leading-6 line-through text-gray-600">
 						₹{mrp}
 					</p>
 				</div>

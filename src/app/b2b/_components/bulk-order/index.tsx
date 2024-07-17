@@ -50,7 +50,7 @@ function BulkOrder() {
 						<BulkOrderForm onButtonClick={handleMessage} />
 					</div>
 					<div className="lg:w-2/4 w-full mt-24 flex justify-center">
-						<Image
+						<img
 							src="/assets/b2b/bulk-order.webp"
 							alt="Bulk Order Image"
 							width={650}

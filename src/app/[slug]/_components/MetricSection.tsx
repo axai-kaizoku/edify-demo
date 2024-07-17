@@ -7,18 +7,18 @@ const MetricsSection = () => {
 	return (
 		<>
 			<Container isBorder={false}>
-				<div className="pt-8 lg:pb-10  flex flex-col lg:flex-row justify-normal gap-8 sm:gap-16 xl:gap-12">
-					<div className="flex flex-col  items-center lg:items-start gap-8">
+				<div className="pt-8 lg:pb-10 flex flex-col lg:flex-row justify-between gap-8 sm:gap-16 lg:gap-[5%]">
+					<div className="flex flex-col w-full h-full items-center lg:items-start gap-8">
 						<div className="text-slate-900 font-semibold text-2xl sm:text-4xl flex justify-start">
 							<CustomHeading heading="What it means to be Edify Refurbished?" />
 						</div>
 						<img
-							className="lg:h-[400px] lg:w-[600px] md:h-72 md:w-64 h-48 w-48 object-contain"
+							className="lg:h-[500px] lg:w-[700px] md:h-72 md:w-64 h-48 w-48 object-contain"
 							src="/assets/seo/metrics.webp"
 							alt="laptop-1"
 						/>
 					</div>
-					<div className="flex flex-col md:gap-8 lg:last:pt-[70px]">
+					<div className="flex flex-col md:gap-8 h-fit lg:last:pt-[4rem] xl:last:pt-[5rem]">
 						<FeatureCard
 							logo="/assets/check-square.svg"
 							title="50+ Quality Checks"

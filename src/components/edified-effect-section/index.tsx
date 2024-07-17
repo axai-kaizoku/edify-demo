@@ -6,7 +6,9 @@ import IncreasingNumbers from './IncreasingNumbers';
 export default function EdifiedEffectSection() {
 	return (
 		<>
-			<Container isBorder className="bg-white gap-10 sm:gap-14 pt-10 pb-16">
+			<Container
+				isBorder
+				className="bg-white gap-10 sm:gap-14 pt-10 pb-16">
 				<CustomHeading heading="The Edified Effect" />
 				<ImageSliderComponent />
 				<div className="flex sm:hidden py-0 flex-col gap-4">

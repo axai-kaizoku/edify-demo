@@ -1,16 +1,19 @@
+import dynamic from 'next/dynamic';
 /* eslint-disable @next/next/no-img-element */
-import HeroSection from './_components/hero';
-import Brands from './_components/brands';
-import EdifyRefurbished from './_components/edify-refurbished';
-import BestSellers from './_components/best-sellers';
-import Partners from './_components/partners';
-import PartnersTestimonials from './_components/partners-testimonials';
-import FAQ from './_components/faq';
-import BulkOrder from './_components/bulk-order';
-import MoreLinksSection from './_components/more-links';
 import Container from '@/components/common/Container';
 import { Metadata } from 'next';
 import { siteConfigB2B } from '@/config/site';
+import HeroSection from './_components/hero';
+import Brands from './_components/brands';
+import EdifyRefurbished from './_components/edify-refurbished';
+const BestSellers = dynamic(() => import('./_components/best-sellers'));
+const Partners = dynamic(() => import('./_components/partners'));
+const PartnersTestimonials = dynamic(
+	() => import('./_components/partners-testimonials'),
+);
+const FAQ = dynamic(() => import('./_components/faq'));
+const BulkOrder = dynamic(() => import('./_components/bulk-order'));
+const MoreLinksSection = dynamic(() => import('./_components/more-links'));
 
 export const metadata: Metadata = {
 	metadataBase: new URL(siteConfigB2B.url),
