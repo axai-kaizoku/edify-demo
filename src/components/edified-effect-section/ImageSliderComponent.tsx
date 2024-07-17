@@ -14,7 +14,7 @@ export default function ImageSliderComponent() {
 						alt="Image one"
 						className="rounded-xl"
 						aria-label="React Compare Slider"
-						loading="eager"
+						loading="lazy"
 					/>
 				}
 				itemTwo={
@@ -23,7 +23,7 @@ export default function ImageSliderComponent() {
 						alt="Image two"
 						className="rounded-xl"
 						aria-label="React Compare Slider"
-						loading="eager"
+						loading="lazy"
 					/>
 				}
 			/>

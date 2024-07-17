@@ -16,6 +16,7 @@ const MetricsSection = () => {
 							className="lg:h-[500px] lg:w-[700px] md:h-72 md:w-64 h-48 w-48 object-contain"
 							src="/assets/seo/metrics.webp"
 							alt="laptop-1"
+							loading="lazy"
 						/>
 					</div>
 					<div className="flex flex-col md:gap-8 h-fit lg:last:pt-[4rem] xl:last:pt-[5rem]">

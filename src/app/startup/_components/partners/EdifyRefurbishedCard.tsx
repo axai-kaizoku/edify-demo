@@ -15,6 +15,7 @@ export default function EdifyRefurbishedCard({
 				src={src}
 				alt="reburfished"
 				className="w-[30px] h-[30px] lg:w-[60px] lg:h-[60px]"
+				loading="lazy"
 			/>
 			<div className="w-full flex flex-col gap-0 lg:gap-5 -mt-2 lg:-mt-0">
 				<h3 className="font-graphik font-semibold text-[0.9rem] sm:text-xl  leading-snug lg:leading-[33px] md:text-[1.6rem] xl:text-[1.3rem]">

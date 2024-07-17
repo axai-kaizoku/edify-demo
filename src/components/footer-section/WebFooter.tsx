@@ -13,18 +13,15 @@ function WebFooter() {
 
 	return (
 		<>
-			<Container
-				isBorder={false}
-				className="pt-16 pb-12 hidden sm:flex gap-8">
+			<Container isBorder={false} className="pt-16 pb-12 hidden sm:flex gap-8">
 				<div>
-					<Link
-						href="/"
-						aria-label="Read more">
+					<Link href="/" aria-label="Read more">
 						<img
 							src={'/assets/logo.webp'}
 							alt="edify"
 							width={132}
 							height={60}
+							loading="lazy"
 						/>
 					</Link>
 				</div>
@@ -34,9 +31,7 @@ function WebFooter() {
 							Edify by Winuall 2nd Floor, SRS Arcade, 15/2, Hosa Rd,
 							Kasavanahalli, Bengaluru, Karnataka 560035, <br />
 							Ph:{' '}
-							<a
-								style={{ color: 'cornflowerblue' }}
-								href="tel:+91 9513245671">
+							<a style={{ color: 'cornflowerblue' }} href="tel:+91 9513245671">
 								+91 9513245671
 							</a>
 							, Email:contact@edify.club
@@ -46,16 +41,12 @@ function WebFooter() {
 						<div className="flex flex-col gap-3">
 							<FooterHeading title="Company" />
 							{pathname !== '/about-us' && (
-								<Link
-									href="/about-us"
-									aria-label="Read more about us">
+								<Link href="/about-us" aria-label="Read more about us">
 									<FooterLinks title="About us" />
 								</Link>
 							)}
 							{pathname !== '/startup' && (
-								<Link
-									href="/startup"
-									aria-label="Read more">
+								<Link href="/startup" aria-label="Read more">
 									<FooterLinks title="Business" />
 								</Link>
 							)}
@@ -66,23 +57,17 @@ function WebFooter() {
 								<FooterLinks title="Blog" />
 							</Link>
 							{pathname !== '/b2b' && (
-								<Link
-									href="/b2b"
-									aria-label="Read more about b2b order">
+								<Link href="/b2b" aria-label="Read more about b2b order">
 									<FooterLinks title="B2B Order" />
 								</Link>
 							)}
 						</div>
 						<div className="flex flex-col gap-3">
 							<FooterHeading title="Legal" />
-							<Link
-								href="/terms-of-services"
-								aria-label="Read more about TOS">
+							<Link href="/terms-of-services" aria-label="Read more about TOS">
 								<FooterLinks title="Terms and Conditions" />
 							</Link>
-							<Link
-								href="/privacy-policy"
-								aria-label="Read more about Policy">
+							<Link href="/privacy-policy" aria-label="Read more about Policy">
 								<FooterLinks title="Privacy Policy" />
 							</Link>
 							<Link

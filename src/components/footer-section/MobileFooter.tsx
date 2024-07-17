@@ -11,6 +11,7 @@ function MobileFooter() {
 						src="/assets/logo.webp"
 						alt="edify"
 						className="-ml-4 w-[150px] h-[50px] object-contain"
+						loading="lazy"
 					/>
 				</Link>
 
@@ -20,12 +21,14 @@ function MobileFooter() {
 							className="h-[1.4rem] w-[1.4rem] rounded-sm"
 							alt="twitter"
 							src="/assets/socials-icons/twitter.svg"
+							loading="lazy"
 						/>
 					</Link>
 					<Link href="https://twitter.com/edify_club">
 						<img
 							className="black-and-white h-[1.8rem] w-[1.8rem] rounded-sm"
 							alt="Instagram"
+							loading="lazy"
 							src="/assets/socials-icons/insta.svg"
 						/>
 					</Link>

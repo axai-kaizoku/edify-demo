@@ -1,5 +1,4 @@
 import { CustomCardProps } from '@/types';
-import React from 'react';
 
 function CustomCards({ src, alt, subHeading }: CustomCardProps) {
 	return (
@@ -8,6 +7,7 @@ function CustomCards({ src, alt, subHeading }: CustomCardProps) {
 				src={src}
 				alt={alt}
 				className="w-7 h-7  lg:w-12 lg:h-12  xl:w-16 xl:h-16 object-contain"
+				loading="lazy"
 			/>
 			<div className="flex justify-center items-center ">
 				<div className="w-[70%] text-center text-sm lg:text-[0.9rem] xl:text-base">

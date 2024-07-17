@@ -20,11 +20,13 @@ export default function StartUps() {
 						src="/livspace_logo.png"
 						alt="Livespace"
 						className=" object-contain h-[50px] w-[230px]"
+						loading="lazy"
 					/>
 					<img
 						src="/assets/startup/startups/apna-logo.webp"
 						alt="Apna"
 						className="w-[100px] h-[100px] object-contain"
+						loading="lazy"
 					/>
 					<img
 						src="/assets/startup/startups/electricpe-logo.png"
@@ -32,30 +34,35 @@ export default function StartUps() {
 						width={150}
 						height={70}
 						className="w-[150px] h-[70px] object-contain"
+						loading="lazy"
 					/>
 					<img
 						src="/assets/startup/startups/apnamart-logo.webp"
 						alt="apnamart"
 						width={140}
 						height={70}
+						loading="lazy"
 					/>
 					<img
 						src="/assets/startup/startups/urban-vault-icon.png"
 						alt="urbanvault"
 						width={80}
 						height={80}
+						loading="lazy"
 					/>
 					<img
 						src="/assets/startup/startups/finagg-logo.png"
 						alt="finagg"
 						width={65}
 						height={70}
+						loading="lazy"
 					/>
 					<img
 						src="/assets/startup/startups/stars-logo.png"
 						alt="stars"
 						width={120}
 						height={70}
+						loading="lazy"
 					/>
 				</div>
 				{/* Tablets */}
@@ -67,6 +74,7 @@ export default function StartUps() {
 							width={230}
 							height={50}
 							className="object-contain"
+							loading="lazy"
 						/>
 						<img
 							src="/assets/startup/startups/apna-logo.webp"
@@ -74,6 +82,7 @@ export default function StartUps() {
 							width={80}
 							height={80}
 							className="object-contain"
+							loading="lazy"
 						/>
 						<img
 							src="/assets/startup/startups/electricpe-logo.png"
@@ -81,6 +90,7 @@ export default function StartUps() {
 							width={150}
 							height={70}
 							className="object-contain"
+							loading="lazy"
 						/>
 					</div>
 					<div className="flex flex-row justify-between w-full">
@@ -90,6 +100,7 @@ export default function StartUps() {
 							width={140}
 							height={70}
 							className="object-contain"
+							loading="lazy"
 						/>
 						<img
 							src="/assets/startup/startups/urban-vault-icon.png"
@@ -97,6 +108,7 @@ export default function StartUps() {
 							width={80}
 							height={80}
 							className="object-contain"
+							loading="lazy"
 						/>
 						<img
 							src="/assets/startup/startups/finagg-logo.png"
@@ -104,6 +116,7 @@ export default function StartUps() {
 							width={65}
 							height={70}
 							className="object-contain"
+							loading="lazy"
 						/>
 						<img
 							src="/assets/startup/startups/stars-logo.png"
@@ -111,6 +124,7 @@ export default function StartUps() {
 							width={120}
 							height={70}
 							className="object-contain"
+							loading="lazy"
 						/>
 					</div>
 				</div>
@@ -123,6 +137,7 @@ export default function StartUps() {
 							width={75}
 							height={20}
 							className="object-contain"
+							loading="lazy"
 						/>
 						<img
 							src="/assets/startup/startups/joyspoon.png"
@@ -130,6 +145,7 @@ export default function StartUps() {
 							width={80}
 							height={25}
 							className="object-contain"
+							loading="lazy"
 						/>
 						<img
 							src="/assets/startup/startups/streak.png"
@@ -137,6 +153,7 @@ export default function StartUps() {
 							width={90}
 							height={15}
 							className="object-contain"
+							loading="lazy"
 						/>
 					</div>
 					<div className="w-full flex flex-row justify-between">
@@ -146,6 +163,7 @@ export default function StartUps() {
 							width={40}
 							height={40}
 							className="object-contain"
+							loading="lazy"
 						/>
 						<img
 							src="/assets/startup/startups/electricpe-logo.png"
@@ -153,6 +171,7 @@ export default function StartUps() {
 							width={58}
 							height={40}
 							className="object-contain"
+							loading="lazy"
 						/>
 						<img
 							src="/assets/startup/startups/apnamart-logo.webp"
@@ -160,6 +179,7 @@ export default function StartUps() {
 							width={60}
 							height={60}
 							className="object-contain"
+							loading="lazy"
 						/>
 						<img
 							src="/assets/startup/startups/longroad.png"
@@ -167,6 +187,7 @@ export default function StartUps() {
 							width={90}
 							height={20}
 							className="object-contain"
+							loading="lazy"
 						/>
 					</div>
 
@@ -177,6 +198,7 @@ export default function StartUps() {
 							width={65}
 							height={50}
 							className="object-contain"
+							loading="lazy"
 						/>
 						<img
 							src="/assets/startup/startups/brown-unknown.webp"
@@ -184,6 +206,7 @@ export default function StartUps() {
 							width={40}
 							height={40}
 							className="object-contain"
+							loading="lazy"
 						/>
 						<img
 							src="/assets/startup/startups/jetplast.png"
@@ -191,6 +214,7 @@ export default function StartUps() {
 							width={34}
 							height={40}
 							className="object-contain"
+							loading="lazy"
 						/>
 						<img
 							src="/assets/startup/startups/finagg-logo.png"
@@ -198,6 +222,7 @@ export default function StartUps() {
 							width={37}
 							height={40}
 							className="object-contain"
+							loading="lazy"
 						/>
 						<img
 							src="/assets/startup/startups/apna-logo.webp"
@@ -205,6 +230,7 @@ export default function StartUps() {
 							width={40}
 							height={40}
 							className="object-contain"
+							loading="lazy"
 						/>
 					</div>
 				</div>

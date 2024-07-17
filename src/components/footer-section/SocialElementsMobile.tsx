@@ -11,6 +11,7 @@ function SocialElementsMobile({ src, href, alt }: SocialIconsProps) {
 				width={24}
 				height={24}
 				className="black-and-white"
+				loading="lazy"
 			/>
 		</Link>
 	);

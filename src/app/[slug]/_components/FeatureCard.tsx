@@ -11,6 +11,7 @@ const FeatureCard = ({ logo, title, description }: FeatureCardProps) => {
 					width={20}
 					height={20}
 					className="text-slate-600"
+					loading="lazy"
 				/>
 				<h1 className="text-[1rem] sm:text-xl lg:text-[1.4rem] xl:text-2xl font-semibold font-manuale text-black">
 					{title}

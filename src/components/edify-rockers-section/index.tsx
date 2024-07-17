@@ -13,12 +13,7 @@ export default function EdifyRockersSection() {
 		if (splideRef.current) {
 			const { root } = splideRef.current.splide.Components.Elements;
 
-			// root element
 			root.classList.add('edify-rockers-root');
-
-			// track element
-			// list.classList.add('edify-rockers-list');
-			// slides.classList.add('edify-rockers-slides');
 		}
 	});
 	return (

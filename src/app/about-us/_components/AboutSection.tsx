@@ -30,7 +30,7 @@ export default function AboutSection({
 				src={src}
 				alt={title}
 				className="w-[250px] h-[250px] lg:w-[300px] lg:h-[300px] xl:w-[420px] xl:h-[420px] 2xl:w-[500px] 2xl:h-[500px] object-contain"
-				loading="eager"
+				loading="lazy"
 			/>
 		</div>
 	);

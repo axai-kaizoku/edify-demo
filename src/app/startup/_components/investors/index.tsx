@@ -4,7 +4,7 @@ import CustomHeading from '@/components/common/CustomHeading';
 export default function StartUps() {
 	return (
 		<>
-			<div className="flex flex-col gap-4  sm:gap-16 py-4 sm:py-8">
+			<div className="flex flex-col gap-4  sm:gap-16 py-4 sm:py-8 lg:mt-[5rem]">
 				<div className="text-center">
 					<CustomHeading heading="Backed by the best Investors" />
 					{/* <div className="font-graphik py-3 sm:py-6 text-slate-500 text-lg sm:text-xl">
@@ -20,6 +20,7 @@ export default function StartUps() {
 						width={156}
 						height={50}
 						className="object-contain"
+						loading="lazy"
 					/>
 					<img
 						src="/assets/startup/investors/beenext-logo.png"
@@ -27,12 +28,14 @@ export default function StartUps() {
 						width={365}
 						height={40}
 						className="object-contain"
+						loading="lazy"
 					/>
 					<img
 						src="/assets/startup/investors/inflection-point-ventures.png"
 						alt="inflection-point-ventures"
 						width={75}
 						className="object-contain"
+						loading="lazy"
 						height={60}
 					/>
 					<img
@@ -40,6 +43,7 @@ export default function StartUps() {
 						alt="apnamart"
 						width={60}
 						className="object-contain"
+						loading="lazy"
 						height={60}
 					/>
 				</div>
@@ -51,6 +55,7 @@ export default function StartUps() {
 							alt="prime-venture-partners"
 							width={156}
 							className="object-contain"
+							loading="lazy"
 							height={50}
 						/>
 						<img
@@ -58,6 +63,7 @@ export default function StartUps() {
 							alt="inflection-point-ventures"
 							width={75}
 							className="object-contain"
+							loading="lazy"
 							height={60}
 						/>
 					</div>
@@ -67,6 +73,7 @@ export default function StartUps() {
 							alt="electric pe"
 							width={365}
 							className="object-contain"
+							loading="lazy"
 							height={40}
 						/>
 						<img
@@ -74,6 +81,7 @@ export default function StartUps() {
 							alt="apnamart"
 							width={60}
 							className="object-contain"
+							loading="lazy"
 							height={60}
 						/>
 					</div>
@@ -98,6 +106,7 @@ export default function StartUps() {
 						src="/assets/startup/investors/inflection-point-ventures.png"
 						alt="inflection-point-ventures"
 						className="object-contain"
+						loading="lazy"
 						width={37}
 						height={30}
 					/>
@@ -106,6 +115,7 @@ export default function StartUps() {
 						alt="prime-venture-partners"
 						width={80}
 						className="object-contain"
+						loading="lazy"
 						height={25}
 					/>
 
@@ -113,6 +123,7 @@ export default function StartUps() {
 						src="/assets/startup/investors/DI-logo.png"
 						alt="apnamart"
 						className="object-contain"
+						loading="lazy"
 						width={30}
 						height={30}
 					/>
@@ -120,6 +131,7 @@ export default function StartUps() {
 						src="/assets/startup/investors/beenext.png"
 						alt="electric pe"
 						className="object-contain"
+						loading="lazy"
 						width={80}
 						height={80}
 					/>

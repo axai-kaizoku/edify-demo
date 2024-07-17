@@ -66,6 +66,7 @@ function NumCard({
 				alt="partners"
 				src={src}
 				className={` object-contain ${style}`}
+				loading="lazy"
 			/>
 			<div className="flex flex-col  gap-2 sm:gap-4">
 				<div className="text-[0.9rem] sm:text-4xl text-black font-manuale font-semibold">

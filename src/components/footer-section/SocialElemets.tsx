@@ -5,7 +5,7 @@ import Link from 'next/link';
 function SocialElements({ src, href, alt }: SocialIconsProps) {
 	return (
 		<Link href={href} aria-label="Read more " target="_blank">
-			<img src={src} alt={alt} width={24} height={24} />
+			<img src={src} alt={alt} width={24} height={24} loading="lazy" />
 		</Link>
 	);
 }

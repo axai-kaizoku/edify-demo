@@ -56,6 +56,7 @@ function BulkOrder() {
 							width={650}
 							height={436}
 							className="scale-x-[-1]"
+							loading="lazy"
 						/>
 					</div>
 				</div>

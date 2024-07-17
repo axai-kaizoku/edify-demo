@@ -25,7 +25,7 @@ export default function BestSellerCard({
 					width={668}
 					height={350}
 					aria-hidden="true"
-					loading="eager"
+					loading="lazy"
 				/>
 			</div>
 			<hr className=" mx-4  border-t border-gray-200" />

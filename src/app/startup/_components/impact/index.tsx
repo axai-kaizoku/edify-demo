@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 export default function ImpactSection() {
 	return (
-		<div className="w-full h-full relative">
-			<div className="absolute w-full flex flex-col gap-0 sm:gap-1 lg:gap-1.5 xl:gap-8 pl-[4%] sm:pl-[6.13%] max-sm:-mt-[9%] sm:pt-7 lg:pt-[8%] xl:pt-[9%]">
+		<div className="max-sm:mt-[3rem]  w-full h-full relative">
+			<div className="absolute w-full flex flex-col gap-0 sm:gap-1 lg:gap-1.5 xl:gap-8 pl-[4%] sm:pl-[6.13%] max-sm:-mt-[20%] sm:pt-7 lg:pt-[8%] xl:pt-[9%]">
 				<h3 className="sm:text-xl text-[0.9rem] lg:text-[2rem] xl:text-[2.5rem] sm:py-2 font-manuale font-semibold flex flex-col lg:gap-2.5 xl:gap-6">
 					<div>
 						<span className="text-[#267C46]">Impact</span> Of Edify
@@ -23,6 +23,7 @@ export default function ImpactSection() {
 				alt="bg"
 				src="/assets/impact-bg.svg"
 				className="xl:w-screen xl:h-screen"
+				loading="lazy"
 			/>
 		</div>
 	);

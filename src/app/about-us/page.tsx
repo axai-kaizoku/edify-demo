@@ -57,7 +57,7 @@ export default function AboutUs() {
 								alt="hero-image"
 								src="/assets/about/about-us.webp"
 								className="w-[320px] h-[210px] sm:w-[440px] sm:h-[350px] lg:w-[420px] p-1 lg:h-[360px] xl:w-[550px] xl:h-[500px] object-contain"
-								loading="eager"
+								loading="lazy"
 							/>
 						</div>
 					</Container>
@@ -78,6 +78,7 @@ export default function AboutUs() {
 							alt="bg"
 							src="/assets/impact-bg.svg"
 							className="xl:w-screen xl:h-screen"
+							loading="lazy"
 						/>
 					</div>
 					<Container isBorder={false}>
