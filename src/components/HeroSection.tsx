@@ -32,6 +32,7 @@ const HeroComponent = () => {
 				<img
 					alt="hero-image"
 					src="/assets/hero.webp"
+					srcSet="/assets/hero-mobile.webp 640w,/assets/hero.webp 1024w"
 					className="w-[350px] h-[250px] sm:w-[440px] sm:h-[350px] lg:w-[490px] p-1 lg:h-[420px] xl:w-[550px] xl:h-[520px] object-contain"
 					loading="eager"
 				/>

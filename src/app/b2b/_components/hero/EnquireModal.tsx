@@ -307,7 +307,7 @@ const EnquireModal: React.FC<EnquireModalProps> = ({ onClose, onDownload }) => {
 					<button
 						className="absolute top-10 right-[19px] lg:top-[48.50px] lg:right-[66px] w-5 sm:w-8 lg:h-[33px] h-5"
 						onClick={handleClose}>
-						<img src="/assets/b2b/cross.svg" alt="close" />
+						<img src="/assets/b2b/cross.svg" alt="close" loading="lazy" />
 					</button>
 				</div>
 			</div>

@@ -87,11 +87,13 @@ function WebFooter() {
 						© 2024 Edify by Winuall. All rights reserved.
 					</h2>
 					<div className="flex items-center  justify-center gap-6">
-						<SocialElements
-							src="/assets/socials-icons/twitter.svg"
-							href="https://twitter.com/edify_club"
-							alt="twitter"
-						/>
+						<Link target="_blank" href="https://twitter.com/edify_club">
+							<img
+								src="/assets/socials-icons/twitter.svg"
+								alt="twitter"
+								className="h-6 w-6 object-contain"
+							/>
+						</Link>
 						<SocialElements
 							src="/assets/socials-icons/linkedin.svg"
 							href="https://www.linkedin.com/company/edifybywinuall/mycompany/"
@@ -102,11 +104,13 @@ function WebFooter() {
 							href="https://facebook.com/edifyclub"
 							alt="Facebook"
 						/>
-						<SocialElements
-							src="/assets/socials-icons/insta.svg"
-							href="https://instagram.com/edify_club"
-							alt="Instagram"
-						/>
+						<Link target="_blank" href="https://instagram.com/edify_club">
+							<img
+								src="/assets/socials-icons/insta.svg"
+								alt="Instagram"
+								className="h-8 w-8 object-contain black-and-white"
+							/>
+						</Link>
 					</div>
 				</div>
 			</div>

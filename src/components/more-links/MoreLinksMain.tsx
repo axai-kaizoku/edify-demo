@@ -52,14 +52,13 @@ export default function MoreLinksMain({ data }: { data: FooterCategory[] }) {
 							src="/assets/loading.svg"
 							className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
 							alt="loading"
+							loading="lazy"
 						/>
 					</div>
 				) : (
 					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full  xl:gap-5">
 						{data?.map((res: FooterCategory, index: number) => (
-							<div
-								key={index}
-								className="">
+							<div key={index} className="">
 								<h1 className="text-sm xl:text-[1rem] font-semibold text-slate-600 font-graphik mb-2 leading-7">
 									{res.categoryValue}
 								</h1>

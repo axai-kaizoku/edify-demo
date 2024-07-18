@@ -135,7 +135,7 @@ export default function CatalogueModal({ onClose, onDownload }: any) {
 				<button
 					className="absolute top-4 right-4 w-6 h-6 text-gray-600 hover:text-gray-800"
 					onClick={handleClose}>
-					<img src="/assets/b2b/cross.svg" alt="close" />
+					<img src="/assets/b2b/cross.svg" alt="close" loading="lazy" />
 				</button>
 				<div className="flex justify-center items-center w-full flex-col pt-4 gap-3">
 					<div className="text-base sm:text-2xl font-semibold font-manuale">

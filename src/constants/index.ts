@@ -2,6 +2,7 @@ import {
 	AboutSectionProps,
 	EdifyRefurbishedCardProps,
 	PrivacyPolicyInfoProps,
+	ReviewCardContentProps,
 	TermsOfServicesProps,
 	frequentlyAskedQuestionsProps,
 } from '@/types';
@@ -357,7 +358,7 @@ Please feel free to reach out to us by e-mail at care@winuall.com in case of a
 	},
 ];
 
-export const reviewCardContent = [
+export const reviewCardContent: ReviewCardContentProps[] = [
 	{
 		src: '/assets/testimonials/osp.webp',
 		name: 'Manjunath Bhat',

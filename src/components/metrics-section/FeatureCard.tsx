@@ -1,10 +1,9 @@
 import { FeatureCardProps } from '@/types';
-import React from 'react';
 
 const FeatureCard = ({ logo, title, description }: FeatureCardProps) => {
 	return (
-		<div className="">
-			<div className="flex  gap-4 items-center">
+		<div>
+			<div className="flex gap-4 items-center">
 				<img
 					src={logo}
 					alt="check-square"

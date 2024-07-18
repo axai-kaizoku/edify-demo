@@ -31,14 +31,12 @@ export default function MobileView() {
 		<div className="border-b">
 			<div className=" w-fit">
 				{/* Mobile LOGO */}
-				<Link
-					href="/"
-					className=" w-fit h-fit"
-					aria-label="Edify Logo">
+				<Link href="/" className=" w-fit h-fit" aria-label="Edify Logo">
 					<img
 						src="/assets/logo.webp"
 						alt="logo"
 						className="block lg:hidden object-contain w-[120px] h-[60px] mx-1.5 my-3"
+						loading="lazy"
 					/>
 				</Link>
 

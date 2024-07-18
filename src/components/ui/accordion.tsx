@@ -46,12 +46,14 @@ const AccordionTrigger = React.forwardRef<
 							src="/assets/minus-circle.svg"
 							alt="minus-circle"
 							className="w-4 h-4 sm:w-6 sm:h-6 object-contain"
+							loading="lazy"
 						/>
 					) : (
 						<img
 							src="/assets/plus-circle.svg"
 							alt="plus-circle"
 							className="w-4 h-4 sm:w-6 sm:h-6 object-contain"
+							loading="lazy"
 						/>
 					)}
 				</div>

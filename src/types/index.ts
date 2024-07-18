@@ -164,3 +164,11 @@ export type IncreasingNumbersProps = {
 	value: string;
 	description: string;
 };
+
+export type ReviewCardContentProps = {
+	src: string;
+	name: string;
+	subText: string;
+	review: string;
+	date: string;
+};
